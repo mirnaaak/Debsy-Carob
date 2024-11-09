@@ -4,6 +4,9 @@
 @import url("https://fonts.cdnfonts.com/css/carlo");
 @import url("https://fonts.cdnfonts.com/css/parisienne");
 @import url("https://fonts.cdnfonts.com/css/quattrocento-2");
+@import url("https://fonts.cdnfonts.com/css/poppins");
+@import url("https://fonts.cdnfonts.com/css/koulen");
+@import url('https://fonts.cdnfonts.com/css/instrument-sans');
 
 body {
   overflow-x: hidden;
@@ -22,6 +25,7 @@ section {
   display: flex;
   flex-direction: column;
   margin-bottom: -20px;
+  margin-top: 30px;
 }
 
 .main-title {
@@ -40,6 +44,27 @@ section {
   margin-top: -37.35px;
 }
 
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 107.42px;
+  height: 39px;
+  border: 1.37px solid #3d240e;
+  border-radius: 14.37px;
+  padding: 0;
+  margin-top: 5px;
+}
+
+.btn-more {
+  font-family: "Carlo", sans-serif;
+  font-size: 21.84px;
+  color: #3d240e;
+  -webkit-text-stroke: 0.16px #3d240e;
+  text-wrap: nowrap;
+  padding: 0;
+}
+
 /* best sellers */
 #best-sub {
   margin-right: -17px;
@@ -55,6 +80,7 @@ section {
 .move-left {
   margin: 0 70px;
   margin-top: -160px;
+  cursor: pointer;
 }
 
 .cards-items {
@@ -164,35 +190,165 @@ section {
   -webkit-text-stroke: 0.75px #4c2b08;
 }
 
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 107.42px;
-  height: 39px;
-  border: 1.37px solid #3d240e;
-  border-radius: 14.37px;
-  padding: 0;
-  margin-top: 5px;
-}
-
-.btn-more {
-  font-family: "Carlo", sans-serif;
-  font-size: 21.84px;
-  color: #3d240e;
-  -webkit-text-stroke: 0.16px #3d240e;
-  text-wrap: nowrap;
-  padding: 0;
-}
-
 /* customization */
 #customization {
   background: url("images/customization/image\ 38.png") no-repeat center;
   background-size: contain;
+  height: 708px;
+  justify-content: start;
+  /* align-items: start; */
 }
 
 #customization-sub {
-  margin-right: -40px;
+  margin-right: -60px;
+}
+
+.customize,
+.total {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  width: 100%;
+}
+
+.customize {
+  margin-top: 50px;
+}
+
+.ingredients,
+.ingredient,
+.jar-customization {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ingredients {
+  width: 45%;
+}
+
+#ingredients-title {
+  font-size: 32px;
+  -webkit-text-stroke: 0px;
+}
+
+.ing-left,
+.ing-right {
+  margin-top: -50px;
+  cursor: pointer;
+}
+
+.ingredients-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.calories, .price{
+    gap: 5px;
+}
+
+h5 {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  color: #4c2b08;
+}
+
+h6 {
+  font-family: "Koulen", sans-serif;
+  font-size: 24px;
+  color: #4c2b08;
+}
+
+.total {
+  margin: 30px 0;
+}
+
+.value{
+    width: 48px;
+    height: 34px;
+    border: 1px solid #4C2B08;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#ing-title{
+    margin-top: 15px;
+}
+
+.ingredients .button{
+    width: 142px;
+    height: 32px;
+}
+
+.ingredients .btn-more {
+  font-size: 24px;
+}
+
+.jar-customization{
+    margin-top: 20px;
+}
+
+.size, .sizes, .calories, .price, .value ,.settings, .undo, .reset{
+    display: flex;
+    flex-direction: row;
+}
+
+.size-title{
+    font-weight: 700;
+    margin-right: 15px;
+}
+
+.sizes{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.size-btn{
+    border: 1px solid #4C2B08;
+    width: 32px;
+    height: 31px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.size-btn h5{
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 700;
+}
+
+.settings{
+width: 100%;
+justify-content: space-evenly;
+}
+
+.size, .settings{
+    margin-top: 15px;
+}
+
+.size-btn, .undo, .reset{
+    cursor: pointer;
+}
+
+.undo div, .reset h6{
+    margin-right: 5px;
+}
+
+.reset h6{
+    margin-top: 2px;
+}
+
+.undo h5, .reset h5{
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 4.2px;
 }
 
 /* blog */
@@ -203,9 +359,9 @@ section {
   justify-content: start;
 }
 
-#our-blog .background{
-    width: 100%;
-    height: 100%;
+#our-blog .background {
+  width: 100%;
+  height: 100%;
 }
 
 #our-blog .title {
@@ -230,13 +386,12 @@ section {
   margin-right: -30px;
 }
 
-#our-blog .btn-con{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100% !important;
+#our-blog .btn-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100% !important;
 }
-
 /*----- Mirna (end) -----*/
 
 /*----- Cyrine (start) -----*/
@@ -338,7 +493,7 @@ nav a:hover {
   justify-content: flex-start;
   padding: 0 20px;
   background-image: url("images/Untitled\ Project_enhanced\ 1@2x.png");
-  background-size:contain;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   margin: 0;
