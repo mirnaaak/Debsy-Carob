@@ -197,15 +197,24 @@ section {
 
 /* blog */
 #our-blog {
-  background: url("images/blog/image.png") no-repeat center;
-  background-size: contain;
   width: 100%;
   height: 1520px;
+  display: flex;
+  justify-content: start;
+}
+
+#our-blog .background{
+    width: 100%;
+    height: 100%;
 }
 
 #our-blog .title {
   width: 100%;
+  height: 1520px;
   align-items: end;
+  position: absolute;
+  margin-top: 100px;
+  margin-right: 300px;
 }
 
 #our-blog .title div {
@@ -218,7 +227,15 @@ section {
 
 #blog-sub {
   font-size: 60px;
+  margin-top: -60px;
+  margin-right: -30px;
+}
 
+#our-blog .btn-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
 }
 
 /*----- Mirna (end) -----*/
