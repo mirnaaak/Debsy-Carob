@@ -1,12 +1,16 @@
 /*----- Mirna (start) -----*/
 
 /* genral */
-@import url("https://fonts.cdnfonts.com/css/carlo");
-@import url("https://fonts.cdnfonts.com/css/parisienne");
+@import url("https://fonts.cdnfonts.com/css/hayward-2");
 @import url("https://fonts.cdnfonts.com/css/quattrocento-2");
 @import url("https://fonts.cdnfonts.com/css/poppins");
 @import url("https://fonts.cdnfonts.com/css/koulen");
-@import url('https://fonts.cdnfonts.com/css/instrument-sans');
+@import url("https://fonts.cdnfonts.com/css/instrument-sans");
+
+@font-face {
+  font-family: "Romely";
+  src: url("fonts/romely/Romely\ Light.ttf");
+}
 
 body {
   overflow-x: hidden;
@@ -29,7 +33,7 @@ section {
 }
 
 .main-title {
-  font-family: "Carlo", sans-serif;
+  font-family: "Romely";
   font-size: 36.78px;
   color: #3d240e;
   -webkit-text-stroke: 0.29px #3d240e;
@@ -38,10 +42,10 @@ section {
 .sub-title {
   display: flex;
   justify-content: end;
-  font-family: "Parisienne", sans-serif;
+  font-family: "Hayward", sans-serif;
   font-size: 33.33px;
   color: #c59f72;
-  margin-top: -37.35px;
+  margin-top: -45px;
 }
 
 .button {
@@ -52,12 +56,12 @@ section {
   height: 39px;
   border: 1.37px solid #3d240e;
   border-radius: 14.37px;
-  padding: 0;
+  padding: 0 3px !important;
   margin-top: 5px;
 }
 
 .btn-more {
-  font-family: "Carlo", sans-serif;
+  font-family: "Romely";
   font-size: 21.84px;
   color: #3d240e;
   -webkit-text-stroke: 0.16px #3d240e;
@@ -67,7 +71,8 @@ section {
 
 /* best sellers */
 #best-sub {
-  margin-right: -17px;
+  font-size: 30px;
+  margin-right: -75px;
 }
 
 .cards {
@@ -98,7 +103,7 @@ section {
 }
 
 .card-title {
-  font-family: "Carlo", sans-serif;
+  font-family: "Romely";
   font-size: 24px;
   -webkit-text-stroke: 0.25px #3d240e;
   color: #3d240e;
@@ -163,7 +168,7 @@ section {
 }
 
 .quantity-input {
-  font-family: "Carlo", sans-serif;
+  font-family: "Romely";
   border: none;
   width: 15px;
   height: 33.11px;
@@ -173,7 +178,7 @@ section {
 }
 
 .quantity-counter a {
-  font-family: "Carlo", sans-serif;
+  font-family: "Romely";
   text-align: center;
   color: #4c2b08;
   padding: 5px;
@@ -196,11 +201,10 @@ section {
   background-size: contain;
   height: 708px;
   justify-content: start;
-  /* align-items: start; */
 }
 
 #customization-sub {
-  margin-right: -60px;
+  margin-right: -95px;
 }
 
 .customize,
@@ -235,7 +239,7 @@ section {
 
 .ing-left,
 .ing-right {
-  margin-top: -50px;
+  margin-top: -80px;
   cursor: pointer;
 }
 
@@ -248,8 +252,9 @@ section {
   margin-top: 30px;
 }
 
-.calories, .price{
-    gap: 5px;
+.calories,
+.price {
+  gap: 5px;
 }
 
 h5 {
@@ -268,87 +273,101 @@ h6 {
   margin: 30px 0;
 }
 
-.value{
-    width: 48px;
-    height: 34px;
-    border: 1px solid #4C2B08;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.value {
+  width: 48px;
+  height: 34px;
+  border: 1px solid #4c2b08;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-#ing-title{
-    margin-top: 15px;
+#ing-title {
+  margin-top: 15px;
 }
 
-.ingredients .button{
-    width: 142px;
-    height: 32px;
+.ingredients .button {
+  width: 142px;
+  height: 32px;
+  border-radius: 12px;
 }
 
 .ingredients .btn-more {
   font-size: 24px;
+  -webkit-text-stroke: 0px;
 }
 
-.jar-customization{
-    margin-top: 20px;
+.jar-customization {
+  margin-top: 20px;
 }
 
-.size, .sizes, .calories, .price, .value ,.settings, .undo, .reset{
-    display: flex;
-    flex-direction: row;
+.size,
+.sizes,
+.calories,
+.price,
+.value,
+.settings,
+.undo,
+.reset {
+  display: flex;
+  flex-direction: row;
 }
 
-.size-title{
-    font-weight: 700;
-    margin-right: 15px;
+.size-title {
+  font-weight: 700;
+  margin-right: 15px;
 }
 
-.sizes{
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
+.sizes {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
 }
 
-.size-btn{
-    border: 1px solid #4C2B08;
-    width: 32px;
-    height: 31px;
-    border-radius: 12px;
-    text-align: center;
+.size-btn {
+  border: 1px solid #4c2b08;
+  width: 32px;
+  height: 31px;
+  border-radius: 12px;
+  text-align: center;
 }
 
-.size-btn h5{
-    font-family: 'Instrument Sans', sans-serif;
-    font-weight: 700;
+.size-btn h5 {
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 700;
 }
 
-.settings{
-width: 100%;
-justify-content: space-evenly;
+.settings {
+  width: 100%;
+  justify-content: space-evenly;
 }
 
-.size, .settings{
-    margin-top: 15px;
+.size,
+.settings {
+  margin-top: 15px;
 }
 
-.size-btn, .undo, .reset{
-    cursor: pointer;
+.size-btn,
+.undo,
+.reset {
+  cursor: pointer;
 }
 
-.undo div, .reset h6{
-    margin-right: 5px;
+.undo div,
+.reset h6 {
+  margin-right: 5px;
 }
 
-.reset h6{
-    margin-top: 2px;
+.reset h6 {
+  margin-top: 2px;
 }
 
-.undo h5, .reset h5{
-    font-size: 20px;
-    font-weight: 700;
-    margin-top: 4.2px;
+.undo h5,
+.reset h5 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 4.2px;
 }
 
 /* blog */
@@ -381,9 +400,9 @@ justify-content: space-evenly;
 }
 
 #blog-sub {
-  font-size: 60px;
+  font-size: 40px;
   margin-top: -60px;
-  margin-right: -30px;
+  margin-right: -90px;
 }
 
 #our-blog .btn-con {
@@ -391,6 +410,17 @@ justify-content: space-evenly;
   justify-content: center;
   align-items: center;
   width: 100% !important;
+}
+
+#our-blog .button {
+  width: 103px;
+  height: 36px;
+  border-radius: 13.26px;
+}
+
+#our-blog .btn-more {
+  font-size: 20.16px;
+  -webkit-text-stroke: 0.15px #3d240e;
 }
 /*----- Mirna (end) -----*/
 
