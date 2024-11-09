@@ -4,226 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.cdnfonts.com/css/langita" rel="stylesheet">
   <title>Debsy Carob</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f7f7f7;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-
-    header {
-      width: 100%;
-      padding: 10px 0;
-      background-color: #fff;
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #333;
-      margin: 0 15px;
-      font-weight: 500;
-      font-size: 1rem;
-    }
-
-    nav a.logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #555;
-    }
-
-    .search-bar {
-      display: flex;
-      align-items: center;
-      border: 1px solid #ccc;
-      padding: 5px 10px;
-      border-radius: 15px;
-    }
-
-    .search-bar input {
-      border: none;
-      outline: none;
-      padding: 5px;
-    }
-
-    /* Hamburger menu styling */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .hamburger div {
-      width: 25px;
-      height: 3px;
-      background-color: #333;
-      margin: 4px 0;
-      transition: 0.3s;
-    }
-
-    
-    .nav-links {
-      padding-top: 10px;
-      display: flex;
-      flex-direction: row;
-    }
-
-    .nav-links a {
-      display: inline;
-    }
-
-    .nav-links.active {
-      display: flex;
-      flex-direction: column;
-      background-color: #fff;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      align-items: center;
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .hero {
-      width: 100%;
-      object-fit: cover;
-      max-width: 1600px;
-      height: 600px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 0 20px;
-      background-image: url('images/Untitled\ Project_enhanced\ 1@2x.png');
-      background-size: cover;
-      background-position: center;
-      position: relative;
-    }
-
-    .hero-text {
-      max-width: 50%;
-      color: #333;
-      text-align: center;
-      margin:auto;
-      margin-left: 100px;
-    }
-
-    .hero h1 {
-      font-size: 2em;
-      color: #333;
-      margin-bottom: 10px;
-    }
-    
-    .hero p {
-      font-size: 1.2em;
-      margin-bottom: 20px;
-    }
-
-    .hero-button {
-      border: 2px solid black;
-      background-color: transparent;
-      padding: 10px 20px;
-      font-size: 1em;
-      color: #333;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    .hero-button:hover {
-      background-color: #333;
-      color: #fff;
-    }
-
-    .carousel-dots {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 10px;
-    }
-
-    .carousel-dot {
-      width: 12px;
-      height: 12px;
-      background-color: #ccc;
-      border-radius: 50%;
-      cursor: pointer;
-    }
-
-    .carousel-dot.active {
-      background-color: #333;
-    }
-    .mobile{
-    	display:none;
-    }
-    
-    @media (max-width: 768px) {
-      .search-bar {
-        display: none;
-      }
-.mobile{
-    	display:block;
-    }
-    .pc{
-    	display:none;
-    }
-      .hamburger {
-        display: flex;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .hero-text {
-        max-width: 100%;
-      }
-
-      .hero h1 {
-        font-size: 2.5em;
-      }
-    }
-  </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Home</title>
 </head>
 
 <body>
+
+  <!-- Cyrine -->
   <header>
     <nav>
-      
       <a href="#" class="logo mobile">Debsy Carob</a>
       <div class="nav-links">
         <a href="#">Home</a>
@@ -245,7 +37,7 @@
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="banner hero">
     <div class="hero-text">
       <h1>Your Sweet Tooth's <br> New Best Friend</h1>
       <p>Vegan - Dark Chocolate - No Added Sugar</p>
@@ -258,170 +50,155 @@
     </div>
   </section>
 
-  <script>
-    function toggleMenu() {
-      const navLinks = document.querySelector('.nav-links');
-      navLinks.classList.toggle('active');
-    }
-  </script>
-</body>
-</html>
+  <!-- MIRNA -->
+  <section id="best-sellers">
 
-    <!-- MIRNA -->
-    <section id="best-sellers">
+    <div class="title">
+      <h2 class="main-title">Our Most Loved Healthy</h2>
+      <h3 class="sub-title" id="best-sub">creations</h6>
+    </div>
 
-        <div class="title">
-            <h2 class="main-title">Our Most Loved Healthy</h2>
-            <h3 class="sub-title" id="best-sub">creations</h6>
-        </div>
+    <div class="cards">
+      <div class="move-left">
+        <img src="images/best-sellers/Vector 1.png" alt="">
+      </div>
 
-        <div class="cards">
-            <div class="move-left">
-                <img src="images/best-sellers/Vector 1.png" alt="">
-            </div>
+      <div class="cards-items">
+        <div class="card text-center" style="width: 267px; height: 377.88px; margin-top: 60px;">
+          <div class="card-image">
+            <img src="images/best-sellers/datebites.png" class="card-img-top" alt="...">
+          </div>
 
-            <div class="cards-items">
-                <div class="card text-center" style="width: 267px; height: 377.88px; margin-top: 60px;">
-                    <div class="card-image">
-                        <img src="images/best-sellers/datebites.png" class="card-img-top" alt="...">
-                    </div>
-
-                    <div class="card-body">
-                        <h5 class="card-title">CAROB DATE BITES</h5>
-                        <p class="card-text">Price: 3.13$</p>
-                        <div class='quantity-counter'>
-                            <div class="counter-border">
-                                <div class="counter-content">
-                                    <a class='btn btn-default minus-btn'>_</a>
-                                    <input type='text' name='quantity' value='1' class='quantity-input' min='0'
-                                        max='20' />
-                                    <a class='btn btn-default add-btn'>+</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          <div class="card-body">
+            <h5 class="card-title">CAROB DATE BITES</h5>
+            <p class="card-text">Price: 3.13$</p>
+            <div class='quantity-counter'>
+              <div class="counter-border">
+                <div class="counter-content">
+                  <a class='btn btn-default minus-btn'>_</a>
+                  <input type='text' name='quantity' value='1' class='quantity-input' min='0' max='20' />
+                  <a class='btn btn-default add-btn'>+</a>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                <div class="card text-center" id="card-center" style="width: 335px; height: 436.87px;">
-                    <div class="card-image">
-                        <img src="images/best-sellers/ginger.png" class="card-img-top" alt="...">
-                    </div>
+        <div class="card text-center" id="card-center" style="width: 335px; height: 436.87px;">
+          <div class="card-image">
+            <img src="images/best-sellers/ginger.png" class="card-img-top" alt="...">
+          </div>
 
-                    <div class="card-body">
-                        <h5 class="card-title">GINGER BISCIUTS</h5>
-                        <p class="card-text">Price: 3.13$</p>
-                        <div class='quantity-counter'>
-                            <div class="counter-border">
-                                <div class="counter-content">
-                                    <a class='btn btn-default minus-btn'>_</a>
-                                    <input type='text' name='quantity' value='1' class='quantity-input' min='0'
-                                        max='20' />
-                                    <a class='btn btn-default add-btn'>+</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          <div class="card-body">
+            <h5 class="card-title">GINGER BISCIUTS</h5>
+            <p class="card-text">Price: 3.13$</p>
+            <div class='quantity-counter'>
+              <div class="counter-border">
+                <div class="counter-content">
+                  <a class='btn btn-default minus-btn'>_</a>
+                  <input type='text' name='quantity' value='1' class='quantity-input' min='0' max='20' />
+                  <a class='btn btn-default add-btn'>+</a>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                <div class="card text-center" style="width: 267px; height: 377.88px; margin-top: 60px;">
-                    <div class="card-image">
-                        <img src="images/best-sellers/macaron.png" class="card-img-top" alt="...">
-                    </div>
+        <div class="card text-center" style="width: 267px; height: 377.88px; margin-top: 60px;">
+          <div class="card-image">
+            <img src="images/best-sellers/macaron.png" class="card-img-top" alt="...">
+          </div>
 
-                    <div class="card-body">
-                        <h5 class="card-title">CAROB MACRON</h5>
-                        <p class="card-text">Price: 3.13$</p>
-                        <div class='quantity-counter'>
-                            <div class="counter-border">
-                                <div class="counter-content">
-                                    <a class='btn btn-default minus-btn'>_</a>
-                                    <input type='text' name='quantity' value='1' class='quantity-input' min='0'
-                                        max='20' />
-                                    <a class='btn btn-default add-btn'>+</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          <div class="card-body">
+            <h5 class="card-title">CAROB MACRON</h5>
+            <p class="card-text">Price: 3.13$</p>
+            <div class='quantity-counter'>
+              <div class="counter-border">
+                <div class="counter-content">
+                  <a class='btn btn-default minus-btn'>_</a>
+                  <input type='text' name='quantity' value='1' class='quantity-input' min='0' max='20' />
+                  <a class='btn btn-default add-btn'>+</a>
                 </div>
+              </div>
             </div>
-
-            <div class="move-right">
-                <img src="images/best-sellers/Vector 2.png" alt="">
-            </div>
+          </div>
         </div>
+      </div>
 
-        <div class="button">
-            <a class="btn btn-default btn-more">View more</a>
-        </div>
-    </section>
+      <div class="move-right">
+        <img src="images/best-sellers/Vector 2.png" alt="">
+      </div>
+    </div>
 
-    <!-- JANA -->
-    <section id="about-us">
+    <div class="button">
+      <a class="btn btn-default btn-more">View more</a>
+    </div>
+  </section>
 
-    </section>
+  <!-- JANA -->
+  <section id="about-us">
 
-    <section id="our-products">
+  </section>
 
-    </section>
+  <section id="our-products">
 
-    <!-- RAMI -->
-    <section id="seasonal-items">
+  </section>
 
-    </section>
+  <!-- RAMI -->
+  <section id="seasonal-items">
 
-    <!-- MIRNA -->
-    <section id="customization">
-        <div class="title">
-            <h2 class="main-title">Your Jar, Your Flavorful</h2>
-            <h3 class="sub-title" id="customization-sub">creation</h6>
-        </div>
+  </section>
 
-        <div class="customize">
-            <div class="ingredients">
+  <!-- MIRNA -->
+  <section id="customization">
+    <div class="title">
+      <h2 class="main-title">Your Jar, Your Flavorful</h2>
+      <h3 class="sub-title" id="customization-sub">creation</h6>
+    </div>
 
-            </div>
-            <div class="jar">
+    <div class="customize">
+      <div class="ingredients">
 
-            </div>
-        </div>
-    </section>
+      </div>
+      <div class="jar">
 
-     <!-- RAMI --> 
-    <!-- RAMI -->
-    <section id="choose-us">
+      </div>
+    </div>
+  </section>
 
-    </section>
-    
-    <!-- MIRNA -->
+  <!-- RAMI -->
+  <section id="choose-us">
 
-    <!-- MIRNA -->
-    <section id="our-blog">
-        <div class="background">
-            <img src="images/blog/image.png" alt="">
-        </div>
-        <div class="title">
-            <h2 class="main-title">Our Blog</h2>
-            <h3 class="sub-title" id="customization-sub">explore</h6>
-        </div>
-        <div class="button">
-            <a class="btn btn-default btn-more">View more</a>
-        </div>
-    </section>
+  </section>
 
-    <!-- YAZAN -->
-    <section id="customers-reviews">
+  <!-- MIRNA -->
+  <section id="our-blog">
+    <div class="background">
+      <img src="images/blog/image.png" alt="">
+    </div>
+    <div class="title">
+      <h2 class="main-title">Our Blog</h2>
+      <h3 class="sub-title" id="customization-sub">explore</h6>
+    </div>
+    <div class="button">
+      <a class="btn btn-default btn-more">View more</a>
+    </div>
+  </section>
 
-    </section>
+  <!-- YAZAN -->
+  <section id="customers-reviews">
 
-    <footer>
+  </section>
 
-    </footer>
+  <footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>
