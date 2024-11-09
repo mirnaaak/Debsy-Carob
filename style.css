@@ -48,6 +48,10 @@ section {
   margin-top: -45px;
 }
 
+.btn {
+  border: none !important;
+}
+
 .button {
   display: flex;
   justify-content: center;
@@ -175,24 +179,30 @@ section {
   font-size: 31.26px;
   text-align: center;
   color: #4c2b08;
+  background: transparent;
+  margin-bottom: -5px;
+}
+
+.quantity-input:focus {
+  outline: none !important;
 }
 
 .quantity-counter a {
-  font-family: "Romely";
+  font-family: "Poppins", sans-serif;
   text-align: center;
   color: #4c2b08;
   padding: 5px;
+  font-weight: 300;
 }
 
 .minus-btn {
   font-size: 21px !important;
-  margin-top: -17px;
+  margin-top: -16px;
 }
 
 .add-btn {
   margin-top: 3px;
   font-size: 26.05px !important;
-  -webkit-text-stroke: 0.75px #4c2b08;
 }
 
 /* customization */
@@ -201,6 +211,7 @@ section {
   background-size: contain;
   height: 708px;
   justify-content: start;
+  margin-top: 0;
 }
 
 #customization-sub {
@@ -632,6 +643,7 @@ nav a:hover {
   padding: 50px;
   background-color: #f4e8dd;
   color: #4b3b2b;
+  margin-bottom: 0;
 }
 
 .text-content {
@@ -640,7 +652,7 @@ nav a:hover {
 
 .text-content h1 {
   font-size: 5rem;
-  font-family: 'Romely';
+  font-family: "Romely";
 }
 
 .text-content p {
@@ -652,11 +664,11 @@ nav a:hover {
 
 .text-content button {
   margin-top: 20px;
- padding: 6px;
+  padding: 6px;
   border: 1px solid #4b3b2b;
   background-color: transparent;
   font-size: 0.9rem;
-  font-family: 'Romely';
+  font-family: "Romely";
   cursor: pointer;
   border-radius: 15px;
 }
@@ -665,7 +677,7 @@ nav a:hover {
   background-color: #4b3b2b;
   color: #fff;
 }
-.image-content img{
+.image-content img {
   height: 350px;
 }
 /*----- Rami (End) -----*/
