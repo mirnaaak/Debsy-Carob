@@ -590,3 +590,62 @@ nav a:hover {
   }
 }
 /*----- Cyrine (end) -----*/
+
+/*----- Rami (Start) -----*/
+body {
+  font-family: Arial, sans-serif;
+}
+@font-face {
+  font-family: 'Carlo';
+  src: url('fonts/Carlo.ttf') format('truetype'); /* Update the path if needed */
+  font-weight: 400;
+  font-style: normal;
+}
+.fall-section {
+  display: flex;
+  flex-direction: row;
+  height: 350px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+  background-color: #f4e8dd;
+  color: #4b3b2b;
+}
+
+.text-content {
+  max-width: 400px;
+}
+
+.text-content h1 {
+  font-size: 5rem;
+  font-family: 'Carlo', sans-serif;
+}
+
+.text-content p {
+  font-size: 1rem;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.text-content button {
+  margin-top: 20px;
+ padding: 6px;
+  border: 1px solid #4b3b2b;
+  background-color: transparent;
+  font-size: 0.9rem;
+  font-family: 'carlo', sans-serif;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.text-content button:hover {
+  background-color: #4b3b2b;
+  color: #fff;
+}
+.image-content img{
+  height: 350px;
+ 
+}
+
+
+/*----- Rami (End) -----*/
