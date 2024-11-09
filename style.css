@@ -1,0 +1,424 @@
+<<<<<<< HEAD
+=======
+/*----- Mirna (start) -----*/
+
+/* genral */
+@import url("https://fonts.cdnfonts.com/css/carlo");
+@import url("https://fonts.cdnfonts.com/css/parisienne");
+@import url("https://fonts.cdnfonts.com/css/quattrocento-2");
+
+body {
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -20px;
+}
+
+.main-title {
+  font-family: "Carlo", sans-serif;
+  font-size: 36.78px;
+  color: #3d240e;
+  -webkit-text-stroke: 0.29px #3d240e;
+}
+
+.sub-title {
+  display: flex;
+  justify-content: end;
+  font-family: "Parisienne", sans-serif;
+  font-size: 33.33px;
+  color: #c59f72;
+  margin-top: -37.35px;
+}
+
+/* best sellers */
+#best-sub {
+  margin-right: -17px;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.move-right,
+.move-left {
+  margin: 0 70px;
+  margin-top: -160px;
+}
+
+.cards-items {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  margin: 35px;
+  border: none;
+}
+
+.card-body {
+  padding-top: 5px !important;
+}
+
+.card-title {
+  font-family: "Carlo", sans-serif;
+  font-size: 24px;
+  -webkit-text-stroke: 0.25px #3d240e;
+  color: #3d240e;
+  margin-bottom: 0 !important;
+}
+
+.card-text {
+  font-family: "Quattrocento", sans-serif;
+  font-size: 24px;
+  color: #6c432d;
+  margin-bottom: 5px !important;
+}
+
+#card-center .card-title {
+  font-size: 28px;
+}
+
+#card-center .card-text {
+  font-size: 30px;
+}
+
+.card-image {
+  border: 2px solid #bc976c;
+  width: 267px;
+  height: 242px;
+  border-radius: 23px;
+  padding: 10px;
+}
+
+#card-center .card-image {
+  width: 335px;
+  height: 306px;
+}
+
+.card-image img {
+  height: 100%;
+  width: 100%;
+}
+
+.quantity-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.counter-border {
+  display: flex;
+  justify-content: center;
+  width: 73px;
+  height: 36.87px;
+  border-radius: 12px;
+  border: 1px solid #4c2b08;
+}
+
+.counter-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 18.5px 0;
+}
+
+.quantity-input {
+  font-family: "Carlo", sans-serif;
+  border: none;
+  width: 15px;
+  height: 33.11px;
+  font-size: 31.26px;
+  text-align: center;
+  color: #4c2b08;
+}
+
+.quantity-counter a {
+  font-family: "Carlo", sans-serif;
+  text-align: center;
+  color: #4c2b08;
+  padding: 5px;
+}
+
+.minus-btn {
+  font-size: 21px !important;
+  margin-top: -17px;
+}
+
+.add-btn {
+  margin-top: 3px;
+  font-size: 26.05px !important;
+  -webkit-text-stroke: 0.75px #4c2b08;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 107.42px;
+  height: 39px;
+  border: 1.37px solid #3d240e;
+  border-radius: 14.37px;
+  padding: 0;
+  margin-top: 5px;
+}
+
+.btn-more {
+  font-family: "Carlo", sans-serif;
+  font-size: 21.84px;
+  color: #3d240e;
+  -webkit-text-stroke: 0.16px #3d240e;
+  text-wrap: nowrap;
+  padding: 0;
+}
+
+/* customization */
+#customization {
+  background: url("images/customization/image\ 38.png") no-repeat center;
+  background-size: contain;
+}
+
+#customization-sub {
+  margin-right: -40px;
+}
+
+/* blog */
+#our-blog {
+  background: url("images/blog/image.png") no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 1520px;
+}
+
+#our-blog .title {
+  width: 100%;
+  align-items: end;
+}
+
+#our-blog .title div {
+  width: fit-content;
+}
+
+#our-blog .main-title {
+  font-size: 96px;
+}
+
+#blog-sub {
+  font-size: 60px;
+
+}
+
+/*----- Mirna (end) -----*/
+
+/*----- Cyrine (start) -----*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  padding: 10px 0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 15px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+nav a.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #555;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+/* Hamburger menu styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+.nav-links {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-links a {
+  display: inline;
+}
+
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  align-items: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.hero {
+  width: 100%;
+  height: 781.97px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 20px;
+  background-image: url("images/Untitled\ Project_enhanced\ 1@2x.png");
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+}
+
+.hero-text {
+  max-width: 50%;
+  color: #333;
+  text-align: center;
+  margin: auto;
+  margin-left: 100px;
+}
+
+.hero h1 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.hero-button {
+  border: 2px solid black;
+  background-color: transparent;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #333;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.hero-button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.carousel-dots {
+  position: absolute;
+  display: flex;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 5px;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  background-color: #333;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .search-bar {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .pc {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 2.5em;
+  }
+}
+/*----- Cyrine (end) -----*/
+>>>>>>> ded481b98291fac817d2f2e8c235e079a8137a41
