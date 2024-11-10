@@ -701,7 +701,7 @@ nav a:hover {
   display: flex;
   justify-content: end;
   font-family: "Hayward", sans-serif;
-  font-size: 33.33pxpx;
+  font-size: 33.33px;
   color: #c59f72;
   margin-top: -40px;
 position: relative;
@@ -713,6 +713,7 @@ left: 15%;
   align-items: center;
   padding: 20px;
   gap: 100px;
+  margin-top: 25px;
 }
 
 .why_us_card {
