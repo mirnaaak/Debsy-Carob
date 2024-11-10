@@ -634,6 +634,7 @@ nav a:hover {
 /*----- Cyrine (end) -----*/
 
 /*----- Rami (Start) -----*/
+/* New for fall */
 .fall-section {
   display: flex;
   flex-direction: row;
@@ -641,7 +642,7 @@ nav a:hover {
   justify-content: space-around;
   align-items: center;
   padding: 50px;
-  background-color: #f4e8dd;
+  background-color: #e0dcd2;
   color: #4b3b2b;
   margin-bottom: 0;
 }
@@ -679,5 +680,70 @@ nav a:hover {
 }
 .image-content img {
   height: 350px;
+  
 }
+/* New for fall (end) */
+
+/* choose us */
+.why_us_title{
+     display: flex;
+    flex-direction: column;
+    
+    margin-top: 30px;
+}
+.why_us_title h2{
+  font-family: "Romely";
+  font-size: 36.78px;
+  color: #3D240E;
+  -webkit-text-stroke: 0.29px #3d240e;
+}
+.why_us_title h3{
+  display: flex;
+  justify-content: end;
+  font-family: "Hayward", sans-serif;
+  font-size: 33.33pxpx;
+  color: #c59f72;
+  margin-top: -40px;
+position: relative;
+left: 15%;
+}
+.why_us_container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  gap: 100px;
+}
+
+.why_us_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 200px;
+  
+}
+
+.why_us_card img {
+  width: 87.76px;
+  height: 87.76px;
+
+}
+
+.why_us_card_content h3 {
+  font-size: 24px;
+  font-family: "Romely";
+  font-weight: 300;
+  margin-top: 15px;
+  color: #3D240E;
+}
+
+.why_us_card_content p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #000000; 
+  margin-top: 8px;
+  font-family: "Instrument Sans";
+}
+/* choose us end */
 /*----- Rami (End) -----*/
