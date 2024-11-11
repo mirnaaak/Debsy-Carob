@@ -27,9 +27,15 @@ section {
 
 .title {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin-bottom: -20px;
   margin-top: 30px;
+  gap: 15px;
+}
+
+.title-content{
+  display: flex;
+  flex-direction: column;
 }
 
 .main-title {
@@ -46,6 +52,10 @@ section {
   font-size: 33.33px;
   color: #c59f72;
   margin-top: -45px;
+}
+
+.line{
+  margin-top: 3px;
 }
 
 .btn {
@@ -76,7 +86,7 @@ section {
 /* best sellers */
 #best-sub {
   font-size: 30px;
-  margin-right: -75px;
+  margin-right: -70px;
 }
 
 .cards {
@@ -212,6 +222,10 @@ section {
   height: 708px;
   justify-content: start;
   margin-top: 0;
+}
+
+#customization .title{
+  gap: 8px;
 }
 
 #customization-sub {
@@ -396,6 +410,7 @@ h6 {
 }
 
 #our-blog .title {
+  flex-direction: column;
   width: 100%;
   align-items: end;
   position: absolute;
