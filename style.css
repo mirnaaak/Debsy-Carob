@@ -433,6 +433,7 @@ small {
 
 #our-blog .title {
   flex-direction: column;
+  align-items: start;
   width: 100%;
   align-items: end;
   position: absolute;
@@ -441,6 +442,7 @@ small {
 }
 
 #our-blog .title div {
+
   width: fit-content;
 }
 
@@ -456,8 +458,8 @@ small {
 
 #our-blog .btn-con {
   display: flex;
-  justify-content: center;
   align-items: center;
+  margin-left: 5px;
   width: 100% !important;
 }
 
@@ -721,28 +723,19 @@ nav a:hover {
 /* New for fall (end) */
 
 /* choose us */
-.why_us_title {
-  display: flex;
-  flex-direction: column;
+#choose-us .title{
+  gap: 0;
+}
 
-  margin-top: 30px;
+#choose-us .l-right{
+  margin-left: 15px;
 }
-.why_us_title h2 {
-  font-family: "Romely";
-  font-size: 36.78px;
-  color: #3d240e;
-  -webkit-text-stroke: 0.29px #3d240e;
+
+#choose-sub{
+  margin-top: -41px;
+  margin-right: -77px;
 }
-.why_us_title h3 {
-  display: flex;
-  justify-content: end;
-  font-family: "Hayward", sans-serif;
-  font-size: 33.33px;
-  color: #c59f72;
-  margin-top: -40px;
-  position: relative;
-  left: 15%;
-}
+
 .why_us_container {
   display: flex;
   justify-content: space-evenly;
@@ -834,6 +827,14 @@ nav a:hover {
 /*----- Rami (End) -----*/
 
 /* ----- Yazan (Start) ----- */
+#review .title{
+  gap: 0;
+}
+
+#review .l-right{
+  margin-left: 15px;
+}
+
 #review-sub{
   margin-top: -48px;
   margin-right: -129px;
