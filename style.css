@@ -774,7 +774,58 @@ nav a:hover {
   font-family: "Instrument Sans";
 }
 /* choose us end */
+/* Responsive adjustments for #choose-us and .fall-section */
+
+@media (max-width: 768px) {
+  /* Fall Section */
+  .fall-section {
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+    text-align: center;
+  }
+
+  .text-content h1 {
+    font-size: 3rem;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+  }
+
+  .image-content img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  /* Choose Us Section */
+  .why_us_container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .why_us_card {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .why_us_title h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .why_us_title h3 {
+    font-size: 20px;
+    text-align: center;
+    position: static;
+    margin-top: 5px;
+  }
+}
+
 /*----- Rami (End) -----*/
+
 * {
   margin: 0;
   padding: 0;
