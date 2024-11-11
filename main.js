@@ -5,9 +5,8 @@ $(document).ready(function () {
       $(this).css("width", "42px");
       $(this).css("height", "41px");
       $(this).find("h5").css("font-size", "30px");
-      $(this).closest('.size-name').css("margin", "0 -10px");
-      $(this).closest('.size-name').css("margin-top", "-30px");
-      $(this).closest('.size-name').find('small').css("display", "block");
+      $(this).closest('.size-name').css("margin-top", "-20px");
+      $(this).closest('.size-name').find('small').css("visibility", "visible");
 
     },
     function () {
@@ -15,8 +14,8 @@ $(document).ready(function () {
       $(this).css("height", "31px");
       $(this).css("margin-top", "0");
       $(this).find("h5").css("font-size", "24px");
-      $(this).closest('.size-name').css("margin", "0");
-      $(this).closest('.size-name').find('small').css("display", "none")
+      $(this).closest('.size-name').css("margin-top", "-20px");
+      $(this).closest('.size-name').find('small').css("visibility", "hidden")
     }
   );
 });
