@@ -360,7 +360,7 @@ small {
   color: #616161;
 }
 
-.size-name{
+.size-name {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -826,14 +826,10 @@ nav a:hover {
 
 /*----- Rami (End) -----*/
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
+/* ----- Yazan (Start) ----- */
+#review-sub{
+  margin-top: -48px;
+  margin-right: -129px;
 }
 
 .container {
@@ -841,11 +837,10 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
- 
-  
 }
 
-.left, .right {
+.left,
+.right {
   flex: 1;
   padding: 10px;
   text-align: center;
@@ -853,7 +848,7 @@ body {
 
 .right {
   border-left: 2px solid black;
-  flex:1;
+  flex: 1;
 }
 
 .feedback-text {
@@ -880,7 +875,7 @@ body {
 .footer {
   margin-top: 40px;
   padding: 20px;
-  background-color: #E9E4DA;
+  background-color: #e9e4da;
   display: flex;
   justify-content: space-around;
   text-align: left;
@@ -906,7 +901,7 @@ body {
 }
 
 .footer-section ul li a {
-  color: #4C2B08;
+  color: #4c2b08;
   text-decoration: none;
   font-size: 14px;
 }
@@ -915,19 +910,19 @@ body {
   margin-top: 15px;
 }
 
-.subscription input[type="email"], button {
+.subscription input[type="email"],
+button {
   padding: 10px;
   border: 2px solid black;
-  background-color:transparent;
+  background-color: transparent;
   font-size: 14px;
-  border-radius:40px;
+  border-radius: 40px;
 }
 
 .subscription button {
   background-color: black;
   color: white;
   cursor: pointer;
- 
 }
 
 .footer-bottom {
@@ -941,17 +936,18 @@ body {
 }
 
 #myInput {
-  padding-right: 30px;  
+  padding-right: 30px;
 }
 
 .image-wrapper {
   position: absolute;
-  right: 10px;  
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .image-wrapper img {
-  width: 20px;  
+  width: 20px;
   height: 20px;
 }
+/* ----- Yazan (End) ----- */
