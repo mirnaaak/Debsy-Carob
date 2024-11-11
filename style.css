@@ -763,3 +763,132 @@ left: 15%;
 }
 /* choose us end */
 /*----- Rami (End) -----*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+ 
+  
+}
+
+.left, .right {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.right {
+  border-left: 2px solid black;
+  flex:1;
+}
+
+.feedback-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.feedback-name {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.arrows {
+  display: inline-flex;
+  align-items: center;
+}
+
+.arrow {
+  font-size: 24px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #E9E4DA;
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 10px;
+}
+
+.footer-section h4 {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #4C2B08;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.subscription {
+  margin-top: 15px;
+}
+
+.subscription input[type="email"], button {
+  padding: 10px;
+  border: 2px solid black;
+  background-color:transparent;
+  font-size: 14px;
+  border-radius:40px;
+}
+
+.subscription button {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+ 
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 12px;
+}
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+#myInput {
+  padding-right: 30px;  
+}
+
+.image-wrapper {
+  position: absolute;
+  right: 10px;  
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.image-wrapper img {
+  width: 20px;  
+  height: 20px;
+}
