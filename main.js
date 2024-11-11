@@ -16,6 +16,28 @@ $(document).ready(function () {
       $(this).closest(".size-name").find("small").css("visibility", "hidden");
     }
   );
+
+  $(".minus-btn").click(function () {
+    let quantityInput = $(this)
+      .closest(".counter-content")
+      .find(".quantity-input");
+    let quantity = quantityInput.val().trim();
+    quantity--;
+    if (quantity >= 0) {
+      quantityInput.val(quantity);
+    }
+  });
+
+  $(".add-btn").click(function () {
+    let quantityInput = $(this)
+      .closest(".counter-content")
+      .find(".quantity-input");
+    let quantity = quantityInput.val().trim();
+    quantity++;
+    if (quantity <= 10) {
+      quantityInput.val(quantity);
+    }
+  });
 });
 
 // Cyrine
