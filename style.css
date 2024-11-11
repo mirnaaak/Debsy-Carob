@@ -674,7 +674,7 @@ nav a:hover {
   display: flex;
   flex-direction: row;
   height: 525px;
-  width: 1512px;
+  width: 100%;
   justify-content: left;
   align-items: center;
   padding: 90px;
@@ -786,7 +786,6 @@ nav a:hover {
     padding: 20px;
     background-size: cover;
     height: auto;
-    width: 100%;
     text-align: center;
   }
 
