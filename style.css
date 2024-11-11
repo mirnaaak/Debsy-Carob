@@ -234,8 +234,7 @@ section {
   margin-right: -96px;
 }
 
-.customize,
-.total {
+.customize {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
@@ -256,7 +255,8 @@ section {
 }
 
 .ingredients {
-  width: 45%;
+  width: 564px;
+  height: 548px;
 }
 
 #ingredients-title {
@@ -264,19 +264,34 @@ section {
   -webkit-text-stroke: 0px;
 }
 
+.ingredient{
+  width: 564px;
+  height: 331px;
+  margin-bottom: 50px;
+}
+
 .ing-left,
 .ing-right {
-  margin-top: -80px;
   cursor: pointer;
 }
 
-.ingredients-card {
+.ing-image {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  margin-top: 30px;
+  width: 564px;
+  height: 241px;
+  margin-top: 40px;
+}
+
+.total{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 489px;
+  height: 49px;
+  margin-bottom: 15px;
 }
 
 .calories,
@@ -294,10 +309,6 @@ h6 {
   font-family: "Koulen", sans-serif;
   font-size: 24px;
   color: #4c2b08;
-}
-
-.total {
-  margin: 30px 0;
 }
 
 .value {
