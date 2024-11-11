@@ -12,7 +12,6 @@ $(document).ready(function () {
     function () {
       $(this).css("width", "32px");
       $(this).css("height", "31px");
-      $(this).css("margin-top", "0");
       $(this).find("h5").css("font-size", "24px");
       $(this).closest('.size-name').css("margin-top", "-20px");
       $(this).closest('.size-name').find('small').css("visibility", "hidden")
