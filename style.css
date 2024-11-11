@@ -218,7 +218,8 @@ section {
 /* customization */
 #customization {
   background: url("images/customization/image\ 38.png") no-repeat center;
-  background-size: contain;
+  background-size: cover;
+  width: 100%;
   height: 708px;
   justify-content: start;
   margin-top: 0;
@@ -573,7 +574,7 @@ nav a:hover {
   justify-content: flex-start;
   padding: 0 20px;
   background-image: url("images/Untitled\ Project_enhanced\ 1@2x.png");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   margin: 0;
@@ -677,17 +678,19 @@ nav a:hover {
   display: flex;
   flex-direction: row;
   height: 525px;
+  width: 100%;
   justify-content: space-around;
   align-items: center;
   padding: 50px;
   background-image: url("images/New\ for\ fall/cookies and pumpkins.png");
   background-repeat: no-repeat;
+  background-size: cover;
   color: #4b3b2b;
   margin-bottom: 0;
 }
 
 .text-content {
-  max-width: 400px;
+  width: 100%;
 }
 
 .text-content h1 {
