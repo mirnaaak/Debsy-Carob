@@ -425,19 +425,15 @@ small {
   height: 564px;
   display: flex;
   justify-content: start;
-}
-
-#our-blog .background {
-  width: 100%;
-  height: 100%;
+  background-image: url("images/blog/image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #our-blog .title {
   flex-direction: column;
-  align-items: start;
-  width: 100%;
   align-items: end;
-  position: absolute;
+  width: 100%;
   margin-top: 100px;
   margin-right: 300px;
 }
