@@ -340,7 +340,7 @@ h6 {
   flex-direction: row;
 }
 
-.size{
+.size {
   width: 208px;
   height: 70px;
   gap: 10px;
@@ -442,7 +442,6 @@ small {
 }
 
 #our-blog .title div {
-
   width: fit-content;
 }
 
@@ -677,11 +676,12 @@ nav a:hover {
 .fall-section {
   display: flex;
   flex-direction: row;
-  height: 350px;
+  height: 525px;
   justify-content: space-around;
   align-items: center;
   padding: 50px;
-  background-color: #e0dcd2;
+  background-image: url("images/New\ for\ fall/cookies and pumpkins.png");
+  background-repeat: no-repeat;
   color: #4b3b2b;
   margin-bottom: 0;
 }
@@ -717,21 +717,18 @@ nav a:hover {
   background-color: #4b3b2b;
   color: #fff;
 }
-.image-content img {
-  height: 350px;
-}
 /* New for fall (end) */
 
 /* choose us */
-#choose-us .title{
+#choose-us .title {
   gap: 0;
 }
 
-#choose-us .l-right{
+#choose-us .l-right {
   margin-left: 15px;
 }
 
-#choose-sub{
+#choose-sub {
   margin-top: -41px;
   margin-right: -77px;
 }
@@ -827,15 +824,15 @@ nav a:hover {
 /*----- Rami (End) -----*/
 
 /* ----- Yazan (Start) ----- */
-#review .title{
+#review .title {
   gap: 0;
 }
 
-#review .l-right{
+#review .l-right {
   margin-left: 15px;
 }
 
-#review-sub{
+#review-sub {
   margin-top: -48px;
   margin-right: -129px;
 }
