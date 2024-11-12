@@ -493,6 +493,7 @@ header {
   width: 100%;
   padding: 10px 0;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
 }
 
 nav {
@@ -513,7 +514,8 @@ nav a {
 }
 
 nav a.logo {
-  font-size: 1.5rem;
+  font-family: "Romely";
+  font-size: 40px;
   font-weight: bold;
 }
 
@@ -561,6 +563,8 @@ nav a:hover {
 }
 
 .nav-links.active {
+  font-family: "Romely";
+  font-size: 28px;
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -596,18 +600,27 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-size: 2em;
+  font-family: "Romely";
+  font-size: 55.8px;
   color: #333;
   margin-bottom: 10px;
 }
 
+.hero br{
+  font-family: "Romely";
+  font-size: 111.59px;
+}
 .hero p {
-  font-size: 1.2em;
+  font-family: "Actor", sans-serif;
+  font-size: 23.25px;
   margin-bottom: 20px;
 }
 
 .hero-button {
+  font-family: "Romely";
+  font-size: 20.16px;
   border: 2px solid black;
+  border-radius: 14.37px;
   background-color: transparent;
   padding: 10px 20px;
   font-size: 1em;
@@ -642,6 +655,19 @@ nav a:hover {
 
 .carousel-dot.active {
   background-color: #333;
+}
+
+.icons button {
+  background-color: transparent;
+  color: #4c2b08;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 24px; /* Adjust the size of the icon */
+}
+
+button:hover {
+  color: #333; /* Change color on hover */
 }
 
 .mobile {
