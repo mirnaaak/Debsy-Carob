@@ -264,7 +264,7 @@ section {
   -webkit-text-stroke: 0px;
 }
 
-.ingredient{
+.ingredient {
   width: 564px;
   height: 331px;
   margin-bottom: 50px;
@@ -285,7 +285,7 @@ section {
   margin-top: 40px;
 }
 
-.total{
+.total {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -775,14 +775,14 @@ nav a:hover {
 .why_us_card_content h3 {
   font-size: 24px;
   font-family: "Romely";
-  font-weight: 300;
   margin-top: 15px;
   color: #3d240e;
 }
 
 .why_us_card_content p {
-  font-size: 15px;
-  font-weight: 400;
+  font-size: 20px;
+  width: 222px;
+  height: 72px;
   color: #000000;
   margin-top: 8px;
   font-family: "Instrument Sans";
@@ -848,151 +848,148 @@ nav a:hover {
 /*----- Rami (End) -----*/
 
 /* Jana (Start) */
-.content{
-    float: left;
+.content {
+  float: left;
 }
 #about-us .main-title {
-    font-family: "Romely";
-    font-size: 30px;
-    color: #3d240e;
-    margin-bottom: 0;
-  }
-  
-  #about-us .sub-title {
-    font-family: "Hayward", sans-serif;
-    font-size: 30px;
-    color: #c59f72;
-    margin-top: -30px;
-    margin-right: 97px;
-  }
-  
-  .about-paragraph {
-    font-family: "Quattrocento", sans-serif;
-    font-size: 18px;
-    color: #6c432d;
-    line-height: 1.5;
-    margin-top: 20px;
-    max-width: 600px;
+  font-family: "Romely";
+  font-size: 30px;
+  color: #3d240e;
+  margin-bottom: 0;
+}
 
+#about-us .sub-title {
+  font-family: "Hayward", sans-serif;
+  font-size: 30px;
+  color: #c59f72;
+  margin-top: -30px;
+  margin-right: 97px;
+}
 
-  }
-  
-  .about-button a {
-    font-family: "Romely";
-    font-size: 21.84px;
-    color: #3d240e;
-    text-wrap: nowrap;
-    padding: 0;
+.about-paragraph {
+  font-family: "Quattrocento", sans-serif;
+  font-size: 18px;
+  color: #6c432d;
+  line-height: 1.5;
+  margin-top: 20px;
+  max-width: 600px;
+}
 
-  }
-  
-  .about-button a:hover {
-    background-color: #3d240e;
-    color: #ffffff;
-  }
-  
-  #our-products .main-title {
-    font-family: "Romely";
-    font-size: 30px;
-    color: #3d240e;
-    margin-bottom: 0;
-  }
-  
-  #our-products .sub-title {
-    font-family: "Hayward", sans-serif;
-    font-size: 30px;
-    color: #c59f72;
-    margin-top: -30px;
-    margin-right: -40px;
-  }
-  #about-us {
-    background-image: url ("images/about/marble.png");
-    background-size: contain;
-  
+.about-button a {
+  font-family: "Romely";
+  font-size: 21.84px;
+  color: #3d240e;
+  text-wrap: nowrap;
+  padding: 0;
+}
+
+.about-button a:hover {
+  background-color: #3d240e;
+  color: #ffffff;
+}
+
+#our-products .main-title {
+  font-family: "Romely";
+  font-size: 30px;
+  color: #3d240e;
+  margin-bottom: 0;
+}
+
+#our-products .sub-title {
+  font-family: "Hayward", sans-serif;
+  font-size: 30px;
+  color: #c59f72;
+  margin-top: -30px;
+  margin-right: -40px;
+}
+#about-us {
+  background-image: url ("images/about/marble.png");
+  background-size: contain;
+
   justify-content: start;
   margin-top: 0;
-  }
+}
 
-  #our-products {
-    padding: 50px 0;
-    position: relative;
-  }
-  
-  .container-products .products-title {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .products-decor-left img,
-  .products-decor-right img {
-    position: absolute;
-    width: 150px;
-  }
-  
-  .products-decor-left img {
-    left: 0;
-    top: 20%;
-  }
-  
-  .products-decor-right img {
-    right: 0;
-    top: 20%;
-  }
-  
-  .products-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    justify-items: center;
-  }
-  
-  .product-card {
-    background-color: #f0f0f0;
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    width: 267px;
-    padding: 20px;
-  }
-  
-  .product-card-image img {
-    border: 2px solid #bc976c;
-    width: 267px;
-    height: 242px;
-    border-radius: 23px;
-    padding: 10px;
-  }
-  
-  .product-card-title {
-    font-family: "Romely";
-    font-size: 20   px;
-    -webkit-text-stroke: 0.25px #3d240e;
-    color: #3d240e;
-    margin-bottom: 0 !important;
-  }
-  
-  .product-card-price {
-    color: #5b3a27;
-    font-size: 14px;
-  }
-  
-  .product-quantity-counter {
-    display: flex;
-    justify-content: center;
-    width: 73px;
-    height: 36.87px;
-    border-radius: 12px;
-    border: 1px solid #4c2b08;
-  }
-  
-  .product-quantity-counter .btn {
-    font-size: 16px;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
-  .product-quantity-input {
-    font-family: "Romely";
+#our-products {
+  padding: 50px 0;
+  position: relative;
+}
+
+.container-products .products-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.products-decor-left img,
+.products-decor-right img {
+  position: absolute;
+  width: 150px;
+}
+
+.products-decor-left img {
+  left: 0;
+  top: 20%;
+}
+
+.products-decor-right img {
+  right: 0;
+  top: 20%;
+}
+
+.products-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.product-card {
+  background-color: #f0f0f0;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 267px;
+  padding: 20px;
+}
+
+.product-card-image img {
+  border: 2px solid #bc976c;
+  width: 267px;
+  height: 242px;
+  border-radius: 23px;
+  padding: 10px;
+}
+
+.product-card-title {
+  font-family: "Romely";
+  font-size: 20 px;
+  -webkit-text-stroke: 0.25px #3d240e;
+  color: #3d240e;
+  margin-bottom: 0 !important;
+}
+
+.product-card-price {
+  color: #5b3a27;
+  font-size: 14px;
+}
+
+.product-quantity-counter {
+  display: flex;
+  justify-content: center;
+  width: 73px;
+  height: 36.87px;
+  border-radius: 12px;
+  border: 1px solid #4c2b08;
+}
+
+.product-quantity-counter .btn {
+  font-size: 16px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.product-quantity-input {
+  font-family: "Romely";
   border: none;
   width: 15px;
   height: 33.11px;
@@ -1001,20 +998,18 @@ nav a:hover {
   color: #4c2b08;
   background: transparent;
   margin-bottom: -5px;
-  }
-  
-  .btn-products-more {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #403020;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  
-  
+}
+
+.btn-products-more {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #403020;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
 /* ----- Yazan (Start) ----- */
 #review .title {
   gap: 0;
