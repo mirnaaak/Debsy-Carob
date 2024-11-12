@@ -32,7 +32,7 @@
         <input type="text" placeholder="Search">
         <span>&#128269;</span>
       </div>
-      <div class="hamburger" onclick="toggleMenu()">
+      <div class="hamburger">
         <div></div>
         <div></div>
         <div></div>
@@ -87,7 +87,7 @@
               <div class="counter-border">
                 <div class="counter-content">
                   <a class='btn btn-default minus-btn'>_</a>
-                  <input type='text' name='quantity' value='1' class='quantity-input' min='0' max='20' readonly />
+                  <input type='text' name='quantity' value='1' class='quantity-input' readonly />
                   <a class='btn btn-default add-btn'>+</a>
                 </div>
               </div>
@@ -107,7 +107,7 @@
               <div class="counter-border">
                 <div class="counter-content">
                   <a class='btn btn-default minus-btn'>_</a>
-                  <input type='text' name='quantity' value='1' class='quantity-input' min='0' max='20' readonly />
+                  <input type='text' name='quantity' value='1' class='quantity-input' readonly />
                   <a class='btn btn-default add-btn'>+</a>
                 </div>
               </div>
@@ -127,7 +127,7 @@
               <div class="counter-border">
                 <div class="counter-content">
                   <a class='btn btn-default minus-btn'>_</a>
-                  <input type='text' name='quantity' value='1' class='quantity-input' min='0' max='20' readonly />
+                  <input type='text' name='quantity' value='1' class='quantity-input' readonly />
                   <a class='btn btn-default add-btn'>+</a>
                 </div>
               </div>
@@ -324,9 +324,6 @@
         pumpkin puree and carob molasses with ginger and cinnamon powder.</p>
       <button>PUMPKIN UP!</button>
     </div>
-    <div class="image-content">
-      <img src="images/New for fall/cookies and pumpkins.png" alt="Pumpkin Cookies" class="cookies">
-    </div>
   </section>
 
   <!-- MIRNA -->
@@ -348,28 +345,28 @@
       <div class="ingredients">
         <h4 class="main-title" id="ingredients-title">Ingredients</h4>
 
-        <div class="ingredients-card">
-          <div class="ing-left">
-            <img src="images/customization/Vector 14.png" alt="">
-          </div>
-
-          <div class="ingredient">
+        <!-- <div class="ingredients-card"> -->
+        <div class="ingredient">
+          <div class="ing-image">
+            <div class="ing-left">
+              <img src="images/customization/Vector 14.png" alt="">
+            </div>
             <img src="images/customization/Untitled-1 1.png" alt="">
-            <h5 id="ing-title">Peanut butter</h5>
-            <div class='quantity-counter'>
-              <div class="counter-border">
-                <div class="counter-content">
-                  <a class='btn btn-default minus-btn'>_</a>
-                  <input type='text' name='quantity' value='1' class='quantity-input' min='0' max='20' />
-                  <a class='btn btn-default add-btn'>+</a>
-                </div>
+            <div class="ing-right">
+              <img src="images/customization/Vector 12.png" alt="">
+            </div>
+          </div>
+          <h5 id="ing-title">Peanut butter</h5>
+          <div class='quantity-counter'>
+            <div class="counter-border">
+              <div class="counter-content">
+                <a class='btn btn-default minus-btn'>_</a>
+                <input type='text' name='quantity' value='1' class='quantity-input' readonly />
+                <a class='btn btn-default add-btn'>+</a>
               </div>
             </div>
           </div>
-
-          <div class="ing-right">
-            <img src="images/customization/Vector 12.png" alt="">
-          </div>
+          <!-- </div> -->
         </div>
 
         <div class="total">
@@ -446,9 +443,17 @@
 
   <!-- RAMI -->
   <section id="choose-us">
-    <div class="why_us_title">
-      <h2>Crafted with care. Chosen</h2>
-      <h3>By you</h3>
+    <div class="title">
+      <div class="line">
+        <img src="images/Line 11.png" alt="">
+      </div>
+      <div class="title-content">
+        <h2 class="main-title">Crafted with care. Chosen</h2>
+        <h3 class="sub-title" id="choose-sub">by you</h3>
+      </div>
+      <div class="line l-right">
+        <img src="images/Line 11.png" alt="">
+      </div>
     </div>
     <div class="why_us_container">
       <div class="why_us_card">
@@ -474,19 +479,11 @@
           <p> Enjoy pure flavors made from 100% natural ingredients.</p>
         </div>
       </div>
-
-
-
     </div>
-
-
   </section>
 
   <!-- MIRNA -->
   <section id="our-blog">
-    <div class="background">
-      <img src="images/blog/image.png" alt="">
-    </div>
     <div class="title">
       <div>
         <h2 class="main-title">Our Blog</h2>
@@ -510,22 +507,21 @@
         <h2 class="main-title">Customer Love and Honest Feedback</h2>
         <h3 class="sub-title" id="review-sub">from you</h3>
       </div>
-      <div class="line">
+      <div class="line l-right">
         <img src="images/Line 11.png" alt="">
       </div>
     </div>
     <div class="container">
       <div class="left">
-        <h3>Customer Love and Honest Feedback</h3>
         <p>Over 1295 happy customers have spoken</p>
-        <button onclick="showFeedback()">Read Feedback</button>
+        <button id="readF">Read All</button>
       </div>
       <div class="middle">
 
       </div>
       <div class="right">
         <div class="arrows">
-          <span class="arrow" onclick="previousFeedback()">&#8592;</span>
+          <span class="arrow arrow-prev">&#8592;</span>
           <div>
             <p class="feedback-text" id="feedbackText">Carob is a game-changer for vegans! Their naturally sweet,
               plant-based carob treats are made with clean ingredients, and the family story adds a special touch. It's
@@ -533,7 +529,7 @@
               snack I can enjoy without compromise!</p>
             <p class="feedback-name" id="feedbackName">Sara M</p>
           </div>
-          <span class="arrow" onclick="nextFeedback()">&#8594;</span>
+          <span class="arrow arrow-next">&#8594;</span>
         </div>
       </div>
     </div>
@@ -559,8 +555,8 @@
     <div class="footer-section">
       <h4>Contact Us</h4>
       <ul>
-        <li>Phone: 96-71459862</li>
-        <li>Email: Debsycarobegmailcom</li>
+        <li>Phone: 961-71459862</li>
+        <li>Email: Debsycarob@gmailcom</li>
       </ul>
 
     </div>
@@ -577,44 +573,6 @@
   <div class="footer-bottom">
     Copyright &copy; debsycarob 2022
   </div>
-
-
-  <script>
-    const feedbacks = [
-      { text: "Carob is a game-changer for vegans! Their naturally sweet, plant-based carob treats are made with clean ingredients, and the family story adds a special touch. It's a snack I can enjoy without compromise!", name: "Sara M" },
-      { text: "Debsy Carob has been my go-to for healthy snacks. The taste and quality are unbeatable!", name: "Alex J" },
-      { text: "Finally a treat that fits my dietary restrictions without sacrificing taste. Highly recommended!", name: "Mona K" }
-    ];
-
-    let currentFeedback = 0;
-
-    function showFeedback() {
-      const feedback = feedbacks[currentFeedback];
-      document.getElementById("feedbackText").innerText = feedback.text;
-      document.getElementById("feedbackName").innerText = feedback.name;
-    }
-
-    function nextFeedback() {
-      currentFeedback = (currentFeedback + 1) % feedbacks.length;
-      showFeedback();
-    }
-
-    function previousFeedback() {
-      currentFeedback = (currentFeedback - 1 + feedbacks.length) % feedbacks.length;
-      showFeedback();
-    }
-
-    window.onload = showFeedback;
-    document.querySelector('.input-with-icon').addEventListener('keypress', function (event) {
-      if (event.key === 'Enter') {
-
-        console.log("Form submitted");
-      }
-    });
-
-  </script>
-
-
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

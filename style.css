@@ -184,7 +184,7 @@ section {
 .quantity-input {
   font-family: "Romely";
   border: none;
-  width: 15px;
+  width: 25px;
   height: 33.11px;
   font-size: 31.26px;
   text-align: center;
@@ -218,7 +218,8 @@ section {
 /* customization */
 #customization {
   background: url("images/customization/image\ 38.png") no-repeat center;
-  background-size: contain;
+  background-size: cover;
+  width: 100%;
   height: 708px;
   justify-content: start;
   margin-top: 0;
@@ -233,8 +234,7 @@ section {
   margin-right: -96px;
 }
 
-.customize,
-.total {
+.customize {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
@@ -255,7 +255,8 @@ section {
 }
 
 .ingredients {
-  width: 45%;
+  width: 564px;
+  height: 548px;
 }
 
 #ingredients-title {
@@ -263,19 +264,34 @@ section {
   -webkit-text-stroke: 0px;
 }
 
+.ingredient{
+  width: 564px;
+  height: 331px;
+  margin-bottom: 50px;
+}
+
 .ing-left,
 .ing-right {
-  margin-top: -80px;
   cursor: pointer;
 }
 
-.ingredients-card {
+.ing-image {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  margin-top: 30px;
+  width: 564px;
+  height: 241px;
+  margin-top: 40px;
+}
+
+.total{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 489px;
+  height: 49px;
+  margin-bottom: 15px;
 }
 
 .calories,
@@ -293,10 +309,6 @@ h6 {
   font-family: "Koulen", sans-serif;
   font-size: 24px;
   color: #4c2b08;
-}
-
-.total {
-  margin: 30px 0;
 }
 
 .value {
@@ -340,7 +352,7 @@ h6 {
   flex-direction: row;
 }
 
-.size{
+.size {
   width: 208px;
   height: 70px;
   gap: 10px;
@@ -424,18 +436,15 @@ small {
   height: 564px;
   display: flex;
   justify-content: start;
-}
-
-#our-blog .background {
-  width: 100%;
-  height: 100%;
+  background-image: url("images/blog/image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #our-blog .title {
   flex-direction: column;
-  width: 100%;
   align-items: end;
-  position: absolute;
+  width: 100%;
   margin-top: 100px;
   margin-right: 300px;
 }
@@ -456,8 +465,8 @@ small {
 
 #our-blog .btn-con {
   display: flex;
-  justify-content: center;
   align-items: center;
+  margin-left: 5px;
   width: 100% !important;
 }
 
@@ -572,7 +581,7 @@ nav a:hover {
   justify-content: flex-start;
   padding: 0 20px;
   background-image: url("images/Untitled\ Project_enhanced\ 1@2x.png");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   margin: 0;
@@ -675,74 +684,72 @@ nav a:hover {
 .fall-section {
   display: flex;
   flex-direction: row;
-  height: 350px;
-  justify-content: space-around;
+  height: 525px;
+  width: 100%;
+  justify-content: left;
   align-items: center;
-  padding: 50px;
-  background-color: #e0dcd2;
+  padding: 90px;
+  background-image: url("images/New\ for\ fall/cookies and pumpkins.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #4b3b2b;
   margin-bottom: 0;
 }
 
 .text-content {
-  max-width: 400px;
+  width: 560px;
+  height: 212px;
+  margin-bottom: 100px;
 }
 
 .text-content h1 {
-  font-size: 5rem;
+  font-size: 111.59px;
   font-family: "Romely";
 }
 
 .text-content p {
   font-family: "Instrument Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 22px;
   margin-top: 10px;
   line-height: 1.5;
+  width: 511px;
+  height: 95px;
+  text-align: justify;
 }
 
 .text-content button {
-  margin-top: 20px;
+  margin-top: 35px;
   padding: 6px;
   border: 1px solid #4b3b2b;
   background-color: transparent;
-  font-size: 0.9rem;
+  font-size: 20.16px;
   font-family: "Romely";
   cursor: pointer;
   border-radius: 15px;
+  width: 130.68px;
+  height: 36px;
 }
 
 .text-content button:hover {
   background-color: #4b3b2b;
   color: #fff;
 }
-.image-content img {
-  height: 350px;
-}
 /* New for fall (end) */
 
 /* choose us */
-.why_us_title {
-  display: flex;
-  flex-direction: column;
+#choose-us .title {
+  gap: 0;
+}
 
-  margin-top: 30px;
+#choose-us .l-right {
+  margin-left: 15px;
 }
-.why_us_title h2 {
-  font-family: "Romely";
-  font-size: 36.78px;
-  color: #3d240e;
-  -webkit-text-stroke: 0.29px #3d240e;
+
+#choose-sub {
+  margin-top: -41px;
+  margin-right: -77px;
 }
-.why_us_title h3 {
-  display: flex;
-  justify-content: end;
-  font-family: "Hayward", sans-serif;
-  font-size: 33.33px;
-  color: #c59f72;
-  margin-top: -40px;
-  position: relative;
-  left: 15%;
-}
+
 .why_us_container {
   display: flex;
   justify-content: space-evenly;
@@ -784,28 +791,35 @@ nav a:hover {
 /* Responsive adjustments for #choose-us and .fall-section */
 
 @media (max-width: 768px) {
-  /* Fall Section */
+  /* Fall section */
   .fall-section {
     flex-direction: column;
     padding: 20px;
+    background-size: cover;
     height: auto;
     text-align: center;
   }
 
+  .text-content {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
   .text-content h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .text-content p {
     font-size: 1rem;
-  }
-
-  .image-content img {
     width: 100%;
-    height: auto;
-    margin-top: 20px;
+    line-height: 1.4;
   }
 
+  .text-content button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    width: auto;
+  }
   /* Choose Us Section */
   .why_us_container {
     flex-direction: column;
@@ -1002,7 +1016,15 @@ nav a:hover {
   
   
 /* ----- Yazan (Start) ----- */
-#review-sub{
+#review .title {
+  gap: 0;
+}
+
+#review .l-right {
+  margin-left: 15px;
+}
+
+#review-sub {
   margin-top: -48px;
   margin-right: -129px;
 }
