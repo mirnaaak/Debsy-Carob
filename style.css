@@ -6,6 +6,7 @@
 @import url("https://fonts.cdnfonts.com/css/poppins");
 @import url("https://fonts.cdnfonts.com/css/koulen");
 @import url("https://fonts.cdnfonts.com/css/instrument-sans");
+@import url('https://fonts.cdnfonts.com/css/actor');
 
 @font-face {
   font-family: "Romely";
@@ -505,35 +506,29 @@ small {
 }
 
 header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-<<<<<<< HEAD
-  padding: -40px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #fff;
-  z-index: 1000;
-  
-=======
   height: 107px;
   padding: 10px 0;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
->>>>>>> 17213e21b524237708a929525a35b0477c89f72d
 }
 
 nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
-  margin: 0 auto;
   padding: 0 20px;
-  white-space: nowrap;
-  margin-left: 15px;
-  
+  white-space: nowrap;  
 }
 
 .nav-links {
@@ -545,23 +540,17 @@ nav {
 nav a {
   font-family: "Romely";
   text-decoration: none;
-  color: #333;
+  color: #4C2B08;
   margin: 0 15px;
-  font-weight: 500;
   font-size: 28px;
-  font-weight: lighter;
   white-space: nowrap;
- 
+  -webkit-text-stroke: 0.25px #3D240E;
 }
 
 nav .logo {
   font-family: "Romely";
   font-size: 40px;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #555;
+  -webkit-text-stroke: 0.5px #4C2B08;
 }
 
 .search-bar {
@@ -632,7 +621,8 @@ button:hover {
 }
 
 .hero {
-  width: 1512px;
+  margin-top: 0;
+  width: 100%;
   height: 781.97px;
   display: flex;
   align-items: center;
@@ -656,8 +646,17 @@ button:hover {
 
 .hero h1 {
   font-family: "Romely";
+  font-size: 111.59px;
+  color: #3D240E;
+  margin-bottom: 10px;
+  text-wrap: nowrap;
+}
+
+.hero h2 {
+  font-family: "Romely";
   font-size: 55.8px;
-  color: #333;
+  color: #3D240E;
+  text-wrap: nowrap;
   margin-bottom: 10px;
 }
 
@@ -669,17 +668,18 @@ button:hover {
   font-family: "Actor", sans-serif;
   font-size: 23.25px;
   margin-bottom: 20px;
+  color: #3D240E;
 }
 
 .hero-button {
+  width: 99.16px;
+  height: 36px;
   font-family: "Romely";
   font-size: 20.16px;
-  border: 2px solid black;
-  border-radius: 14.37px;
+  border: 1.26px solid #3D240E;
+  border-radius: 13.26px;
   background-color: transparent;
-  padding: 10px 20px;
-  font-size: 1em;
-  color: #333;
+  color: #3D240E;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
@@ -687,7 +687,7 @@ button:hover {
 }
 
 .hero-button:hover {
-  background-color: #333;
+  background-color: #3D240E;
   color: #fff;
 }
 
@@ -703,7 +703,7 @@ button:hover {
 .carousel-dot {
   width: 12px;
   height: 12px;
-  background-color: #ccc;
+  background-color: #BC976C;
   border-radius: 50%;
   cursor: pointer;
   margin-top: 40px;
@@ -711,16 +711,18 @@ button:hover {
 }
 
 .carousel-dot.active {
-  background-color: #333;
+  background-color: #3D240E;
 }
-
-
 
 .mobile {
   display: none;
 }
 
 @media (max-width: 768px) {
+  header{
+    display: block;
+  }
+
   .search-bar {
     display: none;
   }
@@ -867,7 +869,6 @@ button:hover {
   .fall-section {
     flex-direction: column;
     padding: 20px;
-    background-size: cover;
     height: auto;
     text-align: center;
   }
