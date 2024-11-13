@@ -482,6 +482,7 @@ small {
 #our-blog .btn-con {
   display: flex;
   align-items: center;
+  justify-content:center ;
   margin-left: 5px;
   width: 100% !important;
 }
@@ -637,18 +638,18 @@ button:hover {
 }
 
 .hero-text {
-  max-width: 50%;
-  color: #333;
+  width: 50%;
   text-align: center;
   margin: auto;
-  margin-left: 100px;
+  margin-top: 180px;
+  margin-left: 200px;
 }
 
 .hero h1 {
   font-family: "Romely";
   font-size: 111.59px;
   color: #3D240E;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   text-wrap: nowrap;
 }
 
@@ -667,7 +668,7 @@ button:hover {
 .hero p {
   font-family: "Actor", sans-serif;
   font-size: 23.25px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   color: #3D240E;
 }
 
