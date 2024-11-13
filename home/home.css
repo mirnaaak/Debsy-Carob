@@ -1,0 +1,865 @@
+/*----- Cyrine (start) -----*/
+
+/* banner */
+.hero {
+  margin-top: 0;
+  width: 100%;
+  height: 781.97px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 20px;
+  background-image: url("images/banner/banner.png");
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero-text {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  margin-top: 180px;
+  margin-left: 200px;
+}
+
+.hero h1 {
+  font-family: "Romely";
+  font-size: 111.59px;
+  color: #3d240e;
+  margin-bottom: 5px;
+  text-wrap: nowrap;
+}
+
+.hero h2 {
+  font-family: "Romely";
+  font-size: 55.8px;
+  color: #3d240e;
+  text-wrap: nowrap;
+  margin-bottom: 10px;
+}
+
+.hero br {
+  font-family: "Romely";
+  font-size: 111.59px;
+}
+.hero p {
+  font-family: "Actor", sans-serif;
+  font-size: 23.25px;
+  margin-bottom: 50px;
+  color: #3d240e;
+}
+
+.hero-button {
+  width: 99.16px;
+  height: 36px;
+  font-family: "Romely";
+  font-size: 20.16px;
+  border: 1.26px solid #3d240e;
+  border-radius: 13.26px;
+  background-color: transparent;
+  color: #3d240e;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.hero-button:hover {
+  background-color: #3d240e;
+  color: #fff;
+}
+
+.carousel-dots {
+  position: absolute;
+  display: flex;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 5px;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #bc976c;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.carousel-dot.active {
+  background-color: #3d240e;
+}
+
+@media (max-width: 768px) {
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 2.5em;
+  }
+}
+
+/*----- Cyrine (end) -----*/
+
+/*----- Mirna (start) -----*/
+
+/* best sellers */
+#best-sellers {
+  margin: 30px 0;
+}
+
+#best-sub {
+  font-size: 30px;
+  margin-right: -70px;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.move-right,
+.move-left {
+  margin: 0 70px;
+  margin-top: -100px;
+  cursor: pointer;
+}
+
+.cards-items {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  margin: 0 30px;
+  margin-bottom: 20px;
+}
+
+.card {
+  border: none;
+  width: 267px;
+  height: 375.87px;
+  margin-top: 80px;
+}
+
+#card-center {
+  width: 335px;
+  height: 441.87px;
+  margin-top: 60px;
+}
+
+.card-body {
+  padding-top: 5px !important;
+}
+
+.card-title {
+  font-family: "Romely";
+  font-size: 24px;
+  -webkit-text-stroke: 0.25px #3d240e;
+  color: #3d240e;
+  margin-bottom: 0 !important;
+}
+
+.card-text {
+  font-family: "Quattrocento", sans-serif;
+  font-size: 24px;
+  color: #6c432d;
+  margin-bottom: 5px !important;
+}
+
+#card-center .card-title {
+  font-size: 28px;
+}
+
+#card-center .card-text {
+  font-size: 30px;
+}
+
+.card-image {
+  border: 2px solid #bc976c;
+  width: 267px;
+  height: 242px;
+  border-radius: 23px;
+  padding: 10px;
+}
+
+#card-center .card-image {
+  width: 335px;
+  height: 306px;
+}
+
+.card-image img {
+  height: 100%;
+  width: 100%;
+}
+
+.quantity-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.counter-border {
+  display: flex;
+  justify-content: center;
+  width: 73px;
+  height: 36.87px;
+  border-radius: 12px;
+  border: 1px solid #4c2b08;
+}
+
+.counter-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 18.5px 0;
+}
+
+.quantity-input {
+  font-family: "Romely";
+  border: none;
+  width: 25px;
+  height: 33.11px;
+  font-size: 31.26px;
+  text-align: center;
+  color: #4c2b08;
+  background: transparent;
+  margin-bottom: -5px;
+}
+
+.quantity-counter a {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #4c2b08;
+  padding: 5px;
+  font-weight: 300;
+}
+
+.minus-btn {
+  font-size: 21px !important;
+  margin-top: -16px;
+}
+
+.add-btn {
+  margin-top: 3px;
+  font-size: 26.05px !important;
+}
+
+.cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  width: 105px;
+  height: 33.87px;
+}
+
+/*----- Mirna (end) -----*/
+
+/*----- Jana (start) -----*/
+
+/* about */
+#about-us {
+  background-image: url("images/about/marble.png");
+  background-size: cover;
+  width: 100%;
+  height: 416px;
+}
+
+#about-sub {
+  font-size: 30px;
+  margin-top: -37px;
+  margin-right: -107px;
+}
+
+.container-about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;
+  /* gap: 208px; */
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-left: 150px;
+  width: 812.22px;
+  height: 174px;
+}
+
+.about-paragraph {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 22px;
+  color: #4c2b08;
+  text-align: justify;
+  width: 100%;
+}
+
+.image-section {
+  width: 394.65px;
+  height: 306px;
+}
+
+.rounded-rec {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 223.24px;
+  height: 264px;
+  border: 2px solid #bc976c;
+  border-radius: 97px;
+}
+
+/* products */
+#products-sub {
+  margin-top: -40px;
+  margin-right: -82px;
+}
+
+.products-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.products-cards .row {
+  display: flex;
+  flex-direction: row;
+  gap: 43px;
+}
+
+.products-cards .cart-info {
+  gap: 19px;
+}
+
+.products-cards .card {
+  margin-top: 10px;
+}
+/*----- Jana (end) -----*/
+
+/*----- Rami (Start) -----*/
+
+/* New for fall */
+.fall-section {
+  display: flex;
+  flex-direction: row;
+  height: 525px;
+  width: 100%;
+  justify-content: left;
+  align-items: center;
+  padding: 90px;
+  background-image: url("images/new-for-fall/cookies\ and\ pumpkins.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #4b3b2b;
+  margin-bottom: 0;
+}
+
+.text-content {
+  width: 560px;
+  height: 212px;
+  margin-bottom: 100px;
+}
+
+.text-content h1 {
+  font-size: 111.59px;
+  font-family: "Romely";
+}
+
+.text-content p {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 22px;
+  margin-top: 10px;
+  line-height: 1.5;
+  width: 511px;
+  height: 95px;
+  text-align: justify;
+}
+
+.text-content button {
+  margin-top: 35px;
+  padding: 6px;
+  border: 1px solid #4b3b2b;
+  background-color: transparent;
+  font-size: 20.16px;
+  font-family: "Romely";
+  cursor: pointer;
+  border-radius: 15px;
+  width: 130.68px;
+  height: 36px;
+}
+
+.text-content button:hover {
+  background-color: #4b3b2b;
+  color: #fff;
+}
+
+/*----- Rami (End) -----*/
+
+/*----- Mirna (start) -----*/
+
+/* customization */
+#customization {
+  background: url("images/customization/image\ 38.png") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 708px;
+  justify-content: start;
+  margin-top: 0;
+}
+
+#customization .title {
+  gap: 8px;
+}
+
+#customization-sub {
+  margin-top: -46px;
+  margin-right: -96px;
+}
+
+.customize {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  width: 100%;
+}
+
+.customize {
+  margin-top: 50px;
+}
+
+.ingredients,
+.ingredient,
+.jar-customization {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ingredients {
+  width: 564px;
+  height: 548px;
+}
+
+#ingredients-title {
+  font-size: 32px;
+  -webkit-text-stroke: 0px;
+}
+
+.ingredient {
+  width: 564px;
+  height: 331px;
+  margin-bottom: 50px;
+}
+
+.ing-left,
+.ing-right {
+  cursor: pointer;
+}
+
+.ing-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 564px;
+  height: 241px;
+  margin-top: 40px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 489px;
+  height: 49px;
+  margin-bottom: 15px;
+}
+
+.calories,
+.price {
+  gap: 5px;
+}
+
+#customization h5 {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  color: #4c2b08;
+}
+
+#customization h6 {
+  font-family: "Koulen", sans-serif;
+  font-size: 24px;
+  color: #4c2b08;
+}
+
+.value {
+  width: 48px;
+  height: 34px;
+  border: 1px solid #4c2b08;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#ing-title {
+  margin-top: 15px;
+}
+
+.ingredients .button {
+  width: 142px;
+  height: 32px;
+  border-radius: 12px;
+}
+
+.ingredients .btn-more {
+  font-size: 24px;
+  -webkit-text-stroke: 0px;
+}
+
+.jar-customization {
+  margin-top: 45px;
+}
+
+.size,
+.sizes,
+.calories,
+.price,
+.value,
+.settings,
+.undo,
+.reset {
+  display: flex;
+  flex-direction: row;
+}
+
+.size {
+  width: 208px;
+  height: 70px;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.size-title {
+  font-weight: 700;
+}
+
+.sizes {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+#customization small {
+  visibility: hidden;
+  height: 29px;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 20px;
+  margin: 0;
+  color: #616161;
+  text-wrap: nowrap;
+}
+
+.size-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 41px;
+  margin-top: -20px;
+}
+
+.size-btn {
+  border: 1px solid #4c2b08;
+  width: 32px;
+  height: 31px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.size-btn h5 {
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 700;
+}
+
+.settings {
+  width: 100%;
+  justify-content: space-evenly;
+  margin-top: -15px;
+}
+
+.size-btn,
+.undo,
+.reset {
+  cursor: pointer;
+}
+
+.undo div,
+.reset h6 {
+  margin-right: 5px;
+}
+
+.reset h6 {
+  margin-top: 2px;
+}
+
+.undo h5,
+.reset h5 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 4.2px;
+}
+
+/*----- Mirna (end) -----*/
+
+/*----- Rami (Start) -----*/
+
+/* choose us */
+#choose-us .title {
+  gap: 0;
+}
+
+#choose-us .l-right {
+  margin-left: 15px;
+}
+
+#choose-sub {
+  margin-top: -41px;
+  margin-right: -77px;
+}
+
+.why_us_container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  gap: 100px;
+  margin-top: 25px;
+}
+
+.why_us_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 200px;
+}
+
+.why_us_card img {
+  width: 87.76px;
+  height: 87.76px;
+}
+
+.why_us_card_content h3 {
+  font-size: 24px;
+  font-family: "Romely";
+  margin-top: 15px;
+  color: #3d240e;
+}
+
+.why_us_card_content p {
+  font-size: 20px;
+  width: 222px;
+  height: 72px;
+  color: #000000;
+  margin-top: 8px;
+  font-family: "Instrument Sans";
+}
+/* choose us end */
+
+/* Responsive adjustments for #choose-us and .fall-section */
+
+@media (max-width: 768px) {
+  /* Fall section */
+  .fall-section {
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+    text-align: center;
+  }
+
+  .text-content {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .text-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+    width: 100%;
+    line-height: 1.4;
+  }
+
+  .text-content button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    width: auto;
+  }
+
+  /* Choose Us Section */
+  .why_us_container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .why_us_card {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .why_us_title h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .why_us_title h3 {
+    font-size: 20px;
+    text-align: center;
+    position: static;
+    margin-top: 5px;
+  }
+}
+
+/*----- Rami (End) -----*/
+
+/*----- Mirna (start) -----*/
+
+/* blog */
+#our-blog {
+  width: 100%;
+  height: 564px;
+  display: flex;
+  justify-content: start;
+  background-image: url("images/blog/cookies.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#our-blog .title {
+  flex-direction: column;
+  align-items: end;
+  width: 100%;
+  margin-top: 100px;
+  margin-right: 300px;
+}
+
+#our-blog .title div {
+  width: fit-content;
+}
+
+#our-blog .main-title {
+  font-size: 96px;
+}
+
+#blog-sub {
+  font-size: 40px;
+  margin-top: -60px;
+  margin-right: -90px;
+}
+
+#our-blog .btn-con {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+  width: 100% !important;
+}
+
+#our-blog .button {
+  width: 103px;
+  height: 36px;
+  border-radius: 13.26px;
+}
+
+#our-blog .btn-more {
+  font-size: 20.16px;
+  -webkit-text-stroke: 0.15px #3d240e;
+}
+
+/*----- Mirna (end) -----*/
+
+/* ----- Yazan (Start) ----- */
+
+/* reviews */
+#review .title {
+  gap: 0;
+}
+
+#review .l-right {
+  margin-left: 15px;
+}
+
+#review-sub {
+  margin-top: -48px;
+  margin-right: -129px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.left,
+.right {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.right {
+  border-left: 2px solid black;
+  flex: 1;
+}
+
+.feedback-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.feedback-name {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.arrows {
+  display: inline-flex;
+  align-items: center;
+}
+
+.arrow {
+  font-size: 24px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+/* ----- Yazan (End) ----- */
