@@ -14,6 +14,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  position:relative;
+  top: 129px;
+  z-index: -1;
 }
 
 .hero-text {
@@ -75,7 +78,7 @@
 .carousel-dots {
   position: absolute;
   display: flex;
-  bottom: 20px;
+  top: 712px;
   left: 50%;
   transform: translateX(-50%);
   gap: 5px;
@@ -87,8 +90,6 @@
   background-color: #bc976c;
   border-radius: 50%;
   cursor: pointer;
-  margin-top: 20px;
-  margin-bottom: -30px;
 }
 
 .carousel-dot.active {
@@ -112,6 +113,7 @@
 /* best sellers */
 #best-sellers {
   margin: 30px 0;
+  margin-top: 170px;
 }
 
 #best-sellers .l-left {
@@ -850,6 +852,8 @@
   background-image: url("images/blog/cookies.png");
   background-repeat: no-repeat;
   background-size: cover;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 #our-blog .title {
