@@ -1,0 +1,29 @@
+.description{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 1290px;
+    height: 134px;
+    gap: 60px;
+    width: 100%;
+    margin-top: 230px;
+}
+
+.description h1{
+    width: 631px;
+    height: 129px;
+    font-family: "Romely";
+    font-size: 64px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.description p{
+    width: 599px;
+    height: 134px;
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 22px;
+    color: #000000;
+    text-align: justify;
+}

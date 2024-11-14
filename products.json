@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Zaatar Biscuits",
+        "image": "products-images/zaatar-biscuits.png",
+        "price": "3.13$"
+    },
+    {
+        "title": "Carob Date Bites",
+        "image": "products-images/date-bites.png",
+        "price": "3.13$"
+    },
+    {
+        "title": "Ginger Biscuits",
+        "image": "products-images/ginger-biscuits.png",
+        "price": "3.13$"
+    },
+    {
+        "title": "Carob Macron",
+        "image": "products-images/macron.png",
+        "price": "3.13$"
+    },
+    {
+        "title": "Carob Cookies",
+        "image": "products-images/carob-cookies.png",
+        "price": "3.13$"
+    },
+    {
+        "title": "Carobella",
+        "image": "products-images/carobella.png",
+        "price": "3.13$"
+    },
+    {
+        "title": "Sesame Cookies",
+        "image": "products-images/sesame-cookies.png",
+        "price": "3.13$"
+    },
+    {
+        "title": "Raison Cookies",
+        "image": "products-images/raison-cookies.png",
+        "price": "3.13$"
+    }
+]

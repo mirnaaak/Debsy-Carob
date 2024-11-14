@@ -53,3 +53,160 @@ document.querySelector(".arrow-prev").addEventListener("click", function () {
 document.querySelector(".arrow-next").addEventListener("click", function () {
   nextFeedback();
 });
+
+// Mirna
+$(document).ready(function () {
+  // best-sellers
+  showBS();
+
+  let begin = 1;
+  let end = 4;
+
+  function showBS() {
+    $.ajax({
+      url: "../products.json",
+      method: "GET",
+      dataType: "json",
+      success: function (products) {
+        if (begin >= 0 && end <= products.length) {
+          let bestS = products.slice(begin, end);
+          fetchBestS(bestS);
+        }
+      },
+      error: function (error) {
+        console.log(error);
+      },
+    });
+  }
+
+  $(".move-left").click(function () {
+    begin--;
+    end--;
+
+    showBS();
+  });
+
+  $(".move-right").click(function () {
+    begin++;
+    end++;
+
+    showBS();
+  });
+
+  function fetchBestS(products) {
+    $(".cards-items").empty();
+
+    let i = 0;
+
+    products.forEach((product) => {
+      let bestSHTML = "";
+
+      if (i !== 1) {
+        bestSHTML = `
+        <div class="card text-center">
+          <div class="card-image">
+            <img src="../${product.image}" class="card-img-top" alt="...">
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">${product.title}</h5>
+            <p class="card-text">Price: ${product.price}</p>
+            <div class="cart">
+              <div class="cart-info">
+                <div class='quantity-counter'>
+                  <div class="counter-border">
+                    <div class="counter-content">
+                      <a class='btn btn-default minus-btn'>_</a>
+                      <input type='text' name='quantity' value='0' class='quantity-input' readonly />
+                      <a class='btn btn-default add-btn'>+</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="add-cart">
+                  <img src="images/best-sellers/cart.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        `;
+      } else {
+        bestSHTML = `
+        <div class="card text-center" id="card-center">
+          <div class="card-image">
+            <img src="../${product.image}" class="card-img-top" alt="...">
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">${product.title}</h5>
+            <p class="card-text">Price: ${product.price}</p>
+            <div class="cart">
+              <div class="cart-info">
+                <div class='quantity-counter'>
+                  <div class="counter-border">
+                    <div class="counter-content">
+                      <a class='btn btn-default minus-btn'>_</a>
+                      <input type='text' name='quantity' value='0' class='quantity-input' readonly />
+                      <a class='btn btn-default add-btn'>+</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="add-cart">
+                  <img src="images/best-sellers/cart.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        `;
+      }
+
+      $(".cards-items").append(bestSHTML);
+      i++;
+    });
+
+    counter();
+  }
+
+  function counter() {
+    $(".minus-btn").click(function () {
+      let quantityInput = $(this)
+        .closest(".counter-content")
+        .find(".quantity-input");
+      let quantity = quantityInput.val().trim();
+      quantity--;
+      if (quantity >= 0) {
+        quantityInput.val(quantity);
+      }
+    });
+
+    $(".add-btn").click(function () {
+      let quantityInput = $(this)
+        .closest(".counter-content")
+        .find(".quantity-input");
+      let quantity = quantityInput.val().trim();
+      quantity++;
+      if (quantity <= 10) {
+        quantityInput.val(quantity);
+      }
+    });
+  }
+
+  // customization
+  $(".size-btn").hover(
+    function () {
+      // $(this).css("width", "42px");
+      // $(this).css("height", "41px");
+      // $(this).find("h5").css("font-size", "30px");
+      // $(this).closest(".size-name").css("margin-top", "-20px");
+      $(this).closest(".size-name").find("small").css("visibility", "visible");
+    },
+    function () {
+      // $(this).css("width", "32px");
+      // $(this).css("height", "31px");
+      // $(this).find("h5").css("font-size", "24px");
+      // $(this).closest(".size-name").css("margin-top", "-20px");
+      $(this).closest(".size-name").find("small").css("visibility", "hidden");
+    }
+  );
+});
