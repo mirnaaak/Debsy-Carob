@@ -2,7 +2,6 @@
 
 /* banner */
 .hero {
-  margin-top: 0;
   width: 100%;
   height: 781.97px;
   display: flex;
@@ -14,9 +13,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  position:relative;
-  top: 129px;
-  z-index: -1;
 }
 
 .hero-text {
@@ -623,13 +619,15 @@
   width: 142px;
   height: 32px;
   border-radius: 12px;
-  background-color: #ffffff;
+  background-color: transparent;
   border: 1px solid #4c2b08;
 }
 
 .ingredients .btn-more {
   font-size: 24px;
   -webkit-text-stroke: 0px;
+  color: #4C2B08;
+
 }
 
 .jar-customization {
