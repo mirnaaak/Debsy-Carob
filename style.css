@@ -133,7 +133,7 @@ nav .logo {
 }
 
 .mobile {
-  display: none;
+  display: none !important;
 }
 
 @media (max-width: 768px) {
@@ -146,11 +146,11 @@ nav .logo {
   }
 
   .mobile {
-    display: block;
+    display: block !important;
   }
 
   .pc {
-    display: none;
+    display: none !important;
   }
 
   .hamburger {
