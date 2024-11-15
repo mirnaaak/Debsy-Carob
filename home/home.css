@@ -4,8 +4,6 @@
 .hero {
   width: 100%;
   height: 781.97px;
-  display: flex;
-  align-items: center;
   justify-content: flex-start;
   padding: 0 20px;
   background-image: url("images/banner/banner.png");
@@ -32,7 +30,7 @@
   font-size: 55.8px;
   color: #3d240e;
   text-wrap: nowrap;
-  margin-bottom: 31px;
+  margin-bottom: 33px;
 }
 
 .hero h1 {
@@ -481,10 +479,10 @@
 .text-content button {
   margin-top: 35px;
   padding: 6px;
-  border: 1.26px solid #BC976C;
-  background-color: #E9E4DA;
-  color: #3D240E;
-  -webkit-text-stroke: 0.15px #3D240E;
+  border: 1.26px solid #bc976c;
+  background-color: #e9e4da;
+  color: #3d240e;
+  -webkit-text-stroke: 0.15px #3d240e;
   font-size: 20.16px;
   font-family: "Romely";
   cursor: pointer;
@@ -512,7 +510,7 @@
   margin-top: 0;
 }
 
-#customization .line{
+#customization .line {
   margin-top: 0;
 }
 
@@ -631,8 +629,7 @@
 .ingredients .btn-more {
   font-size: 24px;
   -webkit-text-stroke: 0px;
-  color: #4C2B08;
-
+  color: #4c2b08;
 }
 
 .jar-customization {
