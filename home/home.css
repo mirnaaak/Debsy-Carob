@@ -16,6 +16,10 @@
 }
 
 .hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 50%;
   text-align: center;
   margin: auto;
@@ -23,31 +27,26 @@
   margin-left: 200px;
 }
 
-.hero h1 {
-  font-family: "Romely";
-  font-size: 111.59px;
-  color: #3d240e;
-  margin-bottom: 5px;
-  text-wrap: nowrap;
-}
-
 .hero h2 {
   font-family: "Romely";
   font-size: 55.8px;
   color: #3d240e;
   text-wrap: nowrap;
-  margin-bottom: 10px;
+  margin-bottom: 31px;
 }
 
-.hero br {
+.hero h1 {
   font-family: "Romely";
   font-size: 111.59px;
+  color: #3d240e;
+  text-wrap: nowrap;
 }
+
 .hero p {
   font-family: "Actor", sans-serif;
   font-size: 23.25px;
-  margin-bottom: 50px;
   color: #3d240e;
+  margin-bottom: 40px;
 }
 
 .hero-button {
@@ -67,6 +66,7 @@
   align-items: center;
   justify-content: center;
   padding-top: 5px;
+  -webkit-text-stroke: 0.15px #3d240e;
 }
 
 .hero-button:hover {
@@ -80,7 +80,7 @@
   top: 712px;
   left: 50%;
   transform: translateX(-50%);
-  gap: 5px;
+  gap: 8px;
 }
 
 .carousel-dot {
@@ -481,13 +481,15 @@
 .text-content button {
   margin-top: 35px;
   padding: 6px;
-  border: 1px solid #4b3b2b;
-  background-color: transparent;
+  border: 1.26px solid #BC976C;
+  background-color: #E9E4DA;
+  color: #3D240E;
+  -webkit-text-stroke: 0.15px #3D240E;
   font-size: 20.16px;
   font-family: "Romely";
   cursor: pointer;
   border-radius: 15px;
-  width: 130.68px;
+  width: 127px;
   height: 36px;
 }
 

@@ -123,7 +123,7 @@ $(document).ready(function () {
                   </div>
                 </div>
                 <div class="add-cart">
-                  <img src="images/best-sellers/cart.png" alt="">
+                  <img src="images/best-sellers/cart.svg" alt="">
                 </div>
               </div>
             </div>
@@ -152,7 +152,7 @@ $(document).ready(function () {
                   </div>
                 </div>
                 <div class="add-cart">
-                  <img src="images/best-sellers/cart.png" alt="">
+                  <img src="images/best-sellers/cart.svg" alt="">
                 </div>
               </div>
             </div>
