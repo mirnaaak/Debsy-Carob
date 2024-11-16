@@ -71,6 +71,14 @@ nav .logo {
   -webkit-text-stroke: 0.5px #4c2b08;
 }
 
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
 .search-bar input {
   border: 2px solid #3c2415;
   border-radius: 11px;
@@ -82,20 +90,9 @@ nav .logo {
 
 .icons {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
-  gap: 63px;
-}
-
-.search-icon,
-.shopping-bag {
   cursor: pointer;
-}
-
-.search-icon {
-  margin-left: -65px;
 }
 
 /* Hamburger menu styling */
@@ -141,7 +138,7 @@ nav .logo {
     display: block;
   }
 
-  .search-bar {
+  .search-bar input {
     display: none;
   }
 
