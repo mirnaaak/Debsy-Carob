@@ -1,0 +1,98 @@
+/* General Body Styling */
+
+@font-face {
+    font-family: "Romely";
+    src: url("fonts/romely/Romely\ Light.ttf");
+  }
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: "Romely";
+  }
+  
+  /* Centering the form */
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 593px;
+    height: 386px;
+    margin-top: 158px;
+    margin-bottom: 174px;
+    padding: 20px;
+    font-weight: bold;
+  }
+  
+  /* Centering the form on the page while keeping the header */
+  main {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Form Heading */
+  .form-container h1 {
+    color: #3D240E;
+    font-size: 44.87px;
+    margin-bottom: 10px;
+  }
+  
+  /* Sign-In Link */
+  .signin-link {
+    font-size: 16.83px;
+    color: #3D240E;
+    margin-bottom: 20px;
+  }
+  
+  .signin-link a {
+    color: #3D240E;
+    text-decoration: none;
+  }
+  
+  .signin-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Form Styling */
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  label {
+    font-size: 14px;
+    color: #5c3b16;
+    text-align: left;
+  }
+  
+ .create_acc_info{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #3D240E;
+    border-radius: 20px;
+    outline: none;
+  }
+  
+  .phone-container input {
+    width: 100%;
+    text-align: left;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus {
+    border-color: #5c3b16;
+  }
+  
+  /* Adjust spacing for the main content area */
+  header {
+    margin-bottom: 20px;
+  }
+  #footer_email{
+
+  }
+  
