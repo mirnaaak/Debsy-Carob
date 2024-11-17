@@ -307,10 +307,13 @@ input:focus {
 /* ----- Yazan (Start) ----- */
 
 /* footer */
+footer {
+  background-color: #e9e4da;
+}
+
 .footer {
   margin-top: 40px;
   padding: 20px;
-  background-color: #e9e4da;
   display: flex;
   justify-content: space-around;
   text-align: left;
