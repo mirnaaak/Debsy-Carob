@@ -852,6 +852,7 @@
   background-size: cover;
   margin-top: 30px;
   margin-bottom: 20px;
+  background-position: right;
 }
 
 #our-blog .title {
@@ -900,9 +901,18 @@
 }
 
 /* responsive */
-@media (max-width: 1280px) {
-  #our-blog {
-    background-position: right;
+@media (max-width: 435px) {
+  #our-blog .title {
+    margin-right: 250px !important;
+  }
+  #our-blog .main-title {
+    font-size: 76px;
+  }
+
+  #blog-sub{
+    font-size: 35px;
+    margin-top: -55px;
+    margin-right: -80px;
   }
 }
 
