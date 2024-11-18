@@ -125,6 +125,10 @@ th:last-child {
 }
 
 /* Summary Section */
+.summary {
+  align-items: start;
+}
+
 .summary_table {
   border: 1.5px solid #d8c3a5; /* Set border for table cells */
   border-radius: 46px;
@@ -211,7 +215,6 @@ td {
   width: 118px;
   height: 39px;
   background-color: transparent;
-
 }
 
 .btn-more {

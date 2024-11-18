@@ -232,6 +232,10 @@
   align-items: center;
 }
 
+.cart img{
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   #best-sellers .card {
     display: none;
@@ -447,9 +451,14 @@
 #customization {
   background: url("images/customization/marble.png") no-repeat center;
   background-size: cover;
-  height: 708px;
+  /* height: 708px; */
   justify-content: start;
   margin-top: 0;
+  margin-bottom: 81px;
+}
+
+#customization .title{
+  margin-top: 100px;
 }
 
 #customization .line {

@@ -117,7 +117,7 @@ $(document).ready(function () {
                   <div class="counter-border">
                     <div class="counter-content">
                       <a class='btn btn-default minus-btn'>_</a>
-                      <input type='text' name='quantity' value='0' class='quantity-input' readonly />
+                      <input type='text' name='quantity' value='1' class='quantity-input' readonly />
                       <a class='btn btn-default add-btn'>+</a>
                     </div>
                   </div>
@@ -146,7 +146,7 @@ $(document).ready(function () {
                   <div class="counter-border">
                     <div class="counter-content">
                       <a class='btn btn-default minus-btn'>_</a>
-                      <input type='text' name='quantity' value='0' class='quantity-input' readonly />
+                      <input type='text' name='quantity' value='1' class='quantity-input' readonly />
                       <a class='btn btn-default add-btn'>+</a>
                     </div>
                   </div>
