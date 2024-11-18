@@ -122,7 +122,7 @@ $(document).ready(function () {
                     </div>
                   </div>
                 </div>
-                <div class="add-cart">
+                <div class="add-cart" data-id="${product.id}">
                   <img src="images/best-sellers/cart.svg" alt="">
                 </div>
               </div>
@@ -151,7 +151,7 @@ $(document).ready(function () {
                     </div>
                   </div>
                 </div>
-                <div class="add-cart">
+                <div class="add-cart" data-id="${product.id}">
                   <img src="images/best-sellers/cart.svg" alt="">
                 </div>
               </div>
@@ -209,4 +209,8 @@ $(document).ready(function () {
       $(this).closest(".size-name").find("small").css("visibility", "hidden");
     }
   );
+
+  $("#our-blog .btn-con").click(function () {
+    window.location.href = "../our-blog/our-blog.html";
+  });
 });

@@ -33,7 +33,7 @@ $(document).ready(function () {
                 <h5 class="card-title">${blogItem.title}</h5>
                 <p class="card-text">${blogItem.description}
                 </p>
-                <div class="read-post">
+                <div class="read-post" data-id="${blogItem.id}">
                     <span>Read Post</span>
                     <img src="images/arrow.svg" alt="">
                 </div>
