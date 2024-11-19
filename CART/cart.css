@@ -125,87 +125,135 @@ th:last-child {
 }
 
 /* Summary Section */
-.summary {
-  align-items: start;
+./* General Body Styling */
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: #fdfdfd;
 }
 
-.summary_table {
-  border: 1.5px solid #d8c3a5; /* Set border for table cells */
-  border-radius: 46px;
-  width: 852px;
-  height: 173px;
-  margin-top: 180px;
+.checkout-table-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 19px; /* Space between tables */
+  padding-left: 90px;
+  padding-top: 35px;
 }
-th,
-td {
-  padding: 10px; /* Add padding inside cells */
+
+.checkout-table-wrapper {
+  border: 1.5px solid #D8C3A5; /* Border color */
+  border-radius: 46px; /* Rounded corners */
+  overflow: hidden; /* Prevents content from overflowing */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
-.summary-head {
-  padding-top: 80px;
-  padding-right: 20px;
+
+.checkout-table-wrapper:first-child {
+  max-width: 852px; /* Max width for first table */
+  max-height: 173px; /* Max height for first table */
+  flex: 1; /* Makes it responsive */
+}
+
+.checkout-table-wrapper:last-child {
+  max-width: 364px; /* Max width for second table */
+  max-height: 173px; /* Max height for second table */
+  flex: 1; /* Makes it responsive */
+}
+
+.checkout-table-container table {
+  width: 100%; /* Table fills the wrapper */
+  border-collapse: collapse;
+  height: 100%; /* Matches the height of the wrapper */
+}
+
+.checkout-table-container th {
+  background-color: #E9E4DA; /* Header background color */
+  color: #333;
+  text-align: center;
+  /* padding: 8px; */
+  /* padding-left: 38px; */
+  padding-top: 18px;
+  padding-bottom: 8px;
+}
+
+.checkout-table-container td {
+  padding: 15px;
+  text-align: center;
+  text-align: left;
+  padding-left: 43px;
+}
+
+.checkout-table-container table,.checkout-table-container th,.checkout-table-container td {
+  border-radius: 0; 
+}
+
+.checkout-table-container img {
+  margin: 0 38px; 
+}
+
+/* Checkout Text and Price Styling */
+.checkout-table-checkout {
+  font-family: "Romely";
+  font-size: 32px;
+  font-weight: lighter;
+  text-align: center;
+  color: #BD8F58;
+}
+
+.checkout-table-price,
+.checkout-table-subprice {
+  font-family: "Quattrocento", sans-serif;
+  font-size: 28px;
+  font-weight: lighter;
+  color: #3D240E;
+}
+
+.checkout-table-subtext,
+.checkout-table-dlvtext,
+.checkout-table-text,
+.checkout-table-totaltext {
+  font-family: "Romely";
+  font-size: 32px;
+  font-weight: lighter;
+  color: #4C2B08;
+  /* display: flex; */
+  text-align: center;
+  /* padding-top: 20px; */
+}
+
+
+
+.checkout-table-text {
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+.checkout-table-coupon tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout-table-discounttext {
+  font-family: "Romely";
+  font-size: 32px;
+  font-weight: lighter;
+  color: #4C2B08;
   padding-left: 20px;
-  background-color: #e9e4da;
-  border-radius: 46;
-  font-family: "Romely";
-  font-weight: 100;
-  font-size: 32px;
-  color: #4c2b08;
 }
 
-.Summary th {
-  padding: 10px;
-  background-color: #e9e4da;
-  border-bottom: 1.5px solid #d8c3a5;
-  text-align: left;
-  font-weight: bold;
-  width: 852px;
-  height: 90px;
-}
-.total {
-  border-top-left-radius: 46px;
-  margin-left: -10px;
-  padding-left: 45px;
+.checkout-table-percentage {
+  color: #BD8F58;
 }
 
-.discount {
-  text-wrap: nowrap;
-}
-.dlv {
-  border-top-right-radius: 46px;
-  margin-left: 30px;
-  text-wrap: nowrap;
-  padding-right: 40px;
-}
+@media (max-width: 900px) {
+  .checkout-table-container {
+      flex-direction: column; 
+      align-items: center; 
+  }
 
-.txt {
-  text-align: left;
-  font-family: "Romely";
-  font-size: 32px;
-  font-weight: lighter;
-  color: #4c2b08;
-  text-wrap: nowrap;
-}
-
-.coupon {
-  text-wrap: nowrap;
-}
-.txtcoupon {
-  font-family: "Romely";
-  font-size: 32px;
-  font-weight: lighter;
-  color: #4c2b08;
-}
-.discount {
-  font-family: "Romely";
-  font-size: 32px;
-  font-weight: lighter;
-  color: #4c2b08;
-}
-.percentage {
-  font-family: "Romely";
-  font-size: 32px;
-  font-weight: lighter;
-  color: #bd8f58;
+  .checkout-table-wrapper {
+      max-width: 100%; 
+  }
 }
 
 .button {
