@@ -137,7 +137,7 @@ body {
   flex-wrap: wrap;
   gap: 19px; /* Space between tables */
   padding-left: 90px;
-  padding-top: 35px;
+  padding-top: 90px;
 }
 
 .checkout-table-wrapper {
