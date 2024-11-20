@@ -62,7 +62,7 @@ th:last-child {
   width: 36px;
   height: 45px;
   position: relative;
-  left: 280px;
+  left: 40px;
   cursor: pointer;
 }
 .total {
@@ -72,7 +72,7 @@ th:last-child {
   width: 99px;
   height: 37px;
   position: relative;
-  left: 370px;
+  left: 90px;
 }
 .vertical-line {
   color: #d9d9d9;
@@ -86,6 +86,7 @@ th:last-child {
   border-radius: 8.05px;
   margin-right: 10px;
   margin-left: 50px;
+  padding-top: 10px;
 }
 
 .itemname {
@@ -95,14 +96,16 @@ th:last-child {
   color: #3d240e;
   width: 181px;
   height: 30px;
+  text-wrap: nowrap;
+  display: flex;
   position: relative;
-  left: 270px;
+  left: 200px;
   bottom: 70px;
 }
 
 .quantity {
   position: relative;
-  left: 230px;
+  right: 5px;
 }
 
 .counter-border {
@@ -125,7 +128,7 @@ th:last-child {
 }
 
 /* Summary Section */
-./* General Body Styling */
+/* General Body Styling */
 body {
   margin: 0;
   padding: 20px;
@@ -137,7 +140,7 @@ body {
   flex-wrap: wrap;
   gap: 19px; /* Space between tables */
   padding-left: 90px;
-  padding-top: 90px;
+  padding-top: 200px;
 }
 
 .checkout-table-wrapper {
@@ -257,16 +260,20 @@ body {
 }
 
 .button {
+  position: relative;
+  left: 90px;
   margin-top: 39px;
   border: 1.37px solid #3d240e;
   border-radius: 14.37px;
   width: 118px;
   height: 39px;
   background-color: transparent;
+  
 }
 
 .btn-more {
   color: #3d240e;
   -webkit-text-stroke: 0.16px #3d240e;
   font-size: 21.84px;
+
 }
