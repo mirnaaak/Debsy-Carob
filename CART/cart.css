@@ -25,7 +25,7 @@
   border-radius: 69px;
   width: 1236px;
   height: 928px;
-  margin-left: 90px;
+  margin-left: 20px;
   margin-top: 67px;
 }
 
@@ -83,10 +83,15 @@ th:last-child {
 .itemimg {
   width: 142.3px;
   height: 128.19px;
+  border: 1px solid #BC976C;
   border-radius: 8.05px;
+  padding: 5px;
   margin-right: 10px;
   margin-left: 50px;
-  padding-top: 10px;
+}
+
+.prod{
+  padding-top: 20px;
 }
 
 .itemname {
@@ -126,7 +131,39 @@ th:last-child {
 .add-btn {
   font-size: 32.11px;
 }
+@media (max-width: 768px) {
+  .cart_table {
+    width: 100%; /* Ensure table fits the screen width */
+    display: block; /* Stack items vertically for better readability */
+  }
 
+  .cart th, .cart td {
+    font-size: 14px; /* Reduce font size further */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .itemimg {
+    width: 100px; /* Further reduce image size */
+  }
+
+  .itemname {
+    font-size: 16px; /* Reduce font size */
+    left: 40px;
+    bottom: 0;
+  }
+  .total{
+    left: 0;
+  }
+  .quantity {
+    font-size: 16px;
+    position: relative; /* Adjust positioning */
+  }
+
+  .Remove {
+    left: 0; /* Align remove button */
+    padding-left: 0;
+  }
+}
 /* Summary Section */
 /* General Body Styling */
 body {
@@ -268,12 +305,12 @@ body {
   width: 118px;
   height: 39px;
   background-color: transparent;
-  
-}
-
-.btn-more {
   color: #3d240e;
   -webkit-text-stroke: 0.16px #3d240e;
   font-size: 21.84px;
+}
 
+.button:hover {
+  background-color: #d8c3a5;
+  color: #fff;
 }
