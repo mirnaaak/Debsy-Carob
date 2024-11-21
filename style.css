@@ -51,12 +51,7 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-<<<<<<< Updated upstream
-  gap: 51px;
-  padding-top: 10px;
-=======
   gap: 80px;
->>>>>>> Stashed changes
 }
 
 nav a {
@@ -81,13 +76,7 @@ nav .logo {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-<<<<<<< Updated upstream
   gap: 5px;
-=======
-  border: none;
-  padding: 10px 10px;
-  
->>>>>>> Stashed changes
 }
 
 .search-bar input {
@@ -101,19 +90,8 @@ nav .logo {
 
 .icons {
   display: flex;
-<<<<<<< Updated upstream
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-=======
   flex-wrap: nowrap;
   gap: 10px;
- 
-}
-
-.material-icons,
-.shopping-bag {
-  flex-shrink: 0;
 }
 
 .shopping-bag {
@@ -121,11 +99,6 @@ nav .logo {
   margin-bottom: 15px;
   position: relative;
   left: -2px;
-}
-
-.material-icons{
-  margin-right: 40px;
->>>>>>> Stashed changes
 }
 
 /* Hamburger menu styling */

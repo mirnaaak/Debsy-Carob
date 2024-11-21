@@ -166,11 +166,11 @@ th:last-child {
 }
 /* Summary Section */
 /* General Body Styling */
-body {
+/* body {
   margin: 0;
   padding: 20px;
   background-color: #fdfdfd;
-}
+} */
 
 .checkout-table-container {
   display: flex;
