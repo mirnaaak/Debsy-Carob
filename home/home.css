@@ -236,6 +236,10 @@
   cursor: pointer;
 }
 
+#best-sellers .mob-card {
+  display: none !important;
+}
+
 /* responsive */
 @media (max-width: 1280px) {
   .cards {
@@ -248,16 +252,23 @@
 }
 
 @media (max-width: 1024px) {
-  #best-sellers .card {
-    display: none;
-  }
-
-  #card-center {
-    display: flex !important;
-  }
-
   .cards {
-    gap: 76px;
+    width: 100%;    
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  .move-right,
+  .move-left {
+    display: none !important;
+  }
+
+  #best-sellers .card {
+    display: none !important;
+  }
+
+  #best-sellers .mob-card {
+    display: flex !important;
   }
 }
 
@@ -679,10 +690,10 @@
 
 /* responsive */
 @media (max-width: 912px) {
-  .customize{
+  .customize {
     margin-top: 70px;
   }
-  .ingredients{
+  .ingredients {
     width: 50%;
   }
 
@@ -711,15 +722,15 @@
     width: 50%;
   }
 
-  .price h5{
+  .price h5 {
     margin-right: 40px;
   }
 
-  .jar-customization{
+  .jar-customization {
     margin-top: -50px;
   }
 
-  .jar img{
+  .jar img {
     width: 250px;
   }
 }
@@ -901,18 +912,30 @@
 }
 
 /* responsive */
-@media (max-width: 435px) {
+@media (max-width: 540px) {
   #our-blog .title {
     margin-right: 250px !important;
   }
   #our-blog .main-title {
-    font-size: 76px;
+    font-size: 76px !important;
   }
 
-  #blog-sub{
-    font-size: 35px;
-    margin-top: -55px;
+  #blog-sub {
+    font-size: 35px !important;
+    margin-top: -55px !important;
     margin-right: -80px;
+  }
+}
+
+@media (max-width: 435px) {
+  #our-blog .title {
+    margin-right: 210px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  #our-blog .title {
+    margin-right: 180px !important;
   }
 }
 

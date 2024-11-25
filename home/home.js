@@ -68,10 +68,13 @@ $(document).ready(function () {
       method: "GET",
       dataType: "json",
       success: function (products) {
+        products = products.filter(product => product.bestSeller);
+
         if (begin >= 0 && end <= products.length) {
           let bestS = products.slice(begin, end);
-          fetchBestS(bestS);
+          fetchpcBestS(bestS);
         }
+        fetchmobBestS(products);
       },
       error: function (error) {
         console.log(error);
@@ -93,16 +96,16 @@ $(document).ready(function () {
     showBS();
   });
 
-  function fetchBestS(products) {
+  function fetchpcBestS(products) {
     $(".cards-items").empty();
 
     let i = 0;
 
     products.forEach((product) => {
-      let bestSHTML = "";
+      let pcBestSHTML = "";
 
       if (i !== 1) {
-        bestSHTML = `
+        pcBestSHTML = `
         <div class="card text-center">
           <div class="card-image">
             <img src="../${product.image}" class="card-img-top" alt="...">
@@ -131,7 +134,7 @@ $(document).ready(function () {
         </div>
         `;
       } else {
-        bestSHTML = `
+        pcBestSHTML = `
         <div class="card text-center" id="card-center">
           <div class="card-image">
             <img src="../${product.image}" class="card-img-top" alt="...">
@@ -161,8 +164,44 @@ $(document).ready(function () {
         `;
       }
 
-      $(".cards-items").append(bestSHTML);
+      $(".cards-items").append(pcBestSHTML);
       i++;
+    });
+
+    counter();
+  }
+
+  function fetchmobBestS(products) {
+    products.forEach((product) => {
+      let mobileBestSHTML = `
+      <div class="card text-center mob-card">
+        <div class="card-image">
+          <img src="../${product.image}" class="card-img-top" alt="...">
+        </div>
+
+        <div class="card-body">
+          <h5 class="card-title">${product.title}</h5>
+          <p class="card-text">Price: ${product.price}</p>
+          <div class="cart">
+            <div class="cart-info">
+              <div class='quantity-counter'>
+                <div class="counter-border">
+                  <div class="counter-content">
+                    <a class='btn btn-default minus-btn'>_</a>
+                    <input type='text' name='quantity' value='1' class='quantity-input' readonly />
+                    <a class='btn btn-default add-btn'>+</a>
+                  </div>
+                </div>
+              </div>
+              <div class="add-cart" data-id="${product.id}">
+                <img src="images/best-sellers/cart.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+      $(".cards-items").append(mobileBestSHTML);
     });
 
     counter();
