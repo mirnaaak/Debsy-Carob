@@ -242,24 +242,24 @@
 
 /* responsive */
 @media (max-width: 1280px) {
-  .cards {
+  #best-sellers .cards {
     gap: 50px;
   }
 
-  .cards-items {
+  #best-sellers .cards-items {
     gap: 66px;
   }
 }
 
 @media (max-width: 1024px) {
-  .cards {
+  #best-sellers .cards {
     width: 100%;    
     overflow-x: scroll;
     overflow-y: hidden;
   }
 
-  .move-right,
-  .move-left {
+  #best-sellers .move-right,
+  #best-sellers .move-left {
     display: none !important;
   }
 
