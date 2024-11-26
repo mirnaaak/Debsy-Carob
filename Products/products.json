@@ -1,0 +1,226 @@
+[
+    {
+        "id": 1,
+        "title": "Zaatar Biscuits",
+        "image": "products-images/zaatar-biscuits.png",
+        "price": "3.13$",
+        "bestSeller": true
+    },
+    {
+        "id": 2,
+        "title": "Carob Date Bites",
+        "image": "products-images/date-bites.png",
+        "price": "3.13$",
+        "bestSeller": true
+    },
+    {
+        "id": 3,
+        "title": "Ginger Biscuits",
+        "image": "products-images/ginger-biscuits.png",
+        "price": "3.13$",
+        "bestSeller": true
+    },
+    {
+        "id": 4,
+        "title": "Carob Macron",
+        "image": "products-images/macron.png",
+        "price": "3.13$",
+        "bestSeller": true
+    },
+    {
+        "id": 5,
+        "title": "Carob Cookies",
+        "image": "products-images/carob-cookies.png",
+        "price": "3.13$",
+        "bestSeller": true
+    },
+    {
+        "id": 6,
+        "title": "Carobella",
+        "image": "products-images/carobella.png",
+        "price": "3.13$",
+        "bestSeller": false
+    },
+    {
+        "id": 7,
+        "title": "Sesame Cookies",
+        "image": "products-images/sesame-cookies.png",
+        "price": "3.13$",
+        "bestSeller": false
+    },
+    {
+        "id": 8,
+        "title": "Raison Cookies",
+        "image": "products-images/raison-cookies.png",
+        "price": "3.13$",
+        "bestSeller": false
+    },
+    {
+        "id": 9,
+        "title": "Choco Cookies",
+        "image": "products-images/choco-cookies.png",
+        "price": "3.13$",
+        "bestSeller": false
+    },
+    {
+        "id": 10,
+        "title": "Coconut Cookies",
+        "image": "products-images/coconut-cookies.png",
+        "price": "3.13$",
+        "bestSeller": false
+    },
+    {
+        "id": 11,
+        "title": "Oats Kaak Sunflower Seeds",
+        "image": "products-images/oats-kaak-sunflower-seeds.png",
+        "price": "3.13$",
+        "bestSeller": false
+    },
+    {
+        "id": 12,
+        "title": "Oats Kaak with Sesame",
+        "image": "products-images/oats-kaak-sesame.png",
+        "price": "3.13$",
+        "bestSeller": false
+    },
+    {
+        "id": 13,
+        "title": "Oat Kaak with Zaatar",
+        "image": "products-images/oat-kaak-zaatar.png",
+        "price": "3.13$",
+        "bestSeller": false
+    },
+    {
+        "id": 14,
+        "title": "Oat Kaak with Cheese",
+        "image": "products-images/oat-kaak-cheese.png",
+        "price": "3.13$",
+        "bestSeller": false
+    },
+    {
+        "id": 15,
+        "title": "Crunchy Seeds Kaak",
+        "image": "products-images/crunchy-seeds-kaak.png",
+        "price": "3.13$",
+        "bestSeller": false
+    },
+    {
+        "id": 16,
+        "title": "Debsy Mix",
+        "image": "products-images/debsy-mix.png",
+        "price": "3.13$",
+        "bestSeller": false
+    },
+    {
+        "id": 17,
+        "title": "Peanut Carob Bar",
+        "image": "products-images/peanut-carob-bar.png",
+        "price": "4.325$",
+        "bestSeller": false
+    },
+    {
+        "id": 18,
+        "title": "Sesame Carob Bar",
+        "image": "products-images/sesame-carob-bar.png",
+        "price": "4.325$",
+        "bestSeller": false
+    },
+    {
+        "id": 19,
+        "title": "Coconut Carob Bites",
+        "image": "products-images/coconut-carob-bites.png",
+        "price": "4.325$",
+        "bestSeller": false
+    },
+    {
+        "id": 20,
+        "title": "Hazelnut Craze",
+        "image": "products-images/hazelnut-craze.png",
+        "price": "5.65$",
+        "bestSeller": false
+    },
+    {
+        "id": 21,
+        "title": "Chocopeanut Cookies",
+        "image": "products-images/chocopeanut-cookies.png",
+        "price": "4.325$",
+        "bestSeller": false
+    },
+    {
+        "id": 22,
+        "title": "Bisco Choco",
+        "image": "products-images/bisco-choco.png",
+        "price": "4.325$",
+        "bestSeller": false
+    },
+    {
+        "id": 23,
+        "title": "Caramel Craze",
+        "image": "products-images/caramel-craze.png",
+        "price": "3.13$",
+        "bestSeller": false
+    },
+    {
+        "id": 24,
+        "title": "Crunchy Craze",
+        "image": "products-images/crunchy-craze.png",
+        "price": "3.13$",
+        "bestSeller": false
+    },
+    {
+        "id": 25,
+        "title": "Carob Molasses 2 kg",
+        "image": "products-images/carob-molasses-2kg.png",
+        "price": "8.55$",
+        "bestSeller": false
+    },
+    {
+        "id": 26,
+        "title": "Carob Molasses 1 kg",
+        "image": "products-images/carob-molasses-1kg-red.png",
+        "price": "4.55$",
+        "bestSeller": false
+    },
+    {
+        "id": 27,
+        "title": "Carob Molasses 1 kg (Green)",
+        "image": "products-images/carob-molasses-1kg-green.png",
+        "price": "4.55$",
+        "bestSeller": false
+    },
+    {
+        "id": 28,
+        "title": "Carob Molasses 500 g",
+        "image": "products-images/carob-molasses-500g.png",
+        "price": "2.45$",
+        "bestSeller": false
+    },
+    {
+        "id": 29,
+        "title": "Tahini Extra 1 kg",
+        "image": "products-images/tahini-extra-1kg.png",
+        "price": "6$",
+        "bestSeller": false
+    },
+    {
+        "id": 30,
+        "title": "Tahini Extra 600 g",
+        "image": "products-images/tahini-extra-600g.png",
+        "price": "4.35$",
+        "bestSeller": false
+    },
+    {
+        "id": 31,
+        "title": "Tahini Extra 360 g",
+        "image": "products-images/tahini-extra-360g.png",
+        "price": "2.645$",
+        "bestSeller": false
+    },
+    {
+        "id": 32,
+        "title": "Debsy Spread",
+        "image": "products-images/debsy-spread.png",
+        "price": "7.55$",
+        "bestSeller": false
+    }    
+]
