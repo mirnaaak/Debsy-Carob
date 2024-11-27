@@ -54,33 +54,11 @@ document.querySelector(".arrow-next").addEventListener("click", function () {
   nextFeedback();
 });
 
-// Mirna
 $(document).ready(function () {
+  // MIRNA (start)
+
   // best-sellers
   showBS();
-
-  let begin = 1;
-  let end = 4;
-
-  function showBS() {
-    $.ajax({
-      url: "../products.json",
-      method: "GET",
-      dataType: "json",
-      success: function (products) {
-        products = products.filter(product => product.bestSeller);
-
-        if (begin >= 0 && end <= products.length) {
-          let bestS = products.slice(begin, end);
-          fetchpcBestS(bestS);
-        }
-        fetchmobBestS(products);
-      },
-      error: function (error) {
-        console.log(error);
-      },
-    });
-  }
 
   $(".move-left").click(function () {
     begin--;
@@ -96,6 +74,58 @@ $(document).ready(function () {
     showBS();
   });
 
+  // products
+  showProducts();
+
+  // customization
+
+  // customization-ingredients
+  showJI();
+
+  $(".size-btn").hover(
+    function () {
+      $(this).closest(".size-name").find("small").css("visibility", "visible");
+    },
+    function () {
+      $(this).closest(".size-name").find("small").css("visibility", "hidden");
+    }
+  );
+
+  // blog btn
+  $("#our-blog .btn-con").click(function () {
+    window.location.href = "../our-blog/our-blog.html";
+  });
+
+  // products btn
+  $(".products-vm").click(function () {
+    window.location.href = "../Products/products.html";
+  });
+
+  // functions
+  let begin = 1;
+  let end = 4;
+
+  function showBS() {
+    $.ajax({
+      url: "../Products/products.json",
+      method: "GET",
+      dataType: "json",
+      success: function (products) {
+        products = products.filter((product) => product.bestSeller);
+
+        if (begin >= 0 && end <= products.length) {
+          let bestS = products.slice(begin, end);
+          fetchpcBestS(bestS);
+        }
+        fetchmobBestS(products);
+        counter();
+      },
+      error: function (error) {
+        console.log(error);
+      },
+    });
+  }
+
   function fetchpcBestS(products) {
     $(".cards-items").empty();
 
@@ -108,7 +138,7 @@ $(document).ready(function () {
         pcBestSHTML = `
         <div class="card text-center">
           <div class="card-image">
-            <img src="../${product.image}" class="card-img-top" alt="...">
+            <img src="../Products/${product.image}" class="card-img-top" alt="...">
           </div>
 
           <div class="card-body">
@@ -137,7 +167,7 @@ $(document).ready(function () {
         pcBestSHTML = `
         <div class="card text-center" id="card-center">
           <div class="card-image">
-            <img src="../${product.image}" class="card-img-top" alt="...">
+            <img src="../Products/${product.image}" class="card-img-top" alt="...">
           </div>
 
           <div class="card-body">
@@ -167,8 +197,6 @@ $(document).ready(function () {
       $(".cards-items").append(pcBestSHTML);
       i++;
     });
-
-    counter();
   }
 
   function fetchmobBestS(products) {
@@ -176,7 +204,7 @@ $(document).ready(function () {
       let mobileBestSHTML = `
       <div class="card text-center mob-card">
         <div class="card-image">
-          <img src="../${product.image}" class="card-img-top" alt="...">
+          <img src="../Products/${product.image}" class="card-img-top" alt="...">
         </div>
 
         <div class="card-body">
@@ -199,15 +227,126 @@ $(document).ready(function () {
             </div>
           </div>
         </div>
-      </div>
-    `;
+      </div>`;
+
       $(".cards-items").append(mobileBestSHTML);
     });
+  }
 
-    counter();
+  function showProducts() {
+    $.ajax({
+      url: "../Products/products.json",
+      method: "GET",
+      dataType: "json",
+      success: function (products) {
+        fetchProducts(products.slice(0, 8));
+        counter();
+      },
+      error: function (error) {
+        console.error("Error fetching the products:", error);
+      },
+    });
+  }
+
+  function fetchProducts(products) {
+    $(".products-cards").empty();
+
+    products.forEach((product) => {
+      const productsHTML = `
+      <div class="card text-center">
+        <div class="card-image">
+          <img src="../Products/${product.image}" class="card-img-top" alt="${product.title}">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">${product.title}</h5>
+          <p class="card-text">Price: ${product.price}</p>
+          <div class="cart">
+            <div class="cart-info">
+              <div class='quantity-counter'>
+                <div class="counter-border">
+                  <div class="counter-content">
+                    <a class='btn btn-default minus-btn'>_</a>
+                    <input type='text' name='quantity' value='1' class='quantity-input' readonly />
+                    <a class='btn btn-default add-btn'>+</a>
+                  </div>
+                </div>
+              </div>
+              <div class="add-cart">
+                <img src="../home/images/best-sellers/cart.svg" alt="Add to Cart">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>`;
+
+      $(".products-cards").append(productsHTML);
+    });
+  }
+
+  let ing = 0;
+
+  function showJI() {
+    $.ajax({
+      url: "jar-ingredients.json",
+      method: "GET",
+      dataType: "json",
+      success: function (ingredients) {
+        jarIngredients(ingredients[ing]);
+
+        $(".ing-left").click(function () {
+          ing--;
+
+          if (ing >= 0) {
+            showJI();
+          }
+        });
+
+        $(".ing-right").click(function () {
+          ing++;
+
+          if (ing <= ingredients.length) {
+            showJI();
+          }
+        });
+
+        counter();
+      },
+      error: function (error) {
+        console.log(error);
+      },
+    });
+  }
+
+  function jarIngredients(ingredient) {
+    let ingredientHTML = `          
+    <div class="ing-image">
+      <div class="ing-left">
+        <img src="images/customization/left.svg" alt="">
+      </div>
+      <img src="${ingredient.image}" id="ing" alt="">
+      <div class="ing-right">
+        <img src="images/customization/right.svg" alt="">
+      </div>
+    </div>
+    <div class="ing-details">
+      <h5 id="ing-title">${ingredient.name}</h5>
+      <div class='quantity-counter'>
+        <div class="counter-border">
+          <div class="counter-content">
+            <a class='btn btn-default minus-btn'>_</a>
+            <input type='text' name='quantity' value='1' class='quantity-input' readonly />
+            <a class='btn btn-default add-btn'>+</a>
+          </div>
+        </div>
+      </div>
+    </div>`;
+
+    $(".ingredient").empty().append(ingredientHTML);
   }
 
   function counter() {
+    $(".minus-btn, .add-btn").off("click");
+
     $(".minus-btn").click(function () {
       let quantityInput = $(this)
         .closest(".counter-content")
@@ -231,25 +370,5 @@ $(document).ready(function () {
     });
   }
 
-  // customization
-  $(".size-btn").hover(
-    function () {
-      // $(this).css("width", "42px");
-      // $(this).css("height", "41px");
-      // $(this).find("h5").css("font-size", "30px");
-      // $(this).closest(".size-name").css("margin-top", "-20px");
-      $(this).closest(".size-name").find("small").css("visibility", "visible");
-    },
-    function () {
-      // $(this).css("width", "32px");
-      // $(this).css("height", "31px");
-      // $(this).find("h5").css("font-size", "24px");
-      // $(this).closest(".size-name").css("margin-top", "-20px");
-      $(this).closest(".size-name").find("small").css("visibility", "hidden");
-    }
-  );
-
-  $("#our-blog .btn-con").click(function () {
-    window.location.href = "../our-blog/our-blog.html";
-  });
+  // MIRNA (end)
 });
