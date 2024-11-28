@@ -146,7 +146,7 @@
 }
 
 .card {
-  border: none;
+  border: none !important;
   width: 267px;
   height: 375.87px;
   margin-top: 80px;
