@@ -98,6 +98,7 @@
   -webkit-text-stroke: 0;
   margin: 0 !important;
   margin-bottom: 5px !important;
+  text-wrap: wrap !important;
 }
 
 .card-text {
@@ -120,6 +121,91 @@
   font-weight: 600;
   color: #000000;
   cursor: pointer;
+}
+
+/* popup */
+.modal-dialog {
+  max-width: 1100px !important;
+}
+
+.modal-content {
+  border-radius: 20px !important;
+}
+
+.back {
+  display: flex;
+  flex-direction: row;
+  font-family: "Romely";
+  font-size: 28.36px;
+  -webkit-text-stroke: 0.44px #4c2b08;
+  color: #4c2b08;
+  gap: 7px;
+  margin-bottom: 49px;
+  margin-left: 14px;
+  margin-top: 39px;
+  cursor: pointer;
+}
+
+.back img {
+  margin-top: -5px;
+}
+
+.details-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 93px;
+}
+
+.blog-title {
+  font-family: "Romely";
+  font-size: 48px;
+  font-weight: 700;
+  color: #000000;
+  width: 573px;
+  text-align: center;
+}
+
+.modal-content .category-date {
+  width: 45%;
+  margin: 0;
+}
+
+.modal-content .category {
+  width: 76px;
+}
+
+.details-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 43px;
+  margin-bottom: 39px;
+}
+
+.blog-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 448.31px;
+  height: 448.69px;
+  border: 2px solid #bc976c;
+  border-radius: 23px;
+}
+
+.blog-image img {
+  width: 425.56px;
+  height: 419.01px;
+}
+
+.blog-description {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 22px;
+  color: #4c2b08;
+  width: 511px;
+  text-align: justify;
 }
 
 /* responsive */
@@ -150,7 +236,7 @@
     font-size: 20px;
   }
 
-  .content{
+  .content {
     margin-top: 20px;
     margin-bottom: 70px;
   }
@@ -160,15 +246,15 @@
     height: 545px;
     margin-top: 50px;
   }
-  
+
   .card-image img {
     width: 300px !important;
     height: 235px !important;
   }
-  
+
   .card-text {
     width: 100%;
-  } 
+  }
 }
 
 @media (max-width: 540px) {
@@ -181,16 +267,16 @@
   }
 }
 
-@media (max-width: 435px){
-  .description{
+@media (max-width: 435px) {
+  .description {
     padding: 0 30px;
   }
 
-  .description h1{
+  .description h1 {
     width: 40%;
   }
 
-  .description p{
+  .description p {
     width: 60%;
   }
 }

@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Peanut butter",
+        "image": "images/customization/ingredients/peanut.png",
+        "calories": "",
+        "price": ""
+    },
+    {
+        "id": 2,
+        "name": "Chocolate chip",
+        "image": "images/customization/ingredients/chocolate.png",
+        "calories": "",
+        "price": ""
+    },
+    {
+        "id": 3,
+        "name": "Carob molasses",
+        "image": "images/customization/ingredients/carob.png",
+        "calories": "",
+        "price": ""
+    },
+    {
+        "id": 4,
+        "name": "Tahini",
+        "image": "images/customization/ingredients/tahini.png",
+        "calories": "",
+        "price": ""
+    },
+    {
+        "id": 5,
+        "name": "Biscuit cookie",
+        "image": "images/customization/ingredients/biscuit.png",
+        "calories": "",
+        "price": ""
+    }
+]

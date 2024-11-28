@@ -71,7 +71,7 @@
     },
     {
         "id": 11,
-        "title": "Oats Kaak Sunflower Seeds",
+        "title": "Oats kaak sunflower seeds",
         "image": "products-images/oats-kaak-sunflower-seeds.png",
         "price": "3.13$",
         "bestSeller": false
@@ -113,44 +113,44 @@
     },
     {
         "id": 17,
-        "title": "Peanut Carob Bar",
+        "title": "Peanut carob bar",
         "image": "products-images/peanut-carob-bar.png",
-        "price": "4.325$",
+        "price": "4.32$",
         "bestSeller": false
     },
     {
         "id": 18,
-        "title": "Sesame Carob Bar",
+        "title": "Sesame carob bar",
         "image": "products-images/sesame-carob-bar.png",
-        "price": "4.325$",
+        "price": "4.32$",
         "bestSeller": false
     },
     {
         "id": 19,
-        "title": "Coconut Carob Bites",
+        "title": "Coconut carob bites",
         "image": "products-images/coconut-carob-bites.png",
-        "price": "4.325$",
+        "price": "4.32$",
         "bestSeller": false
     },
     {
         "id": 20,
         "title": "Hazelnut Craze",
         "image": "products-images/hazelnut-craze.png",
-        "price": "5.65$",
+        "price": "5.6$",
         "bestSeller": false
     },
     {
         "id": 21,
-        "title": "Chocopeanut Cookies",
+        "title": "Chocopeanut cookies",
         "image": "products-images/chocopeanut-cookies.png",
-        "price": "4.325$",
+        "price": "4.32$",
         "bestSeller": false
     },
     {
         "id": 22,
         "title": "Bisco Choco",
         "image": "products-images/bisco-choco.png",
-        "price": "4.325$",
+        "price": "4.32$",
         "bestSeller": false
     },
     {
@@ -169,30 +169,30 @@
     },
     {
         "id": 25,
-        "title": "Carob Molasses 2 kg",
+        "title": "Carob molasses 2 kg",
         "image": "products-images/carob-molasses-2kg.png",
-        "price": "8.55$",
+        "price": "8.5$",
         "bestSeller": false
     },
     {
         "id": 26,
-        "title": "Carob Molasses 1 kg",
+        "title": "Carob molasses 1 kg",
         "image": "products-images/carob-molasses-1kg-red.png",
-        "price": "4.55$",
+        "price": "4.5$",
         "bestSeller": false
     },
     {
         "id": 27,
-        "title": "Carob Molasses 1 kg (Green)",
+        "title": "Carob molasses 1 kg (Green)",
         "image": "products-images/carob-molasses-1kg-green.png",
-        "price": "4.55$",
+        "price": "4.5$",
         "bestSeller": false
     },
     {
         "id": 28,
-        "title": "Carob Molasses 500 g",
+        "title": "Carob molasses 500 g",
         "image": "products-images/carob-molasses-500g.png",
-        "price": "2.45$",
+        "price": "2.4$",
         "bestSeller": false
     },
     {
@@ -220,7 +220,7 @@
         "id": 32,
         "title": "Debsy Spread",
         "image": "products-images/debsy-spread.png",
-        "price": "7.55$",
+        "price": "7.5$",
         "bestSeller": false
     }    
 ]
