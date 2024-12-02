@@ -51,14 +51,10 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-<<<<<<< HEAD
+
   gap: 51px;
   padding-top: 10px;
   gap: 80px;
-
-=======
-  gap: 80px;
->>>>>>> 5f0b3fbcf8e3f0ed760d607575de3c2ded7fe8a1
 }
 
 nav a {
@@ -84,13 +80,9 @@ nav .logo {
   justify-content: center;
   align-items: center;
   gap: 5px;
-<<<<<<< HEAD
   border: none;
   padding: 10px 10px;
-  
 
-=======
->>>>>>> 5f0b3fbcf8e3f0ed760d607575de3c2ded7fe8a1
 }
 
 .search-bar input {
@@ -104,11 +96,9 @@ nav .logo {
 
 .icons {
   display: flex;
-<<<<<<< HEAD
   justify-content: center;
   align-items: center;
-=======
->>>>>>> 5f0b3fbcf8e3f0ed760d607575de3c2ded7fe8a1
+
   flex-wrap: nowrap;
   gap: 10px;
 }
@@ -120,14 +110,13 @@ nav .logo {
   left: -2px;
 }
 
-<<<<<<< HEAD
+
 .material-icons{
   margin-right: 40px;
 
 }
 
-=======
->>>>>>> 5f0b3fbcf8e3f0ed760d607575de3c2ded7fe8a1
+
 /* Hamburger menu styling */
 .hamburger {
   display: none;
