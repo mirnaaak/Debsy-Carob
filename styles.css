@@ -1,0 +1,207 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ 
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #E5E4E4;
+    color: #4A403A;
+
+  }
+  
+  .checkout-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 40px;
+    border: 1px solid #CCC;
+    border-radius: 8px;
+  }
+  
+  .back-to-cart {
+    color: #4A403A;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+    font-family: "Romely";
+    font-size: 28.36 ;
+    color: #4C2B08;
+  }
+  
+  h1 {
+    font-family: "Romely";
+    font-size: 49.68px;
+    text-align: center;
+    margin: 10px 0 20px;
+    color: #4C2B08;
+  }
+  
+  h2 {
+    font-family: "Romely";
+    color: #4C2B08 ;
+    font-size: 26.6px;
+    font-weight: 500;
+    margin: 15px 0 5px;
+  }
+
+  .checkout-form {
+    margin: -20px; /* Negative margin to reduce the gap between the form and the container edges */
+  }
+  
+  
+  .checkout-form input {
+    width: 760px;
+    height: 63px;
+    padding: 10px;
+    margin: 8px 0;
+    border: 2px solid #D8C3A5;
+    border-radius: 23px;
+    font-family: "Romely";
+    font-size: 23.54px;
+    font-weight: lighter;
+    
+  }
+  
+  .name-fields {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .name-fields input {
+    flex: 1;
+  }
+  
+  .extra-fields {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .payment-options {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+  }
+  
+  .payment-options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .payment-options img {
+    width: 50px;
+  }
+  
+  .cash{
+    width: 415px;
+    height: 63px;
+    border: 2px solid #D8C3A5;
+    border-radius: 23px;
+    font-family: "Romely";
+    font-size: 23.54px;
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .cash:hover{
+    background-color: #6A5F58;
+  }
+  .pay{
+    width: 150px;
+    height: 63px;
+    border: 2px solid #D8C3A5;
+    border-radius: 23px;
+    color: #4C2B08;
+    font-family: "Romely";
+    font-size: 23.54px;
+    font-weight: lighter;
+    text-align: center;
+  }
+  .visa{
+    position: absolute;
+    right: 550px;
+  }
+  .master{
+    position: absolute;
+    right: 400px;
+  }
+  .complete-order {
+    font-family: "Romely";
+    font-size: 32px;
+    background-color: #E9E4DA;
+    color: #4C2B08;
+    padding: 10px;
+    border: 2px solid #D8C3A5;
+    border-radius: 23px;
+    width: 760px;
+    height: 63px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+position: relative;
+right: 20px;
+ 
+  }
+  
+  .complete-order:hover {
+    background-color: #6A5F58;
+  }
+  
+  footer {
+    background: #F8F4F4;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+    border-top: 1px solid #CCC;
+  }
+  
+  footer h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  footer a {
+    display: block;
+    margin: 5px 0;
+    color: #4A403A;
+    text-decoration: none;
+  }
+  
+  footer form {
+    display: flex;
+    gap: 5px;
+  }
+  
+  footer form input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+  }
+  
+  footer form button {
+    background-color: #4A403A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  footer form button:hover {
+    background-color: #6A5F58;
+  }
+  
+  footer p {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  
