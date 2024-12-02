@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="cart.css">
+  <title></title>
+</head>
+
+<body>
+  <!-- Header Navigation -->
+  <header>
+    <nav>
+      <a href="../home/index.html" class="logo mobile">Debsy Carob</a>
+      <div class="nav-links">
+        <a href="../home/index.html">Home</a>
+        <a href="../AboutUs/about.html">About Us</a>
+        <a href="../Products/products.html">Products</a>
+        <a href="../our-blog/our-blog.html">Blog</a>
+        <a href="../home/index.html" class="logo pc">Debsy Carob</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="search-bar">
+        <input type="text">
+        <div class="search-icon icons">
+          <img src="../nav+title+footer-images/search.svg" alt="">
+        </div>
+      </div>
+      <div class="shopping-bag icons">
+        <img src="../nav+title+footer-images/shopping.svg" alt="">
+      </div>
+      <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="cart">
+
+    <!-- Cart Title -->
+    <div class="title">
+      <div class="line l-left">
+        <img src="../nav+title+footer-images/line.svg" alt="">
+      </div>
+      <div class="title-content">
+        <h2 class="main-title">Your Handpicked Carob</h2>
+        <h3 class="sub-title" id="cart-sub">creations</h3>
+      </div>
+      <div class="line l-right">
+        <img src="../nav+title+footer-images/line.svg" alt="">
+      </div>
+    </div>
+
+    <!-- Cart Table -->
+    <div class="cart_table">
+      <table>
+        <thead>
+          <tr class="table-head">
+            <th>Products <span> <img src="cartimages/Line2.svg" alt=""> </span> </th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody id="cart-items">
+          <tr>
+            <td class="prod"><img class="itemimg" src="cartimages/image 25.png" alt="Carob Macron"><span
+                class="itemname">CAROB MACRON</span></td>
+            <td class='quantity'>
+              <div class='quantity-counter'>
+                <div class="counter-border">
+                  <div class="counter-content">
+                    <a class='btn btn-default minus-btn'>_</a>
+                    <input type='text' name='quantity' value='2' class='quantity-input' readonly />
+                    <a class='btn btn-default add-btn'>+</a>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td class="total">6.26$</td>
+            <td class="Remove"> <img src="cartimages/remove.svg" alt=""></td>
+          </tr>
+          <tr>
+            <td class="prod"><img class="itemimg" src="cartimages/image.png" alt="Ginger Biscuits"><span
+                class="itemname">GINGER BISCUITS</span></td>
+            <td class='quantity'>
+              <div class='quantity-counter'>
+                <div class="counter-border">
+                  <div class="counter-content">
+                    <a class='btn btn-default minus-btn'>_</a>
+                    <input type='text' name='quantity' value='1' class='quantity-input' readonly />
+                    <a class='btn btn-default add-btn'>+</a>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td class="total">3.13$</td>
+            <td class="Remove"> <img src="cartimages/remove.svg" alt=""></td>
+          </tr>
+          <tr>
+            <td class="prod"><img class="itemimg" src="cartimages/image 35.png" alt="Carob Date Bites"><span
+                class="itemname">CAROB DATE BITES</span></td>
+            <td class='quantity'>
+              <div class='quantity-counter'>
+                <div class="counter-border">
+                  <div class="counter-content">
+                    <a class='btn btn-default minus-btn'>_</a>
+                    <input type='text' name='quantity' value='1' class='quantity-input' readonly />
+                    <a class='btn btn-default add-btn'>+</a>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td class="total">3.13$</td>
+            <td class="Remove"> <img src="cartimages/remove.svg" alt=""></td>
+          </tr>
+          <tr>
+            <td class="prod"><img class="itemimg" src="cartimages/Group 249.png" alt="Zaatar Biscuits"><span
+                class="itemname">ZAATAR BISCUITS</span></td>
+            <td class='quantity'>
+              <div class='quantity-counter'>
+                <div class="counter-border">
+                  <div class="counter-content">
+                    <a class='btn btn-default minus-btn'>_</a>
+                    <input type='text' name='quantity' value='1' class='quantity-input' readonly />
+                    <a class='btn btn-default add-btn'>+</a>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td class="total">3.13$</td>
+            <td class="Remove"> <img src="cartimages/remove.svg" alt=""></td>
+          </tr>
+          <!-- Add other items here -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Summary Section -->
+  <div class="checkout-table-container">
+    <div class="checkout-table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th class="checkout-table-subtext">Sub Total <span class="checkout-table-sub"> <img
+                  src="cartimages/Line2.svg" alt=""> </span></th>
+            <th class="checkout-table-subprice">16.13$</th>
+            <th class="checkout-table-dlvtext">Delivery Fees <span> <img src="cartimages/Line2.svg" alt=""> </span></th>
+            <th class="checkout-table-price">2.00$</th>
+          </tr>
+        </thead>
+        <tbody>
+          <div class="checkout-table-coupon">
+            <tr>
+              <td class="checkout-table-text" colspan="2">+ Add coupon code</td>
+              <td class="checkout-table-discounttext" colspan="2"> Discount <span class="checkout-table-percentage"> 10%
+                </span></td>
+            </tr>
+          </div>
+        </tbody>
+      </table>
+    </div>
+    <div class="checkout-table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th class="checkout-table-totaltext">Total <span> <img src="cartimages/Line2.svg" alt=""> </span></th>
+            <th class="checkout-table-price">18.13$</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="checkout-table-checkout" style="text-align: center;" colspan="2">Checkout Now</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="button">
+    <button class="btn btn-default btn-more">Shop more</button>
+  </div>
+  </section>
+
+  <footer>
+    <div class="footer">
+      <div class="footer-section">
+        <h4>Our Store</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="#">Terms and Conditions</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <ul>
+          <li>Phone: 961-71459862</li>
+          <li>Email: Debsycarob@gmailcom</li>
+        </ul>
+
+      </div>
+      <div class="footer-section">
+        <div class="subscription">
+          <h4>SUBSCIRBE NOW</h4>
+          <input type="email" placeholder="Your Email" class="input-with-icon">
+          <img src="../nav+title+footer-images/submit.svg" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      Copyright &copy; debsycarob 2022
+    </div>
+
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="../main.js"></script>
+  <script src="cart.js"></script>
+</body>
+
+</html>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Rami's work */
 #our-blog h1{
     font-family: 'Langita', sans-serif;
@@ -55,3 +56,392 @@
    height: 45px;
 }
 /* end of ramis work */
+=======
+/*----- Mirna (start) -----*/
+
+@import url("https://fonts.cdnfonts.com/css/hayward-2");
+@import url("https://fonts.cdnfonts.com/css/quattrocento-2");
+@import url("https://fonts.cdnfonts.com/css/poppins");
+@import url("https://fonts.cdnfonts.com/css/koulen");
+@import url("https://fonts.cdnfonts.com/css/instrument-sans");
+@import url("https://fonts.cdnfonts.com/css/actor");
+
+@font-face {
+  font-family: "Romely";
+  src: url("fonts/romely/Romely\ Light.ttf");
+}
+
+/*----- Mirna (end) -----*/
+
+/*----- Cyrine (start) -----*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  height: 111.3px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  box-shadow: none;
+}
+
+nav {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 51px;
+  padding-top: 10px;
+  gap: 80px;
+}
+
+nav a {
+  font-family: "Romely";
+  text-decoration: none;
+  color: #4c2b08;
+  font-size: 28px;
+  text-wrap: nowrap;
+  -webkit-text-stroke: 0.25px #3d240e;
+}
+
+nav .logo {
+  font-family: "Romely";
+  color: #4c2b08;
+  font-size: 40px;
+  text-wrap: nowrap;
+  -webkit-text-stroke: 0.5px #4c2b08;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border: none;
+  padding: 10px 10px;
+}
+
+.search-bar input {
+  border: 2px solid #3c2415;
+  border-radius: 11px;
+  outline: none;
+  padding: 5px;
+  width: 181px;
+  height: 32px;
+}
+
+.icons {
+  cursor: pointer;
+}
+
+.shopping-bag {
+  margin-top: 8px;
+  margin-bottom: 15px;
+  position: relative;
+  left: -2px;
+}
+
+/* Hamburger menu styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #4c2b08;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+.nav-links a {
+  display: inline;
+}
+
+.nav-links.active {
+  font-family: "Romely";
+  font-size: 28px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  align-items: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.mobile {
+  display: none !important;
+}
+
+@media (max-width: 1024px) {
+  nav {
+    justify-content: space-evenly;
+  }
+
+  .search-bar input {
+    display: none;
+  }
+
+  .mobile {
+    display: block !important;
+  }
+
+  .pc {
+    display: none !important;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+/*----- Cyrine (end) -----*/
+
+/*----- Mirna (start) -----*/
+
+body {
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+input:focus {
+  outline: none !important;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: -20px;
+  margin-top: 30px;
+}
+
+.title-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-title {
+  font-family: "Romely";
+  font-size: 36.78px;
+  color: #3d240e;
+  -webkit-text-stroke: 0.29px #3d240e;
+  text-wrap: nowrap;
+}
+
+.sub-title {
+  display: flex;
+  justify-content: end;
+  font-family: "Hayward", sans-serif;
+  font-size: 33.33px;
+  color: #c59f72;
+  margin-top: -45px;
+  text-wrap: nowrap;
+}
+
+.line {
+  margin-top: 5px;
+}
+
+.btn {
+  border: none !important;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 121px;
+  height: 39px;
+  background-color: #e9e4da;
+  border: 1.37px solid #bc976c;
+  border-radius: 14.37px;
+  padding-top: 5px;
+  margin-top: 5px;
+}
+
+.btn-more {
+  font-family: "Romely";
+  font-size: 21.84px;
+  color: #3d240e;
+  -webkit-text-stroke: 0.16px #3d240e;
+  text-wrap: nowrap;
+  padding: 0;
+}
+
+.banner {
+  margin-top: 0 !important;
+  position: relative !important;
+  top: 129px !important;
+  z-index: 0 !important;
+}
+
+.quantity-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.counter-border {
+  display: flex;
+  justify-content: center;
+  width: 73px;
+  height: 36.87px;
+  border-radius: 12px;
+  border: 1px solid #4c2b08;
+}
+
+.counter-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 18.5px 0;
+}
+
+.quantity-input {
+  font-family: "Romely";
+  border: none;
+  width: 25px;
+  height: 33.11px;
+  font-size: 31.26px;
+  text-align: center;
+  color: #4c2b08;
+  background: transparent;
+  margin-bottom: -5px;
+}
+
+.quantity-counter a {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #4c2b08;
+  padding: 5px;
+  font-weight: 300;
+}
+
+.minus-btn {
+  font-size: 21px !important;
+  margin-top: -16px;
+}
+
+.add-btn {
+  margin-top: 3px;
+  font-size: 26.05px !important;
+}
+
+/*----- Mirna (end) -----*/
+
+/* ----- Yazan (Start) ----- */
+
+/* footer */
+footer {
+  background-color: #e9e4da;
+}
+
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 10px;
+}
+
+.footer-section h4 {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #4c2b08;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.subscription {
+  margin-top: 15px;
+}
+
+.subscription input[type="email"],
+button {
+  padding: 10px;
+  border: 2px solid black;
+  background-color: transparent;
+  font-size: 14px;
+  border-radius: 40px;
+}
+
+.subscription button {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 12px;
+}
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+#myInput {
+  padding-right: 30px;
+}
+
+/* ----- Yazan (End) ----- */
+>>>>>>> 1d5c4e1997c93a19a7da3b399bcd0ffb027e29ca
