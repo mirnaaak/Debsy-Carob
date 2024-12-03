@@ -51,7 +51,10 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1d5c4e1997c93a19a7da3b399bcd0ffb027e29ca
   gap: 51px;
   padding-top: 10px;
   gap: 80px;
@@ -82,7 +85,10 @@ nav .logo {
   gap: 5px;
   border: none;
   padding: 10px 10px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1d5c4e1997c93a19a7da3b399bcd0ffb027e29ca
 }
 
 .search-bar input {
@@ -90,17 +96,21 @@ nav .logo {
   border-radius: 11px;
   outline: none;
   padding: 5px;
-  width: 120.75px;
-  height: 33.6px;
+  width: 181px;
+  height: 32px;
 }
 
 .icons {
+<<<<<<< HEAD
   display: flex;
   justify-content: center;
   align-items: center;
 
   flex-wrap: nowrap;
   gap: 10px;
+=======
+  cursor: pointer;
+>>>>>>> 1d5c4e1997c93a19a7da3b399bcd0ffb027e29ca
 }
 
 .shopping-bag {
@@ -110,6 +120,7 @@ nav .logo {
   left: -2px;
 }
 
+<<<<<<< HEAD
 
 .material-icons{
   margin-right: 40px;
@@ -117,6 +128,8 @@ nav .logo {
 }
 
 
+=======
+>>>>>>> 1d5c4e1997c93a19a7da3b399bcd0ffb027e29ca
 /* Hamburger menu styling */
 .hamburger {
   display: none;
@@ -266,7 +279,7 @@ input:focus {
   margin-top: 0 !important;
   position: relative !important;
   top: 129px !important;
-  z-index: -1 !important;
+  z-index: 0 !important;
 }
 
 .quantity-counter {

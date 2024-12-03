@@ -1,0 +1,30 @@
+.products-cards {
+  position: relative;
+  top: 100px;
+  gap: 36px !important;
+}
+.cart-info {
+  gap: 19px;
+}
+.footer {
+  margin-top: 100px !important;
+}
+
+/* Card Container */
+.card {
+  width: 286px !important; /* Width of each card */
+  height: 369.87px !important; /* Height of each card */
+}
+.card-image {
+  width: 286px !important;
+  height: 263px !important;
+}
+.card-image img {
+  width: 266.57px !important;
+  height: 242.83px !important;
+}
+
+.card-body{
+    padding: 0;
+    height: 97.87px !important;
+}

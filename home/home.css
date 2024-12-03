@@ -146,7 +146,7 @@
 }
 
 .card {
-  border: none;
+  border: none !important;
   width: 267px;
   height: 375.87px;
   margin-top: 80px;
@@ -192,6 +192,7 @@
   font-size: 24px;
   -webkit-text-stroke: 0.25px #3d240e;
   color: #3d240e;
+  text-wrap: nowrap !important;
   margin-bottom: 0 !important;
   margin-top: 5px !important;
 }
@@ -253,7 +254,7 @@
 
 @media (max-width: 1024px) {
   #best-sellers .cards {
-    width: 100%;    
+    width: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
   }
@@ -540,6 +541,18 @@
   margin-top: 40px;
 }
 
+#img {
+  width: 343px !important;
+  height: 241px !important;
+}
+
+.ing-details {
+  display: flex;
+  flex-direction: column;
+  height: 82px;
+  gap: 8px;
+}
+
 .total {
   display: flex;
   justify-content: space-between;
@@ -581,7 +594,7 @@
   margin-top: 15px;
 }
 
-.ingredients .button {
+.customization-btn {
   width: 142px;
   height: 32px;
   border-radius: 12px;
@@ -593,6 +606,10 @@
   font-size: 24px;
   -webkit-text-stroke: 0px;
   color: #4c2b08;
+}
+
+.c-mob {
+  display: none !important;
 }
 
 .jar-customization {
@@ -693,6 +710,7 @@
   .customize {
     margin-top: 70px;
   }
+
   .ingredients {
     width: 50%;
   }
@@ -726,12 +744,16 @@
     margin-right: 40px;
   }
 
-  .jar-customization {
-    margin-top: -50px;
-  }
-
   .jar img {
     width: 250px;
+  }
+
+  .c-pc {
+    display: none !important;
+  }
+
+  .c-mob {
+    display: flex !important;
   }
 }
 
@@ -789,7 +811,7 @@
   height: 72px;
   color: #000000;
   margin-top: 8px;
-  font-family: "Instrument Sans";
+  font-family: "Instrument Sans", sans-serif;
 }
 /* choose us end */
 
