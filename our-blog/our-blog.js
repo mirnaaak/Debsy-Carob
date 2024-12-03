@@ -6,7 +6,9 @@ $(document).ready(function () {
     method: "GET",
     dataType: "json",
     success: function (blogItems) {
+      blogItems = blogItems;
       fetchBlog(blogItems);
+      fetchCategories(blogItems);
     },
     error: function (error) {
       console.log(error);
@@ -14,7 +16,7 @@ $(document).ready(function () {
   });
 
   function fetchBlog(blogItems) {
-    $(".content").empty();
+    $(".blog-items").empty();
 
     blogItems.forEach((blogItem) => {
       let blogHTML = `
@@ -43,7 +45,7 @@ $(document).ready(function () {
         </div>
         `;
 
-      $(".content").append(blogHTML);
+      $(".blog-items").append(blogHTML);
 
       $(".card-text").text(function (index, currentText) {
         return currentText.substr(0, 76) + "...";
@@ -100,5 +102,46 @@ $(document).ready(function () {
     </div>`;
 
     $(".modal-content").empty().append(blogDetailsHTML);
+  }
+
+  function fetchCategories(blogItems) {
+    $(".categories").empty();
+
+    let categories = new Set();
+    blogItems.forEach((blogItem) => {
+      categories.add(blogItem.category);
+    });
+
+    let categoriesHTML = `<div class="category" data-name="All">
+        All
+      </div>`;
+    $(".categories").append(categoriesHTML);
+
+    categories.forEach((category) => {
+      categoriesHTML = `
+      <div class="category" data-name="${category}">
+        ${category}
+      </div>
+      `;
+
+      $(".categories").append(categoriesHTML);
+    });
+
+    $(".category").click(function () {
+      let category = $(this).data("name");
+      console.log(category);
+      filterItems(blogItems, category);
+    });
+  }
+
+  function filterItems(blogItems, category) {
+    
+    if (category != "All") {
+      blogItems = blogItems.filter(function (blogItem) {
+        return blogItem.category == category;
+      });
+    }
+
+    fetchBlog(blogItems);
   }
 });
