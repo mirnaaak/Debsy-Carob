@@ -129,11 +129,13 @@
   .visa{
     position: absolute;
     right: 560px;
+    margin-bottom: 10px;
     width: 100px;
     height: 46px;
   }
   .master{
     position: absolute;
+    margin-bottom: 10px;
     right: 400px;
   }
   .complete-order {
@@ -158,4 +160,42 @@ right: 20px;
     background-color: #6A5F58;
   }
   
-  
+  /* Responsive Styles */
+@media (max-width: 768px) {
+  .name-fields,
+  .extra-fields {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .payment-options {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .payment-options img {
+    width: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .payment-options img {
+    width: 30px;
+  }
+
+  .complete-order {
+    font-size: 16px;
+  }
+  .checkout-form input {
+    width: 670px;
+    height: 43px;
+  }
+}
