@@ -1,4 +1,8 @@
 /* banner */
+#our-blog{
+  margin-bottom: 0;
+}
+
 #blog-sub {
   margin-top: -62px;
   margin-right: -39px;
@@ -13,7 +17,7 @@
   height: 134px;
   gap: 60px;
   width: 100%;
-  margin-top: 68px;
+  margin-top: 200px;
 }
 
 .description h1 {
@@ -199,6 +203,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 35px;
   margin-bottom: 39px;
 }
@@ -240,7 +245,7 @@
   }
 }
 
-@media (max-width: 855px) {
+@media (max-width: 912px) {
   .description {
     padding: 0 70px;
   }
@@ -263,7 +268,6 @@
   .card {
     width: 316px;
     height: 545px;
-    margin-top: 50px;
   }
 
   .card-image img {
@@ -273,6 +277,18 @@
 
   .card-text {
     width: 100%;
+  }
+
+  .modal-dialog{
+    max-width: 70% !important;
+  }
+
+  .modal-content{
+    height: fit-content !important;
+  }
+
+  .blog-title{
+    text-wrap: wrap;
   }
 }
 

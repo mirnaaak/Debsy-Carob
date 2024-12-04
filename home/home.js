@@ -304,7 +304,6 @@ $(document).ready(function () {
           }
         });
 
-        counter();
         addToCartProducts();
       },
       error: function (error) {
@@ -326,14 +325,8 @@ $(document).ready(function () {
     </div>
     <div class="ing-details">
       <h5 id="ing-title">${ingredient.name}</h5>
-      <div class='quantity-counter'>
-        <div class="counter-border">
-          <div class="counter-content">
-            <a class='btn btn-default minus-btn'>_</a>
-            <input type='text' name='quantity' value='1' class='quantity-input' readonly />
-            <a class='btn btn-default add-btn'>+</a>
-          </div>
-        </div>
+      <div class="button customization-btn add-ing">
+        <a class="btn btn-default btn-more">add</a>
       </div>
     </div>`;
 

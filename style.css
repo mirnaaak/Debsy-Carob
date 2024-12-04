@@ -242,7 +242,7 @@ input:focus {
 }
 
 .button:hover{
-  background-color: #E9E4DA;
+  background-color: #E9E4DA !important;
 }
 
 .btn-more {
@@ -253,8 +253,6 @@ input:focus {
   text-wrap: nowrap;
   padding: 0;
 }
-
-.btn
 
 .banner {
   margin-top: 0 !important;
