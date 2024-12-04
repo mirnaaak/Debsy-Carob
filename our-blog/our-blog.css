@@ -13,7 +13,7 @@
   height: 134px;
   gap: 60px;
   width: 100%;
-  margin-top: 230px;
+  margin-top: 68px;
 }
 
 .description h1 {
@@ -36,18 +36,39 @@
 
 /* content */
 .content {
+  margin: 68px 0;
+  gap: 25px;
+}
+
+.categories {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 18px;
+  margin-left: 15%;
+}
+
+.categories .category{
+  cursor: pointer;
+}
+
+/* blog cards */
+.blog-items {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 21px;
-  margin-bottom: 109px;
+  justify-content: center;
+  align-items: center;
+  gap: 68px 21px;
+  width: 100%;
 }
 
 .card {
   width: 416px;
   height: 645px;
-  border: 2px solid #bc976c;
+  border: 2px solid #bc976c !important;
   border-radius: 23px;
-  margin-top: 109px;
+  margin-top: 0;
 }
 
 .card-image {
@@ -125,29 +146,26 @@
 
 /* popup */
 .modal-dialog {
-  max-width: 1100px !important;
+  max-width: 946px !important;
 }
 
 .modal-content {
+  gap: 50px;
   border-radius: 20px !important;
+  height: 727px !important;
 }
 
 .back {
   display: flex;
   flex-direction: row;
   font-family: "Romely";
-  font-size: 28.36px;
+  font-size: 20px;
   -webkit-text-stroke: 0.44px #4c2b08;
   color: #4c2b08;
-  gap: 7px;
-  margin-bottom: 49px;
-  margin-left: 14px;
+  gap: 5px;
+  margin-left: 44px;
   margin-top: 39px;
   cursor: pointer;
-}
-
-.back img {
-  margin-top: -5px;
 }
 
 .details-top {
@@ -155,7 +173,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 93px;
 }
 
 .blog-title {
@@ -163,12 +180,13 @@
   font-size: 48px;
   font-weight: 700;
   color: #000000;
-  width: 573px;
+  min-width: 558px;
   text-align: center;
+  text-wrap: nowrap;
 }
 
 .modal-content .category-date {
-  width: 45%;
+  width: 51%;
   margin: 0;
 }
 
@@ -181,7 +199,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 43px;
+  gap: 35px;
   margin-bottom: 39px;
 }
 
@@ -189,22 +207,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 448.31px;
-  height: 448.69px;
-  border: 2px solid #bc976c;
+  width: 417px;
+  height: 417.35px;
+  border: 2px solid #bc976c !important;
   border-radius: 23px;
 }
 
 .blog-image img {
-  width: 425.56px;
-  height: 419.01px;
+  width: 395.84px;
+  height: 389.75px;
 }
 
 .blog-description {
   font-family: "Instrument Sans", sans-serif;
-  font-size: 22px;
+  font-size: 18px;
   color: #4c2b08;
-  width: 511px;
+  width: 450px;
+  height: 417px;
   text-align: justify;
 }
 

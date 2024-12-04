@@ -32,12 +32,6 @@ function previousFeedback() {
   showFeedback();
 }
 
-window.onload = showFeedback;
-
-document.querySelector("#readF").addEventListener("click", function () {
-  showFeedback();
-});
-
 document
   .querySelector(".input-with-icon")
   .addEventListener("keypress", function (event) {
@@ -104,6 +98,7 @@ $(document).ready(function () {
   // functions
   let begin = 1;
   let end = 4;
+  let ing = 0;
 
   function showBS() {
     $.ajax({
@@ -119,6 +114,7 @@ $(document).ready(function () {
         }
         fetchmobBestS(products);
         counter();
+        addToCartProducts();
       },
       error: function (error) {
         console.log(error);
@@ -241,6 +237,7 @@ $(document).ready(function () {
       success: function (products) {
         fetchProducts(products.slice(0, 8));
         counter();
+        addToCartProducts();
       },
       error: function (error) {
         console.error("Error fetching the products:", error);
@@ -271,7 +268,7 @@ $(document).ready(function () {
                   </div>
                 </div>
               </div>
-              <div class="add-cart">
+              <div class="add-cart" data-id="${product.id}">
                 <img src="../home/images/best-sellers/cart.svg" alt="Add to Cart">
               </div>
             </div>
@@ -282,8 +279,6 @@ $(document).ready(function () {
       $(".products-cards").append(productsHTML);
     });
   }
-
-  let ing = 0;
 
   function showJI() {
     $.ajax({
@@ -310,6 +305,7 @@ $(document).ready(function () {
         });
 
         counter();
+        addToCartProducts();
       },
       error: function (error) {
         console.log(error);
@@ -367,6 +363,38 @@ $(document).ready(function () {
       if (quantity <= 10) {
         quantityInput.val(quantity);
       }
+    });
+  }
+
+  function addToCartProducts() {
+    $(".add-cart").off("click");
+    $(".add-cart").click(function () {
+      const productId = $(this).data("id");
+
+      const quantityInput = $(this).closest(".cart").find(".quantity-input");
+      const quantity = Number(quantityInput.val().trim());
+
+      let storedProducts = localStorage.getItem("cartProducts");
+      let cartProducts = [];
+
+      if (storedProducts) {
+        cartProducts = JSON.parse(storedProducts) || [];
+      }
+
+      const existingProduct = cartProducts.find(
+        (product) => product.id == productId
+      );
+
+      if (existingProduct) {
+        existingProduct.quantity += quantity;
+      } else {
+        const product = { id: productId, quantity: Number(quantity) };
+        cartProducts.push(product);
+      }
+
+      localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+
+      console.log(JSON.parse(localStorage.getItem("cartProducts")));
     });
   }
 

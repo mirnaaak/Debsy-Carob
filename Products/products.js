@@ -25,7 +25,7 @@ $(document).ready(function () {
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="add-cart">
+                                    <div class="add-cart" data-id="${product.id}">
                                         <img src="../home/images/best-sellers/cart.svg" alt="Add to Cart">
                                     </div>
                                 </div>

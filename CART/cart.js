@@ -40,27 +40,88 @@ function updateCartTotal() {
     (subtotal + 2.0).toFixed(2) + "$";
 }
 
-$(document).ready(function(){
+$(document).ready(function () {
   // Mirna
-  $(".minus-btn").click(function () {
-    let quantityInput = $(this)
-      .closest(".counter-content")
-      .find(".quantity-input");
-    let quantity = quantityInput.val().trim();
-    quantity--;
-    if (quantity >= 0) {
-      quantityInput.val(quantity);
-    }
-  });
 
-  $(".add-btn").click(function () {
-    let quantityInput = $(this)
-      .closest(".counter-content")
-      .find(".quantity-input");
-    let quantity = quantityInput.val().trim();
-    quantity++;
-    if (quantity <= 10) {
-      quantityInput.val(quantity);
-    }
-  });
-})
+  // showCartItems();
+  counter();
+
+  function counter() {
+    $(".minus-btn, .add-btn").off("click");
+
+    $(".minus-btn").click(function () {
+      let quantityInput = $(this)
+        .closest(".counter-content")
+        .find(".quantity-input");
+      let quantity = quantityInput.val().trim();
+      quantity--;
+      if (quantity >= 0) {
+        quantityInput.val(quantity);
+      }
+    });
+
+    $(".add-btn").click(function () {
+      let quantityInput = $(this)
+        .closest(".counter-content")
+        .find(".quantity-input");
+      let quantity = quantityInput.val().trim();
+      quantity++;
+      if (quantity <= 10) {
+        quantityInput.val(quantity);
+      }
+    });
+  }
+
+  function showCartItems() {
+    $.ajax({
+      url: "../Products/products.json",
+      method: "GET",
+      dataType: "json",
+      success: function (products) {
+        let storedProducts = JSON.parse(localStorage.getItem("cartProducts"));
+
+        $("#cart-items").empty();
+
+        products.forEach((product) => {
+          storedProducts.forEach((sproduct) => {
+            if (product.id == sproduct.id) {
+              fetchCartProducts(product, sproduct.quantity);
+            }
+          });
+        });
+
+        counter();
+      },
+      error: function (error) {
+        console.log(error);
+      },
+    });
+  }
+
+  function fetchCartProducts(product, quantity) {
+    const price = parseFloat(product.price, 10);
+    const qty = parseFloat(quantity, 10);
+    let total = price * qty;
+    let productHTML = `
+      <tr>
+        <td class="prod"><img class="itemimg" src="../Products/${product.image}" alt="${product.title}"><span
+          class="itemname">${product.title}</span></td>
+        <td class='quantity'>
+          <div class='quantity-counter'>
+            <div class="counter-border">
+              <div class="counter-content">
+                <a class='btn btn-default minus-btn'>_</a>
+                <input type='text' name='quantity' value='${quantity}' class='quantity-input' readonly />
+                <a class='btn btn-default add-btn'>+</a>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td class="total">${total}</td>
+        <td class="Remove"> <img src="cartimages/remove.svg" alt=""></td>
+      </tr>
+    `;
+
+    $("#cart-items").append(productHTML);
+  }
+});
