@@ -12,6 +12,26 @@
   src: url("fonts/romely/Romely\ Light.ttf");
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #E9E4DA;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #C59F72;
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3D240E;
+}
+
 /*----- Mirna (end) -----*/
 
 /*----- Cyrine (start) -----*/
@@ -252,6 +272,10 @@ input:focus {
   -webkit-text-stroke: 0.16px #3d240e;
   text-wrap: nowrap;
   padding: 0;
+}
+
+.btn{
+  border: none !important;
 }
 
 .banner {

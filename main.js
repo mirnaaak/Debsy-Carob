@@ -11,6 +11,11 @@ document.querySelector(".hamburger").addEventListener("click", function () {
 $(document).ready(function () {
   // Mirna
   $(".shopping-bag").click(function () {
-    window.location.href="../cart/cart.html"
+    window.location.href = "../cart/cart.html";
+  });
+
+  // products btn
+  $(".products-vm").click(function () {
+    window.location.href = "../Products/products.html";
   });
 });

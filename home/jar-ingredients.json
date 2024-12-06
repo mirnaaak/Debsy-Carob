@@ -8,14 +8,14 @@
     },
     {
         "id": 2,
-        "name": "Chocolate chip",
+        "name": "Dark Chocolate",
         "image": "images/customization/ingredients/chocolate.png",
         "calories": "",
         "price": ""
     },
     {
         "id": 3,
-        "name": "Carob molasses",
+        "name": "Carob Molasses",
         "image": "images/customization/ingredients/carob.png",
         "calories": "",
         "price": ""
@@ -29,7 +29,7 @@
     },
     {
         "id": 5,
-        "name": "Biscuit cookie",
+        "name": "Biscuits",
         "image": "images/customization/ingredients/biscuit.png",
         "calories": "",
         "price": ""

@@ -6,9 +6,10 @@
   height: 500px;
   padding: 40px 40px;
   color: white;
-  background: url("aboutimages/reactangle.png") no-repeat center center/cover;
+  background: url("aboutimages/chocooo.jpg") no-repeat center center/cover;
   background-size: cover;
   position: relative;
+  
 }
 
 .hero .main-title {
@@ -34,6 +35,7 @@
 .about-section {
   padding: 0 20px;
   margin-top: 102px;
+  
 }
 
 .first {
@@ -61,6 +63,7 @@
   border: 2px solid #bc976c;
   border-radius: 15px;
   padding: 10px;
+  
 }
 
 .text {
@@ -91,8 +94,23 @@
   color: #333;
   text-align: justify;
   font-family: "Instrument Sans", sans-serif;
+
 }
 
 .reversed {
   flex-direction: row-reverse;
 }
+
+.about-section p {
+  text-align: justify;
+ margin-right: 50px;
+
+
+}
+
+.about-section .parag {
+  text-align: justify;
+  margin-left: 50px;
+}
+
+

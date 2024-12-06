@@ -168,9 +168,8 @@ $(document).ready(function () {
     window.location.href = "../our-blog/our-blog.html";
   });
 
-  // products btn
-  $(".products-vm").click(function () {
-    window.location.href = "../Products/products.html";
+  $(".container-about .btn-more").click(function () {
+    window.location.href = "../AboutUs/about.html";
   });
 
   // functions
@@ -186,11 +185,20 @@ $(document).ready(function () {
       success: function (products) {
         products = products.filter((product) => product.bestSeller);
 
+        let bestS = products;
         if (begin >= 0 && end <= products.length) {
-          let bestS = products.slice(begin, end);
-          fetchpcBestS(bestS);
+          bestS = products.slice(begin, end);
+        } else if (begin < 0) {
+          begin = products.length - 3;
+          end = products.length;
+          bestS = products.slice(begin, end);
+        } else if (end > products.length) {
+          begin = 1;
+          end = 4;
+          bestS = products.slice(begin, end);
         }
-        fetchmobBestS(products);
+        fetchpcBestS(bestS);
+
         counter();
         addToCartProducts();
       },
@@ -371,6 +379,9 @@ $(document).ready(function () {
 
           if (ing >= 0) {
             showJI();
+          } else {
+            ing = ingredients.length;
+            showJI();
           }
         });
 
@@ -378,6 +389,9 @@ $(document).ready(function () {
           ing++;
 
           if (ing <= ingredients.length) {
+            showJI();
+          } else {
+            ing = 0;
             showJI();
           }
         });
@@ -465,7 +479,7 @@ $(document).ready(function () {
 
       localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
 
-      console.log(JSON.parse(localStorage.getItem("cartProducts")));
+      quantityInput.val(1);
     });
   }
 
