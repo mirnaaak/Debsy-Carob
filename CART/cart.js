@@ -43,7 +43,7 @@ function updateCartTotal() {
 $(document).ready(function () {
   // Mirna
 
-  // showCartItems();
+  showCartItems();
   counter();
 
   function counter() {
@@ -55,8 +55,25 @@ $(document).ready(function () {
         .find(".quantity-input");
       let quantity = quantityInput.val().trim();
       quantity--;
-      if (quantity >= 0) {
+      if (quantity >= 1) {
         quantityInput.val(quantity);
+        const productId = $(this).data("id");
+        let storedProducts = localStorage.getItem("cartProducts");
+        let cartProducts = [];
+
+        if (storedProducts) {
+          cartProducts = JSON.parse(storedProducts) || [];
+        }
+
+        const existingProduct = cartProducts.find(
+          (product) => product.id == productId
+        );
+
+        existingProduct.quantity = quantity;
+
+        localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+
+        showCartItems();
       }
     });
 
@@ -68,6 +85,24 @@ $(document).ready(function () {
       quantity++;
       if (quantity <= 10) {
         quantityInput.val(quantity);
+
+        const productId = $(this).data("id");
+        let storedProducts = localStorage.getItem("cartProducts");
+        let cartProducts = [];
+
+        if (storedProducts) {
+          cartProducts = JSON.parse(storedProducts) || [];
+        }
+
+        const existingProduct = cartProducts.find(
+          (product) => product.id == productId
+        );
+
+        existingProduct.quantity = quantity;
+
+        localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+        
+        showCartItems();
       }
     });
   }
@@ -102,6 +137,7 @@ $(document).ready(function () {
     const price = parseFloat(product.price, 10);
     const qty = parseFloat(quantity, 10);
     let total = price * qty;
+    total = parseFloat(total.toFixed(2));
     let productHTML = `
       <tr>
         <td class="prod"><img class="itemimg" src="../Products/${product.image}" alt="${product.title}"><span
@@ -110,14 +146,14 @@ $(document).ready(function () {
           <div class='quantity-counter'>
             <div class="counter-border">
               <div class="counter-content">
-                <a class='btn btn-default minus-btn'>_</a>
+                <a class='btn btn-default minus-btn' data-id="${product.id}">_</a>
                 <input type='text' name='quantity' value='${quantity}' class='quantity-input' readonly />
-                <a class='btn btn-default add-btn'>+</a>
+                <a class='btn btn-default add-btn' data-id="${product.id}">+</a>
               </div>
             </div>
           </div>
         </td>
-        <td class="total">${total}</td>
+        <td class="total">${total}$</td>
         <td class="Remove"> <img src="cartimages/remove.svg" alt=""></td>
       </tr>
     `;

@@ -63,8 +63,10 @@ $(document).ready(function () {
             if (blog.id == blogId) {
               blogDetails(blog);
             }
-            $("#blog-details").modal("show");
           });
+
+          $("#blog-details").modal("show");
+          adjustCategoryDateWidth();
         },
         error: function (error) {
           console.log(error);
@@ -104,6 +106,16 @@ $(document).ready(function () {
     $(".modal-content").empty().append(blogDetailsHTML);
   }
 
+  function adjustCategoryDateWidth() {
+    $(".modal").on("shown.bs.modal", function () {
+      let blogTitle = $(".modal-content .blog-title");
+      let categoryDate = $(".modal-content .category-date");
+
+      let titleWidth = blogTitle.width();
+      categoryDate.width(titleWidth);
+    });
+  }
+
   function fetchCategories(blogItems) {
     $(".categories").empty();
 
@@ -111,6 +123,8 @@ $(document).ready(function () {
     blogItems.forEach((blogItem) => {
       categories.add(blogItem.category);
     });
+
+    categories = Array.from(categories).sort();
 
     let categoriesHTML = `<div class="category" data-name="All">
         All
@@ -135,7 +149,6 @@ $(document).ready(function () {
   }
 
   function filterItems(blogItems, category) {
-    
     if (category != "All") {
       blogItems = blogItems.filter(function (blogItem) {
         return blogItem.category == category;

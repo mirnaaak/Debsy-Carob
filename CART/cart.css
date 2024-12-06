@@ -28,6 +28,8 @@
   height: 497px;
   margin-left: 20px;
   margin-top: 67px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .table-head {
@@ -40,6 +42,7 @@
   font-size: 34px;
   color: #4c2b08;
 }
+
 .products-header {
   padding:  0 191px; /* Adds 191px padding to the left and right */
 }
@@ -310,17 +313,8 @@ th:last-child {
   position: absolute;
   bottom: 220px;
   left: 1130px;
-  border: 1.37px solid #3d240e;
-  border-radius: 14.37px;
   width: 118px;
   height: 39px;
-  background-color: transparent;
-  color: #3d240e;
-  -webkit-text-stroke: 0.16px #3d240e;
+  background-color: #FFFFFF !important;
   font-size: 21.84px;
-}
-
-.button:hover {
-  background-color: #d8c3a5;
-  color: #fff;
 }
