@@ -1,3 +1,81 @@
+//banner 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const hero = document.querySelector('.hero');
+  const subtitle = document.getElementById('hero-subtitle');
+  const title = document.getElementById('hero-title');
+  const description = document.getElementById('hero-description');
+  const dotsContainer = document.querySelector('.carousel-dots');
+
+  // Array with background images and text
+  const slides = [
+    {
+      image: 'url("images/banner/banner.png")',
+      subtitle: 'Your Sweet Tooth’s',
+      title: 'New Best Friend',
+      description: 'Vegan - Dark Chocolate - No Added Sugar'
+    },
+    {
+      image: 'url("images/banner/Brownie.png")',
+      subtitle: 'The Perfect Snack',
+      title: 'Hazelnut Craze',
+      description: 'Vegan - Dark Chocolate - No Added Sugar'
+    },
+    {
+      image: 'url("images/banner/Tahini.png")',
+      subtitle: 'Freshly Ground, Your Perfect',
+      title: 'Tahini Moment',
+      description: 'Vegan - Dark Chocolate - No Added Sugar'
+    }
+   
+   
+  ];
+
+  let currentIndex = 0;
+
+  function changeSlide() {
+    const currentSlide = slides[currentIndex];
+
+    // Update background and text
+    hero.style.backgroundImage = currentSlide.image;
+    subtitle.innerText = currentSlide.subtitle;
+    title.innerText = currentSlide.title;
+    description.innerText = currentSlide.description;
+
+    updateDots(currentIndex);
+
+    currentIndex = (currentIndex + 1) % slides.length;
+  }
+
+  function updateDots(index) {
+    const dots = document.querySelectorAll('.carousel-dot');
+    dots.forEach(dot => dot.classList.remove('active'));
+    if (dots[index]) {
+      dots[index].classList.add('active');
+    }
+  }
+
+  function createDots() {
+    slides.forEach((_, index) => {
+      const dot = document.createElement('div');
+      dot.className = 'carousel-dot';
+      dot.addEventListener('click', () => {
+        currentIndex = index;
+        changeSlide();
+      });
+      dotsContainer.appendChild(dot);
+    });
+  }
+
+  createDots();
+
+  setInterval(changeSlide, 5000);  // Automatically change slide every 5 seconds
+  changeSlide();  // Initial call to set the first slide
+});
+
+
+
+
 // Yazan
 const feedbacks = [
   {
