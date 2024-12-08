@@ -30,16 +30,12 @@
   width: 1512px;
   width: 100%;
   justify-content: flex-start;
-  margin-bottom: 350px;
+  margin-bottom: 200px;
   object-fit: cover;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-
-
-
-
 
 .hero-text {
   display: flex;
@@ -97,8 +93,8 @@
 }
 
 .hero-button:hover {
-  background-color: #E9E4DA;
-  color: #3D240E;
+  background-color: #e9e4da;
+  color: #3d240e;
 }
 
 .carousel-dots {
@@ -481,7 +477,7 @@
 }
 
 .text-content button:hover {
-  background-color: #D8C3A5;
+  background-color: #d8c3a5;
 }
 
 /*----- Rami (End) -----*/
@@ -638,7 +634,7 @@
   color: #4c2b08;
 }
 
-.add-ing{
+.add-ing {
   width: 75px;
   height: 34px;
 }
@@ -789,6 +785,24 @@
 
   .c-mob {
     display: flex !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .customize {
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .ingredients,
+  .jar-customization {
+    width: 100%;
+  }
+
+  .ing-image,
+  .customize {
+    margin-top: 10px;
   }
 }
 
@@ -986,13 +1000,14 @@
 
 @media (max-width: 435px) {
   #our-blog .title {
-    margin-right: 210px !important;
+    margin-right: 180px !important;
   }
 }
 
 @media (max-width: 380px) {
   #our-blog .title {
-    margin-right: 180px !important;
+    margin-right: 120px !important;
+    padding-right: 20px !important;
   }
 }
 

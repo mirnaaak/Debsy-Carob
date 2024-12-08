@@ -18,18 +18,18 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #E9E4DA;
+  background: #e9e4da;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #C59F72;
+  background: #c59f72;
   border-radius: 6px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #3D240E;
+  background: #3d240e;
 }
 
 /*----- Mirna (end) -----*/
@@ -242,6 +242,35 @@ input:focus {
   margin-top: 5px;
 }
 
+@media (max-width: 540px) {
+  .line {
+    display: none;
+  }
+}
+
+@media (max-width: 435px) {
+  .title {
+    width: 100%;
+    padding: 50px;
+  }
+
+  .main-title {
+    font-size: 28px !important;
+  }
+
+  .sub-title {
+    font-size: 25px !important;
+    margin-top: -40px !important;
+    margin-right: -70px !important;
+  }
+}
+
+@media (max-width: 376px) {
+  .title {
+    padding: 10px !important;
+  }
+}
+
 .btn {
   border: none !important;
 }
@@ -261,8 +290,8 @@ input:focus {
   -webkit-text-stroke: 0.16px #3d240e;
 }
 
-.button:hover{
-  background-color: #E9E4DA !important;
+.button:hover {
+  background-color: #e9e4da !important;
 }
 
 .btn-more {
@@ -274,7 +303,7 @@ input:focus {
   padding: 0;
 }
 
-.btn{
+.btn {
   border: none !important;
 }
 

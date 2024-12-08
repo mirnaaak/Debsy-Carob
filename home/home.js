@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Yazan
 const feedbacks = [
   {
-    text: "Carob is a game-changer for vegans! Their naturally sweet, plant-based carob treats are made with clean ingredients, and the family story adds a special touch. It's a snack I can enjoy without compromise!",
+    text: "Carob is a game-changer for vegans! Their naturally sweet, plant-based carob treats are made with clean ingredients.",
     name: "Sara M",
   },
   {
@@ -198,7 +198,8 @@ $(document).ready(function () {
           bestS = products.slice(begin, end);
         }
         fetchpcBestS(bestS);
-
+        fetchmobBestS(products);
+        
         counter();
         addToCartProducts();
       },

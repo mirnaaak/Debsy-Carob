@@ -294,6 +294,27 @@
   .modal-content .category-date {
     padding: 0 50px;
   }
+
+  .blog-description {
+    height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-image {
+    width: 317px;
+    height: 317.35px;
+  }
+
+  .blog-image img {
+    width: 295.84px;
+    height: 289.75px;
+  }
+
+  .blog-description {
+    width: 350px;
+    height: 100%;
+  }
 }
 
 @media (max-width: 540px) {
@@ -303,6 +324,11 @@
 
   .description p {
     font-size: 16px;
+  }
+
+  .categories {
+    margin-left: 0;
+    padding: 10px;
   }
 }
 
