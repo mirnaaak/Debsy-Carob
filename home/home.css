@@ -134,7 +134,6 @@
 
 /* best sellers */
 #best-sellers {
-  margin: 30px 0;
   margin-top: 170px;
 }
 
@@ -376,12 +375,6 @@
   border-radius: 97px;
 }
 
-#about-us .button {
-  width: 104px;
-  height: 36px;
-  border-radius: 13.26px;
-}
-
 #about-us .btn-more {
   font-size: 20.16px;
 }
@@ -411,7 +404,7 @@
   align-items: center;
   flex-wrap: wrap;
   margin-top: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   gap: 34px;
   padding: 0 114px;
 }
@@ -622,13 +615,10 @@
 
 .customization-btn {
   width: 142px;
-  height: 32px;
+  height: 34px;
   border-radius: 12px;
   background-color: transparent;
   border: 1px solid #4c2b08;
-}
-
-.ingredients .btn-more {
   font-size: 24px;
   -webkit-text-stroke: 0px;
   color: #4c2b08;
@@ -645,6 +635,18 @@
 
 .jar-customization {
   margin-top: 45px;
+}
+
+.jar-ingredients{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.jar-rel{
+  position: relative;
+  margin-top: -370px;
 }
 
 .size,
@@ -779,6 +781,17 @@
     width: 250px;
   }
 
+  .jar-ingredients img{
+    width: 210px;
+  }
+
+  .jar-ingredients{
+    margin-top: -100px;
+  }
+  .jar-rel{
+    margin-top: -290px;
+  }
+
   .c-pc {
     display: none !important;
   }
@@ -790,7 +803,7 @@
 
 @media (max-width: 540px) {
   .customize {
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
     gap: 50px;
   }
@@ -967,19 +980,8 @@
   width: 100% !important;
 }
 
-#our-blog .button {
-  width: 103px;
-  height: 36px;
-  border-radius: 13.26px;
-  background-color: transparent;
-  border: 1px solid #3d240e;
-  padding: 0 5px;
-  padding-top: 8px;
-}
-
 #our-blog .btn-more {
   font-size: 20.16px;
-  -webkit-text-stroke: 0.15px #3d240e;
 }
 
 /* responsive */

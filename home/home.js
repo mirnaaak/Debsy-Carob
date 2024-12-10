@@ -1,34 +1,32 @@
-//banner 
+//banner
 
 document.addEventListener("DOMContentLoaded", () => {
-  const hero = document.querySelector('.hero');
-  const subtitle = document.getElementById('hero-subtitle');
-  const title = document.getElementById('hero-title');
-  const description = document.getElementById('hero-description');
-  const dotsContainer = document.querySelector('.carousel-dots');
+  const hero = document.querySelector(".hero");
+  const subtitle = document.getElementById("hero-subtitle");
+  const title = document.getElementById("hero-title");
+  const description = document.getElementById("hero-description");
+  const dotsContainer = document.querySelector(".carousel-dots");
 
   // Array with background images and text
   const slides = [
     {
       image: 'url("images/banner/banner.png")',
-      subtitle: 'Your Sweet Tooth’s',
-      title: 'New Best Friend',
-      description: 'Vegan - Dark Chocolate - No Added Sugar'
+      subtitle: "Your Sweet Tooth’s",
+      title: "New Best Friend",
+      description: "Vegan - Dark Chocolate - No Added Sugar",
     },
     {
       image: 'url("images/banner/Brownie.png")',
-      subtitle: 'The Perfect Snack',
-      title: 'Hazelnut Craze',
-      description: 'Vegan - Dark Chocolate - No Added Sugar'
+      subtitle: "The Perfect Snack",
+      title: "Hazelnut Craze",
+      description: "Vegan - Dark Chocolate - No Added Sugar",
     },
     {
       image: 'url("images/banner/Tahini.png")',
-      subtitle: 'Freshly Ground, Your Perfect',
-      title: 'Tahini Moment',
-      description: 'Vegan - Dark Chocolate - No Added Sugar'
-    }
-   
-   
+      subtitle: "Freshly Ground, Your Perfect",
+      title: "Tahini Moment",
+      description: "Vegan - Dark Chocolate - No Added Sugar",
+    },
   ];
 
   let currentIndex = 0;
@@ -48,18 +46,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateDots(index) {
-    const dots = document.querySelectorAll('.carousel-dot');
-    dots.forEach(dot => dot.classList.remove('active'));
+    const dots = document.querySelectorAll(".carousel-dot");
+    dots.forEach((dot) => dot.classList.remove("active"));
     if (dots[index]) {
-      dots[index].classList.add('active');
+      dots[index].classList.add("active");
     }
   }
 
   function createDots() {
     slides.forEach((_, index) => {
-      const dot = document.createElement('div');
-      dot.className = 'carousel-dot';
-      dot.addEventListener('click', () => {
+      const dot = document.createElement("div");
+      dot.className = "carousel-dot";
+      dot.addEventListener("click", () => {
         currentIndex = index;
         changeSlide();
       });
@@ -69,26 +67,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   createDots();
 
-  setInterval(changeSlide, 5000);  // Automatically change slide every 5 seconds
-  changeSlide();  // Initial call to set the first slide
+  setInterval(changeSlide, 5000); // Automatically change slide every 5 seconds
+  changeSlide(); // Initial call to set the first slide
 });
-
-
-
 
 // Yazan
 const feedbacks = [
   {
-    text: "Carob is a game-changer for vegans! Their naturally sweet, plant-based carob treats are made with clean ingredients.",
-    name: "Sara M",
+    text: "Debsy Carob is a game-changer for vegans! Their naturally sweet, plant-based carob treats are made with clean ingredients, and the family story adds a special touch. It's a snack I can enjoy without compromise!",
+    name: "Sara M.",
   },
   {
-    text: "Debsy Carob has been my go-to for healthy snacks. The taste and quality are unbeatable!",
-    name: "Alex J",
+    text: "As someone who loves discovering healthy snacks, Debsy Carob is a gem! The traditional, family-oriented touch makes the experience even more wholesome. Plus, the taste is incredible—it feels good to indulge guilt-free!",
+    name: "Maya H.",
   },
   {
-    text: "Finally a treat that fits my dietary restrictions without sacrificing taste. Highly recommended!",
-    name: "Mona K",
+    text: "Debsy Carob is a must-try for anyone seeking a unique, natural treat. The blend of tradition and sustainability makes it stand out. Every bite reminds me of how snacks can be delicious and mindful at the same time!",
+    name: "Omar K.",
   },
 ];
 
@@ -132,6 +127,10 @@ $(document).ready(function () {
   // best-sellers
   showBS();
 
+  $(".peanut").hide();
+  $(".chocolate").hide();
+  $(".biscuit").hide();
+
   $(".move-left").click(function () {
     begin--;
     end--;
@@ -172,6 +171,44 @@ $(document).ready(function () {
     window.location.href = "../AboutUs/about.html";
   });
 
+  // undo btn
+  $(".undo").click(function () {
+    if ($(".chocolate").is(":hidden") && $(".biscuit").is(":hidden")) {
+      $(".peanut").hide();
+      $(".jar").removeClass("jar-rel");
+      $(".jar-customization").css("margin-top", "45px");
+      $(".calories .value h6").text("__");
+      $(".price .value h6").text("__");
+    } else if ($(".biscuit").is(":hidden")) {
+      $(".chocolate").hide();
+      $(".jar-customization").css("margin-top", "318px");
+      $(".calories .value h6").text("188");
+      $(".price .value h6").text("1$");
+    } else if (
+      !(
+        $(".peanut").is(":hidden") &&
+        $(".chocolate").is(":hidden") &&
+        $(".biscuit").is(":hidden")
+      )
+    ) {
+      $(".biscuit").hide();
+      $(".jar-customization").css("margin-top", "245px");
+      $(".calories .value h6").text("250");
+      $(".price .value h6").text("2$");
+    }
+  });
+
+  // reset btn
+  $(".reset").click(function () {
+    $(".peanut").hide();
+    $(".chocolate").hide();
+    $(".biscuit").hide();
+    $(".jar").removeClass("jar-rel");
+    $(".jar-customization").css("margin-top", "45px");
+    $(".calories .value h6").text("__");
+    $(".price .value h6").text("__");
+  });
+
   // functions
   let begin = 1;
   let end = 4;
@@ -199,7 +236,7 @@ $(document).ready(function () {
         }
         fetchpcBestS(bestS);
         fetchmobBestS(products);
-        
+
         counter();
         addToCartProducts();
       },
@@ -397,7 +434,35 @@ $(document).ready(function () {
           }
         });
 
-        addToCartProducts();
+        $(".add-ing").click(function () {
+          let ingId = $(this).data("id");
+          let calories = Number($(this).data("calories"));
+          let price = Number($(this).data("price"));
+
+          $(".jar").addClass("jar-rel");
+          if (ingId == 1) {
+            $(".jar-customization").css("margin-top", "318px");
+            $(".calories .value h6").text(calories);
+            $(".price .value h6").text(price + "$");
+            $(".peanut").show();
+          } else if (ingId == 2) {
+            $(".jar-customization").css("margin-top", "245px");
+            let cal = Number($(".calories .value h6").text());
+            $(".calories .value h6").text(calories + cal);
+            let pr = Number($(".price .value h6").text().replace("$", ""));
+            $(".price .value h6").text(price + pr + "$");
+            $(".chocolate").show();
+          } else if (ingId == 3) {
+            $(".jar-customization").css("margin-top", "155px");
+            let cal = Number($(".calories .value h6").text());
+            $(".calories .value h6").text(calories + cal);
+            let pr = Number($(".price .value h6").text().replace("$", ""));
+            $(".price .value h6").text(price + pr + "$");
+            $(".biscuit").show();
+          }
+        });
+
+        // addToCartProducts();
       },
       error: function (error) {
         console.log(error);
@@ -418,9 +483,7 @@ $(document).ready(function () {
     </div>
     <div class="ing-details">
       <h5 id="ing-title">${ingredient.name}</h5>
-      <div class="button customization-btn add-ing">
-        <a class="btn btn-default btn-more">add</a>
-      </div>
+      <button class="btn-more customization-btn add-ing" data-id="${ingredient.id}" data-calories="${ingredient.calories}" data-price="${ingredient.price}">add</button>
     </div>`;
 
     $(".ingredient").empty().append(ingredientHTML);
