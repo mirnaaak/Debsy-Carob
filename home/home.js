@@ -514,7 +514,6 @@ $(document).ready(function () {
       }
     });
   }
-
   function addToCartProducts() {
     $(".add-cart").off("click");
     $(".add-cart").click(function () {

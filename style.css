@@ -271,6 +271,10 @@ input:focus {
   }
 }
 
+.btn{
+  border: none;
+}
+
 .btn-more {
   display: flex;
   justify-content: center;
