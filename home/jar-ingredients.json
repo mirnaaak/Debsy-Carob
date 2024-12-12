@@ -4,34 +4,39 @@
         "name": "Peanut butter",
         "image": "images/customization/ingredients/peanut.png",
         "calories": 188,
-        "price": 1
+        "price": 1,
+        "jarImage": "images/customization/ingredients/jar-peanut.png"
     },
     {
         "id": 2,
         "name": "Dark Chocolate",
         "image": "images/customization/ingredients/chocolate.png",
         "calories": 62,
-        "price": 1
+        "price": 1,
+        "jarImage": "images/customization/ingredients/jar-chocolate.png"
     },
     {
         "id": 3,
         "name": "Biscuits",
         "image": "images/customization/ingredients/biscuit.png",
         "calories": 50,
-        "price": 1
+        "price": 1,
+        "jarImage": "images/customization/ingredients/jar-biscuit.png"
     },
     {
         "id": 4,
         "name": "Carob Molasses",
         "image": "images/customization/ingredients/carob.png",
         "calories": "",
-        "price": ""
+        "price": "",
+        "jarImage": ""
     },
     {
         "id": 5,
         "name": "Tahini",
         "image": "images/customization/ingredients/tahini.png",
         "calories": "",
-        "price": ""
+        "price": "",
+        "jarImage": ""
     }
 ]

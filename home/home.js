@@ -127,9 +127,7 @@ $(document).ready(function () {
   // best-sellers
   showBS();
 
-  $(".peanut").hide();
-  $(".chocolate").hide();
-  $(".biscuit").hide();
+  $(".ing").hide();
 
   $(".move-left").click(function () {
     begin--;
@@ -162,6 +160,63 @@ $(document).ready(function () {
     }
   );
 
+  let size = "";
+  $(".size-btn").click(function () {
+    size = $(this).find("h5").text();
+    $(".size-btn").css("background-color", "transparent");
+    $(this).css("background-color", "#E0CCB0");
+  });
+
+  $(".undo").click(function () {
+    if ($(".i-1").is(":hidden")) {
+      alert("Please add ingredients to undo!");
+    }
+
+    if (size == "S") {
+      if ($(".i-2").is(":hidden") && $(".i-3").is(":hidden")) {
+        $(".i-1").empty().hide();
+        $(".jar").removeClass("jar-rel");
+        $(".jar-customization").css("margin-top", "45px");
+        console.log($("i-1").data("calories"));
+        updateCaloriesAndPrice(
+          Number($("i-1").data("calories")),
+          Number($("i-1").data("price")),
+          "subtract"
+        );
+      } else if ($(".i-3").is(":hidden")) {
+        $(".i-2").empty().hide();
+        $(".jar-customization").css("margin-top", "318px");
+        updateCaloriesAndPrice(
+          Number($("i-2").data("calories")),
+          Number($("i-2").data("price")),
+          "subtract"
+        );
+      } else if (
+        !(
+          $(".i-1").is(":hidden") ||
+          $(".i-2").is(":hidden") ||
+          $(".i-3").is(":hidden")
+        )
+      ) {
+        $(".i-3").empty().hide();
+        $(".jar-customization").css("margin-top", "245px");
+        updateCaloriesAndPrice(
+          Number($("i-3").data("calories")),
+          Number($("i-3").data("price")),
+          "subtract"
+        );
+      }
+    }
+  });
+
+  $(".reset").click(function () {
+    if (!$(".i-1").is(":hidden")) {
+      reset();
+    } else {
+      alert("Please add ingredients to reset!");
+    }
+  });
+
   // blog btn
   $("#our-blog .btn-con").click(function () {
     window.location.href = "../our-blog/our-blog.html";
@@ -169,44 +224,6 @@ $(document).ready(function () {
 
   $(".container-about .btn-more").click(function () {
     window.location.href = "../AboutUs/about.html";
-  });
-
-  // undo btn
-  $(".undo").click(function () {
-    if ($(".chocolate").is(":hidden") && $(".biscuit").is(":hidden")) {
-      $(".peanut").hide();
-      $(".jar").removeClass("jar-rel");
-      $(".jar-customization").css("margin-top", "45px");
-      $(".calories .value h6").text("__");
-      $(".price .value h6").text("__");
-    } else if ($(".biscuit").is(":hidden")) {
-      $(".chocolate").hide();
-      $(".jar-customization").css("margin-top", "318px");
-      $(".calories .value h6").text("188");
-      $(".price .value h6").text("1$");
-    } else if (
-      !(
-        $(".peanut").is(":hidden") &&
-        $(".chocolate").is(":hidden") &&
-        $(".biscuit").is(":hidden")
-      )
-    ) {
-      $(".biscuit").hide();
-      $(".jar-customization").css("margin-top", "245px");
-      $(".calories .value h6").text("250");
-      $(".price .value h6").text("2$");
-    }
-  });
-
-  // reset btn
-  $(".reset").click(function () {
-    $(".peanut").hide();
-    $(".chocolate").hide();
-    $(".biscuit").hide();
-    $(".jar").removeClass("jar-rel");
-    $(".jar-customization").css("margin-top", "45px");
-    $(".calories .value h6").text("__");
-    $(".price .value h6").text("__");
   });
 
   // functions
@@ -359,6 +376,7 @@ $(document).ready(function () {
       method: "GET",
       dataType: "json",
       success: function (products) {
+        products = products.filter((product) => product.id !== 0);
         fetchProducts(products.slice(0, 8));
         counter();
         addToCartProducts();
@@ -435,34 +453,47 @@ $(document).ready(function () {
         });
 
         $(".add-ing").click(function () {
-          let ingId = $(this).data("id");
-          let calories = Number($(this).data("calories"));
-          let price = Number($(this).data("price"));
+          if (size === "") {
+            alert("Please select size to start adding ingredients!");
+          } else {
+            let ingId = $(this).data("id");
+            let calories = Number($(this).data("calories"));
+            let price = Number($(this).data("price"));
+            let jarImage = $(this).data("jar");
 
-          $(".jar").addClass("jar-rel");
-          if (ingId == 1) {
-            $(".jar-customization").css("margin-top", "318px");
-            $(".calories .value h6").text(calories);
-            $(".price .value h6").text(price + "$");
-            $(".peanut").show();
-          } else if (ingId == 2) {
-            $(".jar-customization").css("margin-top", "245px");
-            let cal = Number($(".calories .value h6").text());
-            $(".calories .value h6").text(calories + cal);
-            let pr = Number($(".price .value h6").text().replace("$", ""));
-            $(".price .value h6").text(price + pr + "$");
-            $(".chocolate").show();
-          } else if (ingId == 3) {
-            $(".jar-customization").css("margin-top", "155px");
-            let cal = Number($(".calories .value h6").text());
-            $(".calories .value h6").text(calories + cal);
-            let pr = Number($(".price .value h6").text().replace("$", ""));
-            $(".price .value h6").text(price + pr + "$");
-            $(".biscuit").show();
+            $(".jar").addClass("jar-rel");
+
+            if (size == "S") {
+              if (!$(".i-3").is(":hidden")) {
+                alert(
+                  "You have reached the maximum number of ingredients for this size!"
+                );
+              }
+
+              if ($(".i-1").is(":hidden")) {
+                $(".jar-customization").css("margin-top", "318px");
+                updateCaloriesAndPrice(calories, price, "add");
+                $(".i-1").data("calories", calories);
+                $(".i-1").data("price", price);
+                $(".i-1").append($("<img>").attr("src", jarImage)).show();
+              } else if ($(".i-2").is(":hidden")) {
+                $(".jar-customization").css("margin-top", "245px");
+                updateCaloriesAndPrice(calories, price, "add");
+                $(".i-2").data("calories", calories);
+                $(".i-2").data("price", price);
+                $(".i-2").append($("<img>").attr("src", jarImage)).show();
+              } else if ($(".i-3").is(":hidden")) {
+                $(".jar-customization").css("margin-top", "155px");
+                updateCaloriesAndPrice(calories, price, "add");
+                $(".i-3").data("calories", calories);
+                $(".i-3").data("price", price);
+                $(".i-3").append($("<img>").attr("src", jarImage)).show();
+              }
+            }
           }
         });
 
-        // addToCartProducts();
+        addToCartProducts();
       },
       error: function (error) {
         console.log(error);
@@ -483,7 +514,7 @@ $(document).ready(function () {
     </div>
     <div class="ing-details">
       <h5 id="ing-title">${ingredient.name}</h5>
-      <button class="btn-more customization-btn add-ing" data-id="${ingredient.id}" data-calories="${ingredient.calories}" data-price="${ingredient.price}">add</button>
+      <button class="btn-more customization-btn add-ing" data-id="${ingredient.id}" data-calories="${ingredient.calories}" data-price="${ingredient.price}" data-jar="${ingredient.jarImage}">add</button>
     </div>`;
 
     $(".ingredient").empty().append(ingredientHTML);
@@ -498,7 +529,7 @@ $(document).ready(function () {
         .find(".quantity-input");
       let quantity = quantityInput.val().trim();
       quantity--;
-      if (quantity >= 0) {
+      if (quantity >= 1) {
         quantityInput.val(quantity);
       }
     });
@@ -514,13 +545,11 @@ $(document).ready(function () {
       }
     });
   }
+
   function addToCartProducts() {
     $(".add-cart").off("click");
     $(".add-cart").click(function () {
-      const productId = $(this).data("id");
-
-      const quantityInput = $(this).closest(".cart").find(".quantity-input");
-      const quantity = Number(quantityInput.val().trim());
+      let productId = $(this).data("id");
 
       let storedProducts = localStorage.getItem("cartProducts");
       let cartProducts = [];
@@ -529,21 +558,85 @@ $(document).ready(function () {
         cartProducts = JSON.parse(storedProducts) || [];
       }
 
-      const existingProduct = cartProducts.find(
+      let existingProduct = cartProducts.find(
         (product) => product.id == productId
       );
 
-      if (existingProduct) {
-        existingProduct.quantity += quantity;
+      let product = {};
+
+      if (productId == 0) {
+        if ($(".i-1").is(":hidden")) {
+          alert("Please select ingredients to add to cart!");
+        } else if ($(".i-3").is(":hidden")) {
+          alert("Please add at least 3 ingredients!");
+        } else {
+          if (existingProduct) {
+            existingProduct.quantity = existingProduct.quantity + 1;
+          } else {
+            product = {
+              id: productId,
+              price: Number(
+                $(".total .price .value h6").text().replace("$", "")
+              ),
+              quantity: 1,
+            };
+            cartProducts.push(product);
+          }
+
+          reset();
+        }
       } else {
-        const product = { id: productId, quantity: Number(quantity) };
-        cartProducts.push(product);
+        let quantityInput = $(this).closest(".cart").find(".quantity-input");
+        let quantity = Number(quantityInput.val().trim());
+
+        if (existingProduct) {
+          existingProduct.quantity += quantity;
+        } else {
+          product = {
+            id: productId,
+            quantity: Number(quantity),
+          };
+
+          cartProducts.push(product);
+        }
+
+        quantityInput.val(1);
       }
 
       localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
-
-      quantityInput.val(1);
     });
+  }
+
+  function updateCaloriesAndPrice(caloriesVal, priceVal, operation) {
+    let calories = $(".calories .value h6");
+    let price = $(".price .value h6");
+
+    if (operation === "add") {
+      if (calories.text() == "__" && price.text() == "__") {
+        calories.text(caloriesVal);
+        price.text(priceVal + "$");
+      } else {
+        calories.text(caloriesVal + Number(calories.text()));
+        price.text(priceVal + Number(price.text().replace("$", "")) + "$");
+      }
+    } else if (operation === "subtract") {
+      calories.text(Number(calories.text()) - caloriesVal);
+      price.text(Number(price.text().replace("$", "")) - priceVal + "$");
+
+      if (calories.text() == 0 && price.text() == 0) {
+        calories.text("__");
+        price.text("__");
+      }
+    }
+  }
+
+  function reset() {
+    $(".ing").empty().hide();
+    $(".jar").removeClass("jar-rel");
+    $(".jar-customization").css("margin-top", "45px");
+    $(".calories .value h6").text("__");
+    $(".price .value h6").text("__");
+    $(".size-btn").css("background-color", "transparent");
   }
 
   // MIRNA (end)

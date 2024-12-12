@@ -1,5 +1,13 @@
 [
     {
+        "id": 0,
+        "title": "Jar Creations",
+        "image": "products-images/jar.png",
+        "price": "0$",
+        "bestSeller": false,
+        "category": "Customization"
+    },
+    {
         "id": 1,
         "title": "Zaatar Biscuits",
         "image": "products-images/zaatar-biscuits.png",

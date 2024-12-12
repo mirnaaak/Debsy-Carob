@@ -42,7 +42,6 @@ function updateCartTotal() {
 
 $(document).ready(function () {
   // Mirna
-
   showCartItems();
   counter();
 
@@ -101,7 +100,7 @@ $(document).ready(function () {
         existingProduct.quantity = quantity;
 
         localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
-        
+
         showCartItems();
       }
     });
@@ -120,7 +119,11 @@ $(document).ready(function () {
         products.forEach((product) => {
           storedProducts.forEach((sproduct) => {
             if (product.id == sproduct.id) {
-              fetchCartProducts(product, sproduct.quantity);
+              if (sproduct.price !== undefined) {
+                fetchCartProducts(product, sproduct.price, sproduct.quantity);
+              } else {
+                fetchCartProducts(product, 0, sproduct.quantity);
+              }
             }
           });
         });
@@ -133,11 +136,16 @@ $(document).ready(function () {
     });
   }
 
-  function fetchCartProducts(product, quantity) {
-    const price = parseFloat(product.price, 10);
-    const qty = parseFloat(quantity, 10);
-    let total = price * qty;
+  function fetchCartProducts(product, price, quantity) {
+    let qty = parseInt(quantity, 10);
+    let total = "";
+    if (price === 0) {
+      price = parseFloat(product.price, 10);
+    }
+
+    total = price * qty;
     total = parseFloat(total.toFixed(2));
+
     let productHTML = `
       <tr>
         <td class="prod"><img class="itemimg" src="../Products/${product.image}" alt="${product.title}"><span
@@ -160,4 +168,5 @@ $(document).ready(function () {
 
     $("#cart-items").append(productHTML);
   }
+  // Mirna (end)
 });

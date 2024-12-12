@@ -699,6 +699,7 @@
 }
 
 .size-btn {
+  background-color: transparent;
   border: 1px solid #4c2b08;
   width: 32px;
   height: 31px;

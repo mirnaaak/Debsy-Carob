@@ -1,6 +1,22 @@
 $(document).ready(function () {
   let productsData = [];
 
+  $.ajax({
+    url: "products.json",
+    method: "GET",
+    dataType: "json",
+    success: function (products) {
+      productsData = products.filter((product) => product.id !== 0);
+      console.log(productsData);
+      renderProducts(productsData);
+
+      populateFilters(productsData);
+    },
+    error: function (error) {
+      console.error("Error fetching the products:", error);
+    },
+  });
+
   function renderProducts(products) {
     const productsContainer = $(".products-cards");
     productsContainer.empty();
@@ -39,6 +55,7 @@ $(document).ready(function () {
     addToCartProducts();
   }
 
+  // Mirna
   function addToCartProducts() {
     $(".add-cart").off("click");
     $(".add-cart").click(function () {
@@ -66,25 +83,10 @@ $(document).ready(function () {
       }
 
       localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
-      
+
       quantityInput.val(1);
     });
   }
-
-  $.ajax({
-    url: "products.json",
-    method: "GET",
-    dataType: "json",
-    success: function (products) {
-      productsData = products;
-      renderProducts(products);
-
-      populateFilters(products);
-    },
-    error: function (error) {
-      console.error("Error fetching the products:", error);
-    },
-  });
 
   function counter() {
     $(".minus-btn").click(function () {
@@ -93,7 +95,7 @@ $(document).ready(function () {
         .find(".quantity-input");
       let quantity = quantityInput.val().trim();
       quantity--;
-      if (quantity >= 0) {
+      if (quantity >= 1) {
         quantityInput.val(quantity);
       }
     });
@@ -109,6 +111,7 @@ $(document).ready(function () {
       }
     });
   }
+  // Mirna (end)
 
   function populateFilters(products) {
     const categories = [...new Set(products.map((p) => p.category))].sort();
