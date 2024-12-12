@@ -177,18 +177,17 @@ $(document).ready(function () {
         $(".i-1").empty().hide();
         $(".jar").removeClass("jar-rel");
         $(".jar-customization").css("margin-top", "45px");
-        console.log($("i-1").data("calories"));
         updateCaloriesAndPrice(
-          Number($("i-1").data("calories")),
-          Number($("i-1").data("price")),
+          Number($(".i-1").data("calories")),
+          Number($(".i-1").data("price")),
           "subtract"
         );
       } else if ($(".i-3").is(":hidden")) {
         $(".i-2").empty().hide();
         $(".jar-customization").css("margin-top", "318px");
         updateCaloriesAndPrice(
-          Number($("i-2").data("calories")),
-          Number($("i-2").data("price")),
+          Number($(".i-2").data("calories")),
+          Number($(".i-2").data("price")),
           "subtract"
         );
       } else if (
@@ -201,8 +200,8 @@ $(document).ready(function () {
         $(".i-3").empty().hide();
         $(".jar-customization").css("margin-top", "245px");
         updateCaloriesAndPrice(
-          Number($("i-3").data("calories")),
-          Number($("i-3").data("price")),
+          Number($(".i-3").data("calories")),
+          Number($(".i-3").data("price")),
           "subtract"
         );
       }
@@ -494,6 +493,10 @@ $(document).ready(function () {
                   $(".i-3").append($("<img>").attr("src", jarImage)).show();
                 }
               }
+            } else {
+              alert(
+                "Size is unavailable at this moment. Please try another size!"
+              );
             }
           }
         });
@@ -625,12 +628,15 @@ $(document).ready(function () {
         price.text(priceVal + Number(price.text().replace("$", "")) + "$");
       }
     } else if (operation === "subtract") {
-      calories.text(Number(calories.text()) - caloriesVal);
-      price.text(Number(price.text().replace("$", "")) - priceVal + "$");
+      let cal = Number(calories.text()) - caloriesVal;
+      let pr = Number(price.text().replace("$", "")) - priceVal;
 
-      if (calories.text() == 0 && price.text() == 0) {
+      if (cal == 0 && pr == 0) {
         calories.text("__");
         price.text("__");
+      } else {
+        calories.text(cal);
+        price.text(pr + "$");
       }
     }
   }
