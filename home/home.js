@@ -456,38 +456,43 @@ $(document).ready(function () {
           if (size === "") {
             alert("Please select size to start adding ingredients!");
           } else {
-            let ingId = $(this).data("id");
             let calories = Number($(this).data("calories"));
             let price = Number($(this).data("price"));
             let jarImage = $(this).data("jar");
 
-            $(".jar").addClass("jar-rel");
-
             if (size == "S") {
-              if (!$(".i-3").is(":hidden")) {
+              if (jarImage === "") {
                 alert(
-                  "You have reached the maximum number of ingredients for this size!"
+                  "Jar image is unavailable at this moment, please try another item!"
                 );
-              }
+              } else {
+                $(".jar").addClass("jar-rel");
 
-              if ($(".i-1").is(":hidden")) {
-                $(".jar-customization").css("margin-top", "318px");
-                updateCaloriesAndPrice(calories, price, "add");
-                $(".i-1").data("calories", calories);
-                $(".i-1").data("price", price);
-                $(".i-1").append($("<img>").attr("src", jarImage)).show();
-              } else if ($(".i-2").is(":hidden")) {
-                $(".jar-customization").css("margin-top", "245px");
-                updateCaloriesAndPrice(calories, price, "add");
-                $(".i-2").data("calories", calories);
-                $(".i-2").data("price", price);
-                $(".i-2").append($("<img>").attr("src", jarImage)).show();
-              } else if ($(".i-3").is(":hidden")) {
-                $(".jar-customization").css("margin-top", "155px");
-                updateCaloriesAndPrice(calories, price, "add");
-                $(".i-3").data("calories", calories);
-                $(".i-3").data("price", price);
-                $(".i-3").append($("<img>").attr("src", jarImage)).show();
+                if (!$(".i-3").is(":hidden")) {
+                  alert(
+                    "You have reached the maximum number of ingredients for this size!"
+                  );
+                }
+
+                if ($(".i-1").is(":hidden")) {
+                  $(".jar-customization").css("margin-top", "318px");
+                  updateCaloriesAndPrice(calories, price, "add");
+                  $(".i-1").data("calories", calories);
+                  $(".i-1").data("price", price);
+                  $(".i-1").append($("<img>").attr("src", jarImage)).show();
+                } else if ($(".i-2").is(":hidden")) {
+                  $(".jar-customization").css("margin-top", "245px");
+                  updateCaloriesAndPrice(calories, price, "add");
+                  $(".i-2").data("calories", calories);
+                  $(".i-2").data("price", price);
+                  $(".i-2").append($("<img>").attr("src", jarImage)).show();
+                } else if ($(".i-3").is(":hidden")) {
+                  $(".jar-customization").css("margin-top", "155px");
+                  updateCaloriesAndPrice(calories, price, "add");
+                  $(".i-3").data("calories", calories);
+                  $(".i-3").data("price", price);
+                  $(".i-3").append($("<img>").attr("src", jarImage)).show();
+                }
               }
             }
           }
@@ -514,7 +519,7 @@ $(document).ready(function () {
     </div>
     <div class="ing-details">
       <h5 id="ing-title">${ingredient.name}</h5>
-      <button class="btn-more customization-btn add-ing" data-id="${ingredient.id}" data-calories="${ingredient.calories}" data-price="${ingredient.price}" data-jar="${ingredient.jarImage}">add</button>
+      <button class="btn-more customization-btn add-ing" data-calories="${ingredient.calories}" data-price="${ingredient.price}" data-jar="${ingredient.jarImage}">add</button>
     </div>`;
 
     $(".ingredient").empty().append(ingredientHTML);
