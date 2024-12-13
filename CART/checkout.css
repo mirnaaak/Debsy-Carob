@@ -1,257 +1,248 @@
 /* General reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
- 
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #E5E4E4;
-    color: #4A403A;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  }
-  
-  .checkout-container {
-    width: 90%;
-    max-width: 800px;
-    margin: 20px auto;
-    background: #fff;
-    padding: 40px;
-    border: 1px solid #CCC;
-    border-radius: 8px;
-  }
-  
-  .back-to-cart {
-    color: #4A403A;
-    text-decoration: none;
-    margin-bottom: 10px;
-    display: block;
-    font-family: "Romely";
-    font-size: 28.36 ;
-    color: #4C2B08;
-  }
-  
-  h1 {
-    font-family: "Romely";
-    font-size: 49.68px;
-    text-align: center;
-    margin: 10px 0 20px;
-    color: #4C2B08;
-  }
-  
-  h2 {
-    font-family: "Romely";
-    color: #4C2B08 ;
-    font-size: 26.6px;
-    font-weight: 500;
-    margin: 15px 0 5px;
-  }
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #e5e4e4;
+  color: #4a403a;
+}
 
-  .checkout-form {
-    margin: -20px; /* Negative margin to reduce the gap between the form and the container edges */
-  }
-  
-  
-  .checkout-form input {
-    width: 760px;
-    height: 63px;
-    padding: 10px;
-    margin: 8px 0;
-    border: 2px solid #D8C3A5;
-    border-radius: 23px;
-    font-family: "Romely";
-    font-size: 23.54px;
-    font-weight: lighter;
-    
-  }
- 
-  form.checkout-form .name-fields input.name {
-    width: 515px !important; /* Set the width of the input fields */
-    padding: 10px; /* Optional: Adds padding for better aesthetics */
-    box-sizing: border-box; /* Ensures padding is included in the width */
-  }
+.checkout-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
 
-  .name-fields {
-    display: flex;
-    gap: 10px;
+.back-to-cart {
+  color: #4a403a;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+  font-family: "Romely";
+  font-size: 28.36;
+  color: #4c2b08;
+}
 
-  }
-  
-  .name-fields input {
-    flex: 1;
-  }
-  
-  .extra-fields {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .payment-options {
-    width: 150px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
+h1 {
+  font-family: "Romely";
+  font-size: 49.68px;
+  text-align: center;
+  margin: 10px 0 20px;
+  color: #4c2b08;
+}
 
- .payment{
+h2 {
+  font-family: "Romely";
+  color: #4c2b08;
+  font-size: 26.6px;
+  font-weight: 500;
+  margin: 15px 0 5px;
+}
+
+.checkout-form {
+  margin: -20px; /* Negative margin to reduce the gap between the form and the container edges */
+}
+
+.checkout-form input {
+  width: 760px;
+  height: 63px;
+  padding: 10px;
+  margin: 8px 0;
+  border: 2px solid #d8c3a5;
+  border-radius: 23px;
+  font-family: "Romely";
+  font-size: 23.54px;
+  font-weight: lighter;
+}
+
+form.checkout-form .name-fields input.name {
+  width: 515px !important; /* Set the width of the input fields */
+  padding: 10px; /* Optional: Adds padding for better aesthetics */
+  box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.name-fields {
+  display: flex;
+  gap: 10px;
+}
+
+.name-fields input {
+  flex: 1;
+}
+
+.extra-fields {
+  display: flex;
+  gap: 10px;
+}
+
+.payment-options {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.payment {
   padding-top: 10px;
   margin-right: 1000px;
   text-wrap: nowrap;
- }
-  
-  .payment-options img {
-    width: 50px;
+}
+
+.payment-options img {
+  width: 50px;
+}
+
+.cash {
+  width: 430px;
+  height: 63px;
+  border: 2px solid #d8c3a5;
+  background-color: transparent;
+  border-radius: 23px;
+  font-family: "Romely";
+  font-size: 23.54px;
+  font-weight: lighter;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.cash:hover {
+  background-color: #6a5f58;
+}
+.pay {
+  width: 150px;
+  height: 63px;
+  border: 2px solid #d8c3a5;
+  border-radius: 23px;
+  color: #4c2b08;
+  font-family: "Romely";
+  font-size: 23.54px;
+  font-weight: lighter;
+  text-align: center;
+}
+.visa {
+  position: absolute;
+  right: 545px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  align-items: center;
+  width: 100px;
+  height: 46px;
+}
+.master {
+  position: absolute;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  align-items: center;
+  right: 380px;
+}
+.complete-order {
+  font-family: "Romely";
+  font-size: 32px;
+  background-color: #e9e4da;
+  color: #4c2b08;
+  padding: 10px;
+  border: 2px solid #d8c3a5;
+  border-radius: 23px;
+  width: 760px;
+  height: 63px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  position: relative;
+  right: 20px;
+}
+
+.complete-order:hover {
+  background-color: #6a5f58;
+}
+
+.footer {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .checkout-container {
+    padding: 20px;
   }
-  
-  .cash{
-    width: 430px;
-    height: 63px;
-    border: 2px solid #D8C3A5;
-    background-color: transparent;
-    border-radius: 23px;
-    font-family: "Romely";
-    font-size: 23.54px;
-    font-weight: lighter;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+
+  .back-to-cart {
+    font-size: 20px;
   }
-  .cash:hover{
-    background-color: #6A5F58;
+
+  h1 {
+    font-size: 36px;
   }
-  .pay{
-    width: 150px;
-    height: 63px;
-    border: 2px solid #D8C3A5;
-    border-radius: 23px;
-    color: #4C2B08;
-    font-family: "Romely";
-    font-size: 23.54px;
-    font-weight: lighter;
-    text-align: center;
+
+  h2 {
+    font-size: 22px;
   }
-  .visa{
-    position: absolute;
-    right: 545px;
-    margin-bottom: 10px;
-    margin-top: 5px;
-    align-items: center;
-    width: 100px;
-    height: 46px;
+
+  .checkout-form input {
+    flex: 1;
+    min-width: 100px;
   }
-  .master{
-    position: absolute;
-    margin-bottom: 10px;
-    margin-top: 15px;
-    align-items: center;
-    right: 380px;
+
+  .name-fields input {
+    flex: 1;
+    min-width: 100px;
   }
+
+  .visa,
+  .master {
+    width: 80px;
+    height: 36px;
+  }
+
   .complete-order {
-    font-family: "Romely";
-    font-size: 32px;
-    background-color: #E9E4DA;
-    color: #4C2B08;
-    padding: 10px;
-    border: 2px solid #D8C3A5;
-    border-radius: 23px;
-    width: 760px;
-    height: 63px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px;
-    position: relative;
-    right: 20px;
-  }
-  
-  .complete-order:hover {
-    background-color: #6A5F58;
-  }
-
-  .footer{
     width: 100%;
+    max-width: 100%;
+    padding-left: 30px;
+    padding-top: 20px;
   }
-  
-  @media (max-width: 768px) {
-    .checkout-container {
-      padding: 20px; 
-    }
-  
-    .back-to-cart {
-      font-size: 20px; 
-    }
-  
-    h1 {
-      font-size: 36px; 
-    }
-  
-    h2 {
-      font-size: 22px; 
-    }
-  
-    .checkout-form input {
-      flex: 1;
-      min-width: 100px;
-    }
-  
-    .name-fields input {
-      flex: 1;
-      min-width: 100px;
+}
 
-    }
-  
-    
-  
-    .visa,
-    .master {
-      width: 80px; 
-      height: 36px;
-    }
-  
-    .complete-order {
-      width: 100%;
-      max-width: 100%;
-      padding-left: 30px;
-      padding-top: 20px;
-    }
+@media (max-width: 480px) {
+  .checkout-container {
+    padding: 10px;
   }
-  
-  @media (max-width: 480px) {
-    .checkout-container {
-      padding: 10px;
-    }
-  
-    h1 {
-      font-size: 28px; 
-    }
-  
-    h2 {
-      font-size: 20px; 
-    }
-  
-    .back-to-cart {
-      font-size: 16px; 
-    }
-  
-    .checkout-form input {
-      font-size: 18px; 
-    }
-  
-    .cash,
-    .pay {
-      font-size: 18px; 
-    }
-  
-    .visa,
-    .master {
-      width: 60px; 
-      height: 30px;
-    }
-  
-    .complete-order {
-      font-size: 14px; 
-    }
+
+  h1 {
+    font-size: 28px;
   }
- 
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .back-to-cart {
+    font-size: 16px;
+  }
+
+  .checkout-form input {
+    font-size: 18px;
+  }
+
+  .cash,
+  .pay {
+    font-size: 18px;
+  }
+
+  .visa,
+  .master {
+    width: 60px;
+    height: 30px;
+  }
+
+  .complete-order {
+    font-size: 14px;
+  }
+}

@@ -1,4 +1,4 @@
-
+// Cyrine
 $(document).ready(function () {
   // Show the Visa pop-up
   $(".visa").on("click", function () {

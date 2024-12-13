@@ -1,49 +1,62 @@
-// Sample data for item prices
-const prices = {
-  carob_macron: 3.13,
-  ginger_biscuits: 3.13,
-  carob_date_bites: 3.13,
-  zaatar_biscuits: 3.13,
-};
+// Cyrine
 
-function updateQuantity(item, change) {
-  const qtyElem = document.getElementById(`qty-${item}`);
-  let qty = parseInt(qtyElem.textContent) + change;
-
-  if (qty < 1) qty = 1; // Minimum quantity is 1
-  qtyElem.textContent = qty;
-
-  // Update total for each item
-  const totalElem = document.getElementById(`total-${item}`);
-  totalElem.textContent = (prices[item] * qty).toFixed(2) + "$";
-
-  // Update subtotal and total
-  updateCartTotal();
-}
-
-function removeItem(item) {
-  const row = document.getElementById(`row-${item}`);
-  row.remove();
-  updateCartTotal();
-}
-
+// update subtotal and total
 function updateCartTotal() {
-  const subtotals = Array.from(
-    document.querySelectorAll("tbody td[id^='total-']")
-  );
+  const subtotals = Array.from(document.querySelectorAll("#cart-items .total"));
   let subtotal = subtotals.reduce(
-    (sum, elem) => sum + parseFloat(elem.textContent),
+    (sum, elem) => sum + parseFloat(elem.textContent.replace("$", "")),
     0
   );
+
   document.getElementById("subtotal").textContent = subtotal.toFixed(2) + "$";
   document.getElementById("total").textContent =
     (subtotal + 2.0).toFixed(2) + "$";
 }
+// Cyrine (end)
 
 $(document).ready(function () {
-  // Mirna
+  // MIRNA
   showCartItems();
-  counter();
+
+  function showCartItems() {
+    $.ajax({
+      url: "../Products/products.json",
+      method: "GET",
+      dataType: "json",
+      success: function (products) {
+        let storedProducts = JSON.parse(localStorage.getItem("cartProducts"));
+
+        $("#cart-items").empty();
+
+        products.forEach((product) => {
+          storedProducts.forEach((sproduct) => {
+            if (product.id == sproduct.id) {
+              if (sproduct.price !== undefined) {
+                fetchCartProducts(product, sproduct.price, sproduct.quantity);
+              } else {
+                fetchCartProducts(product, 0, sproduct.quantity);
+              }
+            }
+          });
+        });
+
+        $(".Remove").click(function () {
+          let productId = $(this).data("id");
+          storedProducts = storedProducts.filter(
+            (product) => product.id !== productId
+          );
+          localStorage.setItem("cartProducts", JSON.stringify(storedProducts));
+          showCartItems();
+        });
+
+        updateCartTotal();
+        counter();
+      },
+      error: function (error) {
+        console.log(error);
+      },
+    });
+  }
 
   function counter() {
     $(".minus-btn, .add-btn").off("click");
@@ -71,7 +84,6 @@ $(document).ready(function () {
         existingProduct.quantity = quantity;
 
         localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
-
         showCartItems();
       }
     });
@@ -100,39 +112,8 @@ $(document).ready(function () {
         existingProduct.quantity = quantity;
 
         localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
-
         showCartItems();
       }
-    });
-  }
-
-  function showCartItems() {
-    $.ajax({
-      url: "../Products/products.json",
-      method: "GET",
-      dataType: "json",
-      success: function (products) {
-        let storedProducts = JSON.parse(localStorage.getItem("cartProducts"));
-
-        $("#cart-items").empty();
-
-        products.forEach((product) => {
-          storedProducts.forEach((sproduct) => {
-            if (product.id == sproduct.id) {
-              if (sproduct.price !== undefined) {
-                fetchCartProducts(product, sproduct.price, sproduct.quantity);
-              } else {
-                fetchCartProducts(product, 0, sproduct.quantity);
-              }
-            }
-          });
-        });
-
-        counter();
-      },
-      error: function (error) {
-        console.log(error);
-      },
     });
   }
 
@@ -143,6 +124,7 @@ $(document).ready(function () {
       price = parseFloat(product.price, 10);
     }
 
+    // row total price
     total = price * qty;
     total = parseFloat(total.toFixed(2));
 
@@ -162,11 +144,11 @@ $(document).ready(function () {
           </div>
         </td>
         <td class="total">${total}$</td>
-        <td class="Remove"> <img src="cartimages/remove.svg" alt=""></td>
+        <td class="Remove" data-id="${product.id}"> <img src="cartimages/remove.svg" alt=""></td>
       </tr>
     `;
 
     $("#cart-items").append(productHTML);
   }
-  // Mirna (end)
+  // MIRNA (end)
 });

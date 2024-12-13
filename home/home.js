@@ -1,5 +1,6 @@
-//banner
+// Cyrine
 
+//banner
 document.addEventListener("DOMContentLoaded", () => {
   const hero = document.querySelector(".hero");
   const subtitle = document.getElementById("hero-subtitle");
@@ -71,6 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
   changeSlide(); // Initial call to set the first slide
 });
 
+// Cyrine (end)
+
 // Yazan
 const feedbacks = [
   {
@@ -120,7 +123,7 @@ document.querySelector(".arrow-prev").addEventListener("click", function () {
 document.querySelector(".arrow-next").addEventListener("click", function () {
   nextFeedback();
 });
-
+// Yazan (end)
 $(document).ready(function () {
   // MIRNA (start)
 

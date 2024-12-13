@@ -271,7 +271,7 @@ input:focus {
   }
 }
 
-.btn{
+.btn {
   border: none;
 }
 
@@ -282,7 +282,7 @@ input:focus {
   width: 103px;
   height: 36px;
   background-color: transparent;
-  border: 1.37px solid #3D240E;
+  border: 1.37px solid #3d240e;
   border-radius: 14.37px;
   margin-top: 5px;
   font-family: "Romely";

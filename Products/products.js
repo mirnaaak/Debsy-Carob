@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // Rami
   let productsData = [];
 
   $.ajax({
@@ -54,6 +55,7 @@ $(document).ready(function () {
     counter();
     addToCartProducts();
   }
+  // Rami (end)
 
   // Mirna
   function addToCartProducts() {
@@ -113,6 +115,8 @@ $(document).ready(function () {
   }
   // Mirna (end)
 
+
+  // Jana
   function populateFilters(products) {
     const categories = [...new Set(products.map((p) => p.category))].sort();
     const filterSelect = $("#filter");
@@ -154,4 +158,5 @@ $(document).ready(function () {
 
     renderProducts(filteredProducts);
   }
+  // Jana (end)
 });
