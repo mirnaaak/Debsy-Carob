@@ -30,8 +30,8 @@
       <!-- Delivery Information -->
       <h2>Delivery Information</h2>
       <div class="name-fields">
-        <input type="text" placeholder="First Name" required>
-        <input type="text" placeholder="Last Name" required>
+        <input class="name" type="text" placeholder="First Name"  required>
+        <input class="name" type="text" placeholder="Last Name" required>
       </div>
       <input type="text" placeholder="Address" required>
       <input type="text" placeholder="City" required>
@@ -40,14 +40,15 @@
         <input type="text" placeholder="Postal Code (optional)" required>
       </div>
       <input type="text" placeholder="Governorate" required>
-</form>
+    </form>
       <!-- Payment Method -->
-      <h2>Payment Method</h2>
+      <h2 class="payment">Payment Method</h2>
+  
       <div class="payment-options">
         <label>
           <input class="cash" type="button" name="payment" value="Cash on Delivery" required>
-          
         </label>
+
         <label>
           <input class="pay" type="image" name="payment" value="" > 
         <img class="visa"  src="visa-logo.svg" alt="Visa" >
@@ -56,9 +57,9 @@
           <input class="pay" type="image" name="payment" value="" required>
           <img class="master" src="mastercard-logo.svg" alt="Mastercard">
         </label>
-      </div>
-      <button type="submit" class="complete-order">Complete Order</button>
- 
+        </div>
+   
+    <button type="submit" class="complete-order">Complete Order</button>
       <!-- Visa Pop-up Form -->
  <div id="visaPopup" class="popup-container" >
   <form class="popup">

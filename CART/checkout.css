@@ -66,10 +66,17 @@
     font-weight: lighter;
     
   }
-  
+ 
+  form.checkout-form .name-fields input.name {
+    width: 515px !important; /* Set the width of the input fields */
+    padding: 10px; /* Optional: Adds padding for better aesthetics */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+  }
+
   .name-fields {
     display: flex;
     gap: 10px;
+
   }
   
   .name-fields input {
@@ -82,24 +89,24 @@
   }
   
   .payment-options {
+    width: 150px;
     display: flex;
     align-items: center;
     gap: 8px;
-    
   }
-  
-  .payment-options label {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
+
+ .payment{
+  padding-top: 10px;
+  margin-right: 1000px;
+  text-wrap: nowrap;
+ }
   
   .payment-options img {
     width: 50px;
   }
   
   .cash{
-    width: 415px;
+    width: 430px;
     height: 63px;
     border: 2px solid #D8C3A5;
     background-color: transparent;
@@ -128,15 +135,19 @@
   }
   .visa{
     position: absolute;
-    right: 560px;
+    right: 545px;
     margin-bottom: 10px;
+    margin-top: 5px;
+    align-items: center;
     width: 100px;
     height: 46px;
   }
   .master{
     position: absolute;
     margin-bottom: 10px;
-    right: 400px;
+    margin-top: 15px;
+    align-items: center;
+    right: 380px;
   }
   .complete-order {
     font-family: "Romely";
@@ -181,23 +192,17 @@
     }
   
     .checkout-form input {
-      width: 100%;
+      flex: 1;
+      min-width: 100px;
     }
   
     .name-fields input {
       flex: 1;
       min-width: 100px;
+
     }
   
-    .cash {
-      width: 100%;
-      max-width: 415px;
-    }
-  
-    .pay {
-      width: 100%;
-      max-width: 150px;
-    }
+    
   
     .visa,
     .master {
@@ -208,6 +213,8 @@
     .complete-order {
       width: 100%;
       max-width: 100%;
+      padding-left: 30px;
+      padding-top: 20px;
     }
   }
   
