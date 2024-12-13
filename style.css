@@ -246,28 +246,31 @@ input:focus {
   .line {
     display: none;
   }
-}
-
-@media (max-width: 435px) {
-  .title {
-    width: 100%;
-    padding: 50px;
-  }
 
   .main-title {
-    font-size: 28px !important;
+    font-size: 30px !important;
   }
 
   .sub-title {
-    font-size: 25px !important;
+    font-size: 27px !important;
     margin-top: -40px !important;
-    margin-right: -70px !important;
+    margin-right: -50px !important;
   }
 }
 
-@media (max-width: 376px) {
-  .title {
-    padding: 10px !important;
+@media (max-width: 435px) {
+  .title-content {
+    padding: 0 50px;
+  }
+
+  .main-title {
+    font-size: 23px !important;
+  }
+
+  .sub-title {
+    font-size: 20px !important;
+    margin-top: -32px !important;
+    margin-right: 0 !important;
   }
 }
 

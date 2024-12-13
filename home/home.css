@@ -814,9 +814,12 @@
     width: 100%;
   }
 
-  .ing-image,
   .customize {
-    margin-top: 10px;
+    margin-top: 50px;
+  }
+
+  .ing-image{
+    margin-top: 0px;
   }
 }
 
