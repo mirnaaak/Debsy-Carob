@@ -25,12 +25,13 @@
         <a href="../home/index.html" class="logo pc">Debsy Carob</a>
         <a href="../contact us/contact.html">Contact Us</a>
       </div>
-      <div class="search-bar">
-        <input type="text">
-        <div class="search-icon icons">
-          <img src="../nav+title+footer-images/search.svg" alt="">
+      <!-- Update the search form to send the query to products.html -->
+      <form id="searchForm" action="../Products/products.html" method="get" class="search-bar">
+        <input type="text" name="search" id="searchInput" placeholder="Search products...">
+        <div class="search-icon icons" id="searchIcon">
+          <img src="../nav+title+footer-images/search.svg" alt="Search">
         </div>
-      </div>
+      </form>
       <div class="shopping-bag icons">
         <img src="../nav+title+footer-images/shopping.svg" alt="">
       </div>
@@ -41,6 +42,8 @@
       </div>
     </nav>
   </header>
+  
+  
 
   <!-- Jana -->
   <div class="banner-section">

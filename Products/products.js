@@ -2,6 +2,13 @@ $(document).ready(function () {
   // Rami
   let productsData = [];
 
+  // Event listener for the search icon
+  $("#searchIcon").on("click", function (event) {
+    event.preventDefault();  // Prevent the default form submission
+    $("#searchForm").submit();  // Submit the form when the icon is clicked
+  });
+
+  // Fetch the product data
   $.ajax({
     url: "products.json",
     method: "GET",
@@ -11,6 +18,21 @@ $(document).ready(function () {
       console.log(productsData);
       renderProducts(productsData);
 
+      // Get the search query from the URL (if available)
+      const urlParams = new URLSearchParams(window.location.search);
+      const searchQuery = urlParams.get('search');
+
+      // If there's a search query, filter the products
+      if (searchQuery) {
+        const filteredProducts = filterProductsBySearch(productsData, searchQuery);
+        renderProducts(filteredProducts);
+
+        // Scroll to the product section after rendering the products
+        scrollToProductsSection();
+      } else {
+        renderProducts(productsData); // Show all products if no search query
+      }
+
       populateFilters(productsData);
     },
     error: function (error) {
@@ -18,9 +40,23 @@ $(document).ready(function () {
     },
   });
 
+  // Function to filter products based on the search query
+  function filterProductsBySearch(products, query) {
+    return products.filter((product) => {
+      return product.title.toLowerCase().includes(query.toLowerCase());
+    });
+  }
+
+  // Function to render the filtered products on the page
   function renderProducts(products) {
     const productsContainer = $(".products-cards");
     productsContainer.empty();
+
+    if (products.length === 0) {
+      productsContainer.append("<p>No products found matching your search.</p>");
+      return;
+    }
+
     products.forEach((product) => {
       const productHTML = `
         <div class="card text-center">
@@ -54,6 +90,27 @@ $(document).ready(function () {
 
     counter();
     addToCartProducts();
+  }
+
+  // Function to handle adding to cart and quantity counter (if necessary)
+  function counter() {
+    // Your counter logic goes here (if needed)
+  }
+
+  function addToCartProducts() {
+    // Your cart logic goes here (if needed)
+  }
+
+  // Optional: You can implement filters if you want more refined searches like by category
+  function populateFilters(products) {
+    // Filter logic here (optional, e.g., to populate categories or price ranges)
+  }
+
+  // Smooth scroll to the product section after search
+  function scrollToProductsSection() {
+    $('html, body').animate({
+      scrollTop: $(".products_section").offset().top
+    }, 1000); // Scroll duration in milliseconds (1 second)
   }
   // Rami (end)
 

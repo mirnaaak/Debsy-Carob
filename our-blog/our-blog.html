@@ -18,32 +18,32 @@
     <!-- Cyrine -->
     <header>
         <nav>
-            <a href="../home/index.html" class="logo mobile">Debsy Carob</a>
-            <div class="nav-links">
-                <a href="../home/index.html">Home</a>
-                <a href="../AboutUs/about.html">About Us</a>
-                <a href="../Products/products.html">Products</a>
-                <a href="../our-blog/our-blog.html">Blog</a>
-                <a href="../home/index.html" class="logo pc">Debsy Carob</a>
-                <a href="../contact us/contact.html">Contact Us</a>
+          <a href="../home/index.html" class="logo mobile">Debsy Carob</a>
+          <div class="nav-links">
+            <a href="../home/index.html">Home</a>
+            <a href="../AboutUs/about.html">About Us</a>
+            <a href="../Products/products.html">Products</a>
+            <a href="../our-blog/our-blog.html">Blog</a>
+            <a href="../home/index.html" class="logo pc">Debsy Carob</a>
+            <a href="../contact us/contact.html">Contact Us</a>
+          </div>
+          <!-- Update the search form to send the query to products.html -->
+          <form id="searchForm" action="../Products/products.html" method="get" class="search-bar">
+            <input type="text" name="search" id="searchInput" placeholder="Search products...">
+            <div class="search-icon icons" id="searchIcon">
+              <img src="../nav+title+footer-images/search.svg" alt="Search">
             </div>
-            <div class="search-bar">
-                <input type="text">
-                <div class="search-icon icons">
-                    <img src="../nav+title+footer-images/search.svg" alt="">
-                </div>
-            </div>
-            <div class="shopping-bag icons">
-                <img src="../nav+title+footer-images/shopping.svg" alt="">
-            </div>
-            <div class="hamburger">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+          </form>
+          <div class="shopping-bag icons">
+            <img src="../nav+title+footer-images/shopping.svg" alt="">
+          </div>
+          <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </nav>
-    </header>
-
+      </header>
     <!-- Mirna -->
     <section class="banner" id="our-blog">
         <div class="title">
@@ -129,6 +129,7 @@
         crossorigin="anonymous"></script>
     <script src="../main.js"></script>
     <script src="our-blog.js"></script>
+    <script src="../Products/products.js"></script>
 </body>
 
 </html>
