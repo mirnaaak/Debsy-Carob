@@ -54,7 +54,7 @@
 }
 .filter-product select:nth-child(1){
   border: 2px solid #BC976C;
-  padding: 2px 0px;
+  padding: 3px 0px;
 }
 .filter-product select:nth-child(2) {
 
