@@ -173,49 +173,49 @@ $(document).ready(function () {
   $(".undo").click(function () {
     if ($(".i-1").is(":hidden")) {
       alert("Please add ingredients to undo!");
-    }
-
-    if (size == "S") {
-      if ($(".i-2").is(":hidden") && $(".i-3").is(":hidden")) {
-        $(".i-1").empty().hide();
-        $(".jar").removeClass("jar-rel");
-        $(".jar-customization").css("margin-top", "45px");
-        updateCaloriesAndPrice(
-          Number($(".i-1").data("calories")),
-          Number($(".i-1").data("price")),
-          "subtract"
-        );
-      } else if ($(".i-3").is(":hidden")) {
-        $(".i-2").empty().hide();
-        $(".jar-customization").css("margin-top", "318px");
-        updateCaloriesAndPrice(
-          Number($(".i-2").data("calories")),
-          Number($(".i-2").data("price")),
-          "subtract"
-        );
-      } else if (
-        !(
-          $(".i-1").is(":hidden") ||
-          $(".i-2").is(":hidden") ||
-          $(".i-3").is(":hidden")
-        )
-      ) {
-        $(".i-3").empty().hide();
-        $(".jar-customization").css("margin-top", "245px");
-        updateCaloriesAndPrice(
-          Number($(".i-3").data("calories")),
-          Number($(".i-3").data("price")),
-          "subtract"
-        );
+    } else {
+      if (size == "S") {
+        if ($(".i-2").is(":hidden") && $(".i-3").is(":hidden")) {
+          $(".i-1").empty().hide();
+          $(".jar").removeClass("jar-rel");
+          $(".jar-customization").css("margin-top", "45px");
+          updateCaloriesAndPrice(
+            Number($(".i-1").data("calories")),
+            Number($(".i-1").data("price")),
+            "subtract"
+          );
+        } else if ($(".i-3").is(":hidden")) {
+          $(".i-2").empty().hide();
+          $(".jar-customization").css("margin-top", "318px");
+          updateCaloriesAndPrice(
+            Number($(".i-2").data("calories")),
+            Number($(".i-2").data("price")),
+            "subtract"
+          );
+        } else if (
+          !(
+            $(".i-1").is(":hidden") ||
+            $(".i-2").is(":hidden") ||
+            $(".i-3").is(":hidden")
+          )
+        ) {
+          $(".i-3").empty().hide();
+          $(".jar-customization").css("margin-top", "245px");
+          updateCaloriesAndPrice(
+            Number($(".i-3").data("calories")),
+            Number($(".i-3").data("price")),
+            "subtract"
+          );
+        }
       }
     }
   });
 
   $(".reset").click(function () {
-    if (!$(".i-1").is(":hidden")) {
+    if (!$(".i-1").is(":hidden") || size !== "") {
       reset();
-    } else {
-      alert("Please add ingredients to reset!");
+    } else if (size === "") {
+      alert("Please select size or add ingredients to reset!");
     }
   });
 
@@ -651,6 +651,7 @@ $(document).ready(function () {
     $(".calories .value h6").text("__");
     $(".price .value h6").text("__");
     $(".size-btn").css("background-color", "transparent");
+    size = "";
   }
 
   // MIRNA (end)
