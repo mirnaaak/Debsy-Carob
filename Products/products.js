@@ -92,20 +92,6 @@ $(document).ready(function () {
     addToCartProducts();
   }
 
-  // Function to handle adding to cart and quantity counter (if necessary)
-  function counter() {
-    // Your counter logic goes here (if needed)
-  }
-
-  function addToCartProducts() {
-    // Your cart logic goes here (if needed)
-  }
-
-  // Optional: You can implement filters if you want more refined searches like by category
-  function populateFilters(products) {
-    // Filter logic here (optional, e.g., to populate categories or price ranges)
-  }
-
   // Smooth scroll to the product section after search
   function scrollToProductsSection() {
     $('html, body').animate({
@@ -171,7 +157,6 @@ $(document).ready(function () {
     });
   }
   // Mirna (end)
-
 
   // Jana
   function populateFilters(products) {
